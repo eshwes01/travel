@@ -1,131 +1,484 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Travel Era 
+  This travel web site aiming to develop for Full Stack Software Development bootcamp final project at Code Institute.
+  
+  > ## Target Audiences
+  Adventure Seekers , Cultural Enthusiasts – Tourists interested in exploring historical sites, traditional festivals, local customs, and UNESCO World Heritage locations.
 
-Welcome Ei Sin,
+  Luxury Travelers – High-end tourists seeking premium, customized experiences including exclusive resorts, private tours, and personalized service.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+  Families & Groups – Families or groups of friends who want stress-free
+  , well-organized vacations that cater to all age groups, with itineraries that balance adventure, culture, and relaxation.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+  Digital Nomads – Remote workers looking to combine travel with work, interested in exploring Southeast Asia’s growing coworking spaces, long-term stay options, and vibrant urban hubs.
+     
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+       Introduction](#Travel Era---introduction)
+  - [User Experience - UX](#user-experience---ux)
+    - [Site Aims](#site-aims)
+    - [Agile Methodology](#agile-methodology)
+      - [Epics and User Stories](#epics-and-user-stories)
+      - [Tasks](#tasks)
+  - [Design](#design)
+    - [Colours](#colours)
+    - [Typography](#typography)
+    - [Imagery](#imagery)
+    - [Wireframes](#wireframes)
+  - [Database Diagram](#database-diagram)
+  - [Features](#features)
+    - [Home Page](#home-page)
+      - [Navbar](#navbar)
+      - [Hero Image](#hero-image)
+      - [Destination Section](#destination-section)
+      - [Footer](#footer)
+    - [User Page](#user-page)
+    - [About Page](#about-page)
+    - [Blog Page](#blog-page)
+      - [Blog Details](#blog-details)
+      - [Blog Comments](#blog-comments)
+    - [Register](#register)
+    - [Login](#login)
+    - [Logout](#logout)
+    - [Destinations](#destinations)
+    - [Alert Messages](#alert-messages)      
+  - [Admin Panel/Superuser](#admin-panelsuperuser)
+  - [Technologies Used](#technologies-used)
+    - [Languages Used](#languages-used)
+    - [Django Packages](#django-packages)
+    - [Frameworks - Libraries - Programs Used](#frameworks---libraries---programs-used)
+  - [Testing](#testing)
+      - [Validation](#validation)
+      - [Manual Testing](#manual-testing)
+  - [Bugs](#bugs)
+      - [Fixed Bugs](#fixed-bugs)
+      - [Unfix Bugs](#unfix-bugs)
+  - [Deployment](#deployment)
+      - [Creating the Django project](#creating-the-django-project)
+      - [Creating Heroku app](#creating-heroku-app)
+      - [Set up Environment Variables](#set-up-environment-variables)
+      - [Heroku deployment](#heroku-deployment)
+      - [Final Deployment](#final-deployment)
+  - [Credits](#credits)
+    - [Content](#content)
+    - [Information Sources / Resources](#information-sources--resources)
+  - [Acknowledgement](#acknowledgement)
 
-`python3 -m http.server`
+  # User Experience - UX
 
-A blue button should appear to click: _Make Public_,
+## Site Aims
 
-Another blue button should appear to click: _Open Browser_.
+*
+## Agile Methodology
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board. Through the use of the Kanban board in the projects view in Github, the project was divided into a few different sections: 
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+Please find my Kanban Board with my user stories [here](https://github.com/users/jyotiyadav2508/projects/3/views/1).
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Epics and User Stories
 
-To log into the Heroku toolbelt CLI:
+Following Epics were created which were further developed into 19 User Stories.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Epic 1- Website UI
+Epic Goals for User- 
+* 
+#### Related User Stories:
+* 
+### Epic 2- Registration and Account Management
+Epic Goals-
+* Easy registration of an account
+*
+* 
+* 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+#### Related User Stories:
+* As a site user, I can register an account so that I can comment and like.
+* 
 
-### Connecting your Mongo database
+### Epic 3- 
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
 
-------
+### Epic 4- Comments and Like Management
+Epic Goals-
+* Add /Delete and View Comments on a post
+* Like / Unlike a post
 
-## Release History
+#### Related User Stories:
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**June 18, 2024,** Add Mongo back into template
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
 
-**May 28 2024:** Fix Mongo and Links installs
+## Tasks
 
-**April 26 2024:** Update node version to 16
+The tasks for the website development process was closely followed as mentioned in CI's Django module "I Think Therefore I Blog" walkthrough project. 
 
-**September 20 2023:** Update Python version to 3.9.17.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+**Before Project Inception**
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+**Creation of Project in GitPod**
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- Create the django project. Check details in [deployment-section](#deployment)
+- Deploying app to Heroku - Details in [deployment](#deployment) section
+- Create Database Models
+	- Set up models.py file in "blog" directory
+- Build Admin site
+- Set up Templates
+	- Create base.html - Navbar and Footer content, which gets extended to all the other template files
+	- Add responsiveness to navigation and footer
+    - Create index.html, view and style
+	- Set up template file features with views.py and urls.py
+  - about.html (Description about incredible india)
+  - blog.html (to view all blog posts)
+  - user_page.html (for user's personal collections)
+  - post_details.html (for detailed post view)
+  - edit_comment.html (to update the comment)
+  - destinations_post.html (to view blog post for a selected destination)
+  - add_post.html (to allow user's input for blog posts)
+  - delete_post.html (to allow user to delete his post)
+  - search.html (to search a blog post)
+  - update_post.html (to allow user to edit his post)
+  - user_post_list.html (to allow user to view all post, which he posted so far)
+- Install Allauth for sign in, sign up and sign out templates with-  pip3 install django-allauth 
+	- Install crispy-forms to add styles to Django account templates with-  pip3 install crispy-bootstrap5
+- Intensive Manual Testing and Validation checks of each page and codes written
+- Final Deployment steps
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+-----
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+[Back to top](#content)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Design
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Colours
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Typography
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
 
-## FAQ about the uptime script
+### Imagery
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+----
+### Wireframes
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+----
 
-**So….?**
+## Database Diagram
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+Lucidchart was used to create a database schema to visualise the types of custom models the project requires. This schema was used as a guide to what needed to be added to each model. Below is the Database structure that this project is based on. 
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
+[Back to top ⇧](#content)
+
+----
+
+# Features
+
+## Home Page
+
+
+
+
+----
+
+
+
+## Navbar
+
+-
+
+
+
+## User Page
+
+
+
+----
+
+## Footer
+
+-
+----
+
+## MyBooking Page
+
+
+
+
+----
+
+## Info Page
+
+T
+
+
+
+----
+
+## Post-Detail Page
+
+- 
+
+----
+
+## Destination Page
+
+
+
+
+
+----
+
+### Sign Up
+
+- User is asked to enter username and password to sign up. User will be guided by validation messages if the username exists or password is too small which was created by modifying Django inbuilt templates.
+![Signup page](assets/features/user-register-page.jpg)
+
+- When users sign up to the website they will see a message at the top of the page saying "Successfully signed in as (username)".
+![Sign Up alert](assets/features/user-registration-alert.jpg)
+
+### Sign In
+
+- User can enter username and password to sign in. User will be guided by validation messages if the username or password is not correct. This was created by modifying Django inbuilt templates.
+
+![Sign In page](assets/features/user-login-page.jpg)
+
+- When users sign in to the website they will see a message at the top of the page saying "Successfully signed in as (username)".
+
+![Sign In alert](assets/features/signed-in-alert.jpg)
+
+### Sign Out
+
+- 
+
+
+----
+
+## Admin Panel/Superuser
+
+-
+
+
+
+### Admin 'Post' Model Management
+
+- 
+
+### Admin 'Comment' Model Management
+
+- U
+
+### Admin 'Destination' Model Management
+
+
+
+
+
+----
+
+## Technologies Used
+
+### Languages Used
+
+* [HTML 5](https://en.wikipedia.org/wiki/HTML/)- Used to structure all the templates on the site
+* [CSS 3](https://en.wikipedia.org/wiki/CSS)- to provide extra styling to the site
+* [JavaScript](https://www.javascript.com/)- Minimum javascript was used to fade out alerts after a few seconds.
+* [Python](https://www.python.org/)- To provide the functionality to the site. Packages used in the project can be found in requirements.txt
+
+### Django Packages
+
+* [Gunicorn](https://gunicorn.org/)- As the server for Heroku.
+* [Cloudinary](https://cloudinary.com/)- Was used to host the static files and media for the site.
+* [Dj_database_url](https://pypi.org/project/dj-database-url/)- To parse the database URL from the environment variables in Heroku.
+* [Psycopg2](https://pypi.org/project/psycopg2/)- As an adaptor for Python and PostgreSQL databases.
+* [Summernote](https://summernote.org/)- As a text editor.
+* [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)- For authentication, registration, account management.
+* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)- To style the forms.
+
+### Frameworks - Libraries - Programs Used
+
+* [Django](https://www.djangoproject.com/) was used as the framework for the back-end logic of the project. Django enables rapid and secure development.
+* [Bootstrap](https://getbootstrap.com/)- Used to style the website, add responsiveness and interactivity.
+* [Git](https://git-scm.com/)- Used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub.
+* [GitHub](https://github.com/)- Used to store the project's code after being pushed from Git.
+* [Heroku](https://id.heroku.com)- Used to deploy the live project.
+* [PostgreSQL](https://www.postgresql.org/)- Database used through heroku.
+* [Balsamiq](https://balsamiq.com/)- To build the wireframes for the project.
+* [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) was used to inspect page elements, debug, troubleshoot and test features and adjust property values. Using the Lighthouse extension installed in Chrome Browser, the performance report was generated.
+* [Google Fonts:](https://fonts.google.com/) used for the Roboto font
+* [Font Awesome:](https://fontawesome.com/) was used to add icons for aesthetic and UX purposes.
+
+-----
+
+[Back to top ⇧](#content)
+
+## Testing
+
+### Validation
+
+
+- HTML using [W3C HTML validator](https://validator.w3.org/)
+- CSS using [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/)
+- Python via [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
+
+### Manual Testing
+
+
+
+
+----
+
+## Bugs
+
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+|
+
+
+| **Unfix Bug** |
+| ----------- | 
+
+
+
+----
+
+## Future Implementation
+
+[Back to top ⇧](#content)
+
+
+## Deployment
+
+### 1. Creating the Django Project
+* Go to the Code Institute Gitpod Full Template [Template](https://github.com/Code-Institute-Org/gitpod-full-template).
+* Click on `Use This Template` button, then create new repository.
+* Name our repository and click on `Create repository from template` button.
+* Once the template is available in your repository click on `Gitpod` button.
+* When the image for the template and the Gitpod are ready, open a new terminal to start a new Django App.
+* Install Django and gunicorn: `pip3 install 'django<4' gunicorn`.
+* Install supporting database libraries dj_database_url and psycopg2 library: `pip3 install dj_database_url==0.5.0 psycopg2`.
+* Install Cloudinary libraries to manage static files: `pip install dj-3-cloudinary-storage`.
+* Create file for requirements: `pip freeze --local > requirements.txt`.
+* Create project:`django-admin startproject project_name .`.
+* Create app: `python manage.py startapp app_name`.
+* Add app to list of `installed apps` in settings.py file: `'app_name'`.
+* Migrate changes: `python manage.py migrate`.
+* Test server works locally: `python manage.py runserver`.
+* If the app has been installed correctly the window will display- The install worked successfully! Congratulations!
+
+### 2. Create your Heroku app
+* Navigate to [Heroku](https://id.heroku.com).
+* Create a Heroku account by entering your email address and a password (or login if you have one already).
+* Activate the account through the authentication email sent to your email account.
+* Click the **new button** on the top right corner of the screen and select create a new app from the dropdown menu.
+* Enter a unique name for the application.
+* Select the appropriate region for the application.
+* Click create app.
+* Click Reveal Config Vars and add a new record with `DATABASE_URL`.
+* Click Reveal Config Vars and add a new record with `PORT`.
+* Click Reveal Config Vars and add a new record with the `DISABLE_COLLECTSTATIC = 1`(note: this must be either removed or set to 0 for final deployment).
+* Next, scroll down to the Buildpack section, click `Add Buildpack` select python and click Save Changes.
+
+### 3. Set up Environment Variables
+* In you IDE create a new env.py file in the top level directory.
+* Add env.py to the .gitignore file.
+* In env.py import the os library.
+* In env.py add `os.environ["DATABASE_URL"]` = "Paste the link copied from Heroku DATABASE_URL".
+* In env.py add `os.environ["SECRET_KEY"] = "Make up your own random secret key"`.
+* In Heroku Settings tab Config Vars enter the same `SECRET_KEY` created in env.py by entering 'SECRET_KEY' in the box for 'KEY' and your randomly created secret key in the 'value' box.
+
+### 4. Setting up settings.py
+* In your Django 'settings.py' file type:
+
+ ```
+ from pathlib import Path
+ import os
+ import dj_database_url
+
+ if os.path.isfile("env.py"):
+  import env
+ ```
+* Remove the default insecure secret key in settings.py and replace with the link to the secret key variable in Heroku by typing: `SECRET_KEY = os.environ.get(SECRET_KEY)`
+* Comment out the `DATABASES` section in settings.py and replace with:
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+DATABASES = {
+  'default': 
+  dj_database_url.parse(os.environ.get("DATABASE_URL"))
+  }`
 ```
+* Create a Cloudinary account and from the 'Dashboard' in Cloudinary copy your url into the env.py file by typing: `os.environ["CLOUDINARY_URL"] = "cloudinary://<insert-your-url>"`
+* In Heroku, click Reveal Config Vars and add a new record with the `CLOUDINARY_URL`
+* Add Cloudinary libraries to the installed apps section of settings.py file:
+ ```
+ 'cloudinary_storage'
+ 'django.contrib.staticfiles''
+ 'cloudinary'
+ ```
+* Connect Cloudinary to the Django app in `settings.py`:
+```
+STATIC_URL = '/static'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'STATIC')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE =
+'cloudinary_storage.storage.MediaCloudinaryStorage'
+* Link file to the templates directory in Heroku 
+* Place under the BASE_DIR: TEMPLATES_DIR = os.path.join(BASE_DIR,
+'templates')
+```
+* Change the templates directory to TEMPLATES_DIR. Place within the TEMPLATES array: `'DIRS': [TEMPLATES_DIR]`
+* Add Heroku Hostname to ALLOWED_HOSTS: 
+```ALLOWED_HOSTS = ['<Heroku_app_name>.herokuapp.com', 'localhost']```
+* Create Procfile at the top level of the file structure and insert the following:
+    ``` web: gunicorn PROJECT_NAME.wsgi ```
 
-**Anything more?**
+* Commit and push the code to the GitHub Repository.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### 5. Heroku Deployment: 
+* Click Deploy tab in Heroku.
+* Select Github as the deployment method.
+* Confirm you want to connect to GitHub.
+* Search for the repository name and click the connect button to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository.
+* Scroll to the bottom of the deploy page and select the preferred deployment type.
+* Click either Enable Automatic Deploys for automatic deployment when you push updates to Github or To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
 
----
+### 6. Final Deployment
+In the IDE:
+* When development is complete change the debug setting to: `DEBUG = False` in `settings.py` 
+* In Heroku settings config vars change the `DISABLE_COLLECTSTATIC` value to 0
+* Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku. 
+* To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
 
-Happy coding!
+----
+
+[Back to top](#content)
+
+# Credits
+
+## Code
+- 
+
+## Learning Resources
+
+
+
+## Content and Media
+
+
+
+----
+
+## Acknowledgement
+
+
+[Back to top](<#content>)
