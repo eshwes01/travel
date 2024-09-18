@@ -199,7 +199,7 @@ Different travel destination cards, each offering:
     A brief description of the destination.
     "Our Packages" Button: Leads to detailed package offers for the specific destination.
     "Info" Button: Provides more detailed information about the destination.
-    
+
 ### Footer Section:
 
 Rating: Shows customer ratings for the overall travel services or destinations.
