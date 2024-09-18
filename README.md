@@ -148,7 +148,6 @@ The tasks for the website development process was closely followed as mentioned 
 
 -----
 
-[Back to top](#content)
 
 ## Design
 
@@ -183,57 +182,29 @@ Lucidchart was used to create a database schema to visualise the types of custom
 
 # Features
 
-## Home Page
+## Navigation Bar (Top Section):
 
+### Home:
+ A button or link that brings the user to the homepage.
 
+### Our Packages: 
+Links to a page displaying travel packages or details of available destinations.
+My Booking: Provides access to a user’s current bookings or reservation history.
+Log In / Register: A login or registration page to access user accounts.
+Main Section (Travel Destinations):
 
+### Destination Cards: 
+Different travel destination cards, each offering:
+    A placeholder image representing the destination.
+    A brief description of the destination.
+    "Our Packages" Button: Leads to detailed package offers for the specific destination.
+    "Info" Button: Provides more detailed information about the destination.
+    
+### Footer Section:
 
-----
-
-
-
-## Navbar
-
--
-
-
-
-## User Page
-
-
-
-----
-
-## Footer
-
--
-----
-
-## MyBooking Page
-
-
-
-
-----
-
-## Info Page
-
-T
-
-
-
-----
-
-## Post-Detail Page
-
-- 
-
-----
-
-## Destination Page
-
-
-
+Rating: Shows customer ratings for the overall travel services or destinations.
+Reviews: Displays customer reviews or testimonials.
+Social Media Icons: Links to social media pages such as Facebook, Twitter, and Instagram for further interaction with the service.
 
 
 ----
@@ -250,11 +221,11 @@ T
 
 - User can enter username and password to sign in. User will be guided by validation messages if the username or password is not correct. This was created by modifying Django inbuilt templates.
 
-![Sign In page](assets/features/user-login-page.jpg)
+
 
 - When users sign in to the website they will see a message at the top of the page saying "Successfully signed in as (username)".
 
-![Sign In alert](assets/features/signed-in-alert.jpg)
+
 
 ### Sign Out
 
@@ -396,53 +367,7 @@ T
 * In env.py add `os.environ["SECRET_KEY"] = "Make up your own random secret key"`.
 * In Heroku Settings tab Config Vars enter the same `SECRET_KEY` created in env.py by entering 'SECRET_KEY' in the box for 'KEY' and your randomly created secret key in the 'value' box.
 
-### 4. Setting up settings.py
-* In your Django 'settings.py' file type:
 
- ```
- from pathlib import Path
- import os
- import dj_database_url
-
- if os.path.isfile("env.py"):
-  import env
- ```
-* Remove the default insecure secret key in settings.py and replace with the link to the secret key variable in Heroku by typing: `SECRET_KEY = os.environ.get(SECRET_KEY)`
-* Comment out the `DATABASES` section in settings.py and replace with:
-```
-DATABASES = {
-  'default': 
-  dj_database_url.parse(os.environ.get("DATABASE_URL"))
-  }`
-```
-* Create a Cloudinary account and from the 'Dashboard' in Cloudinary copy your url into the env.py file by typing: `os.environ["CLOUDINARY_URL"] = "cloudinary://<insert-your-url>"`
-* In Heroku, click Reveal Config Vars and add a new record with the `CLOUDINARY_URL`
-* Add Cloudinary libraries to the installed apps section of settings.py file:
- ```
- 'cloudinary_storage'
- 'django.contrib.staticfiles''
- 'cloudinary'
- ```
-* Connect Cloudinary to the Django app in `settings.py`:
-```
-STATIC_URL = '/static'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'STATIC')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE =
-'cloudinary_storage.storage.MediaCloudinaryStorage'
-* Link file to the templates directory in Heroku 
-* Place under the BASE_DIR: TEMPLATES_DIR = os.path.join(BASE_DIR,
-'templates')
-```
-* Change the templates directory to TEMPLATES_DIR. Place within the TEMPLATES array: `'DIRS': [TEMPLATES_DIR]`
-* Add Heroku Hostname to ALLOWED_HOSTS: 
-```ALLOWED_HOSTS = ['<Heroku_app_name>.herokuapp.com', 'localhost']```
-* Create Procfile at the top level of the file structure and insert the following:
-    ``` web: gunicorn PROJECT_NAME.wsgi ```
-
-* Commit and push the code to the GitHub Repository.
 
 ### 5. Heroku Deployment: 
 * Click Deploy tab in Heroku.
@@ -461,7 +386,7 @@ In the IDE:
 
 ----
 
-[Back to top](#content)
+
 
 # Credits
 
@@ -481,4 +406,3 @@ In the IDE:
 ## Acknowledgement
 
 
-[Back to top](<#content>)
