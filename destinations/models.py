@@ -16,4 +16,15 @@ class Destination(models.Model):
     class Meta:
         ordering = ["created_on"]
 
+class Packages(models.Model):
+    destination = models.ForeignKey(
+        Destination,
+        on_delete=models.CASCADE,
+        related_name = "package"
+    )
+    body= models.TextField()
+    price = models.FloatField(default="0.0")
+    duration = models.CharField(max_length=200)
+
+    
     
