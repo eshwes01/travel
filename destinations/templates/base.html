@@ -1,0 +1,60 @@
+{% load static %}
+{% url 'home' as home_url %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Era</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+<!-- Navigation Bar -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Travel Era</a>
+            <ul>
+                <li><a href="destinations/index.html">Destinations</a></li>
+                <li><a href="#">My Booking</a></li>
+                <li><a href="#">Log In / Register</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <div>   
+        <section class="hero">
+            <img src="static/images/hero_image.jpg" alt="Hero Image" class="hero-image">
+            <div class="hero-text">
+                <h1>Travel with Peace</h1>
+                <a href="#" class="explore-btn">Explore</a>
+            </div>
+        </section>
+    </div>
+
+    <main class="">
+
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+
+    </main>
+
+    <!-- Footer Section with Ratings, Reviews, and Social Media Links -->
+    <footer>
+        <div class="ratings">
+            <h3>Rating</h3>
+            <p>★★★★☆ (4.5/5)</p>
+        </div>
+        <div class="reviews">
+            <h3>Reviews</h3>
+            <p>Great experience, wonderful service!</p>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>

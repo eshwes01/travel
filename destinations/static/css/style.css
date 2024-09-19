@@ -1,0 +1,142 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header (Navigation Bar) */
+header {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4B7BE5;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #12751f;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4B7BE5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.explore-btn:hover {
+    background-color: #3a6cd4;
+}
+
+/* Recommended Destinations */
+.recommended {
+    padding: 40px;
+    background-color: #f0f4f8;
+    text-align: center;
+}
+
+.recommended h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.recommended ul {
+    list-style: none;
+}
+
+.recommended ul li {
+    margin: 10px 0;
+}
+
+.recommended ul li a {
+    text-decoration: none;
+    color: #4B7BE5;
+    font-size: 18px;
+}
+
+/* Carousel Placeholder */
+.carousel {
+    margin-top: 20px;
+}
+
+.carousel img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* Footer Section */
+footer {
+    background-color: #4B7BE5;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+.social-media img {
+    width: 30px;
+    margin: 0 10px;
+}
