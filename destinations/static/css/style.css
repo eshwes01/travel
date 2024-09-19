@@ -36,6 +36,10 @@ nav ul li a {
     text-decoration: none;
     color: #333;
 }
+nav ul li a:hover {
+    color: #92afec;
+    font-size: 25px;
+}
 
 .logo {
     font-size: 24px;
@@ -59,8 +63,9 @@ nav ul li a {
     position: absolute;
     top: 50%;
     left: 50%;
+    font-size : 3 rem;
     transform: translate(-50%, -50%);
-    color: #12751f;
+    color: #164a1d;
 }
 
 .hero-text h1 {
@@ -68,9 +73,9 @@ nav ul li a {
     margin-bottom: 20px;
 }
 
-.placeholder{
+.img-placeholder{
     width: 30%;
-    height: 30%;
+    height: 25%;
 }
 
 .explore-btn {
@@ -86,41 +91,46 @@ nav ul li a {
     background-color: #3a6cd4;
 }
 
-/* Recommended Destinations */
-.recommended {
-    padding: 40px;
-    background-color: #f0f4f8;
-    text-align: center;
-}
 
-.recommended h2 {
-    font-size: 32px;
+/*  Destination Section */
+.destination-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin-bottom: 20px;
+    background-color: #f0f2f5;
 }
 
-.recommended ul {
-    list-style: none;
+.destination {
+    background-color: rgba(248, 247, 253, 0.3);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    
 }
 
-.recommended ul li {
-    margin: 10px 0;
-}
-
-.recommended ul li a {
-    text-decoration: none;
-    color: #4B7BE5;
-    font-size: 18px;
-}
-
-/* Carousel Placeholder */
-.carousel {
-    margin-top: 20px;
-}
-
-.carousel img {
+.destination img {
     width: 100%;
-    max-width: 500px;
     height: auto;
+    border-radius: 8px;
+}
+
+.btn-destination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.destination button {  
+    color: rgb(240, 230, 230);
+    border: solid;
+    padding: 15px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.5s;
 }
 
 /* Footer Section */

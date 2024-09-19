@@ -2,37 +2,30 @@
 {% load static %}
 
 {% block content %}
-    <h1>Welcome to My Page</h1>
+<div class="container-fluid">
     <!-- Destination Column -->
-    <div class="col-12">
-        <div class="row">
-            {% for destination in destination_list %}
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="">
-                        <div class="">
-                        {% if "placeholder" in destination.featured_image.url %}
-                        <img class="placeholder" src="{% static 'images/default.jpg' %}"
-                              alt="placeholder image">
-                        {% else %}
-                        <img class="placeholder" src="{{ destination.featured_image.url }}"
-                            alt="{{ destination.title }}"> 
-                        {% endif %}
-                        </div>
-                    </div>
-                    <a href="#" class="">
-                        <h2 class=""><a href="" class="">{{ destination.title }}</a>
-                        <p class =""> {{ destination.description }}</p>
-                    </a></h2>
+    <div class="destination-container">
+        {% for destination in destination_list %}
+        <div class="destination">
+            <a><h2 class=""><a href="" class="">{{ destination.title }}</a></h2>
+                {% if "placeholder" in destination.featured_image.url %}
+                <img class="img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="img-placeholder" src="{{ destination.featured_image.url }}" alt="{{ destination.title }}">
+                {% endif %}
+                <article>
+                    <p> {{ destination.description }} </p>
                     <hr />
-                    <p class="card-text text-muted h6">{{ destination.created_on}}
-                    </p>
-                </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-        <div class="row">
-            {% endif %}
-            {% endfor %}         
+                    <p class="card-text"> {{ destination.created_on}} </p>
+                </article>
+                <button class="btn btn-primary">Our Packages</button>
+                <button class="btn btn-info">Info</button>
         </div>
+        {% if forloop.counter|divisibleby:3 %}
     </div>
-{% endblock content %}
+    <div class="row">
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock content%}
