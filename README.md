@@ -78,15 +78,17 @@ Please find my Kanban Board with my user stories [here]
 
 
 
-### Epic 1- Website UI
-Epic Goals for User- 
-* 
-#### Related User Stories:
-* 
-Epic Goals-
-* 
+### Epics : User Registration
+ Goals : 
+ * Landing page should be easy access for the user to register, able to Log In and Log Out. 
+ * Registered users will be given the access to comment CRUD features . 
 
 #### Related User Stories:
+* As a new user of site I want to create a user account by using my email and password
+So that I can access all the functionality of the site.
+- AC - There will be a button for registration on the Nav bar
+
+
 
 
 
@@ -131,24 +133,23 @@ The tasks for the website development process was closely followed as mentioned 
 
 ## Database Diagram
 
-Lucidchart was used to create a database schema to visualise the types of custom models the project requires. This schema was used as a guide to what needed to be added to each model. Below is the Database structure that this project is based on. 
+Lucidchart was used to create a database schema to visualise the types of custom models the project requires. Below is the Database structure that this project is based on. 
 
 
 
-[Back to top ⇧](#content)
 
 ----
 
-# Features
-
-## Navigation Bar (Top Section):
+# UI Features
 
 ### Home:
  A button or link that brings the user to the homepage.
 
 ### Our Packages: 
 Links to a page displaying travel packages or details of available destinations.
+
 My Booking: Provides access to a user’s current bookings or reservation history.
+
 Log In / Register: A login or registration page to access user accounts.
 Main Section (Travel Destinations):
 
@@ -271,17 +272,24 @@ Social Media Icons: Links to social media pages such as Facebook, Twitter, and I
 
 ### 5. Heroku Deployment: 
 * Click Deploy tab in Heroku.
+
 * Select Github as the deployment method.
+
 * Confirm you want to connect to GitHub.
+
 * Search for the repository name and click the connect button to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository.
+
 * Scroll to the bottom of the deploy page and select the preferred deployment type.
+
 * Click either Enable Automatic Deploys for automatic deployment when you push updates to Github or To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
+
 
 ### 6. Final Deployment
 In the IDE:
 * When development is complete change the debug setting to: `DEBUG = False` in `settings.py` 
 * In Heroku settings config vars change the `DISABLE_COLLECTSTATIC` value to 0
 * Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku. 
+
 * To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
 
 ----

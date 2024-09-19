@@ -12,17 +12,16 @@
                     <div class="">
                         <div class="">
                         {% if "placeholder" in destination.featured_image.url %}
-                        <img class="" src="{% static 'images/default.jpg ' %}"
+                        <img class="placeholder" src="{% static 'images/default.jpg' %}"
                               alt="placeholder image">
                         {% else %}
-                        <img class=" " src="{% static destination.featured_image.url %}"
-                        alt="{{ destination.title }}">
+                        <img class="placeholder" src="{{ destination.featured_image.url }}"
+                            alt="{{ destination.title }}"> 
                         {% endif %}
                         </div>
                     </div>
                     <a href="#" class="">
                         <h2 class=""><a href="" class="">{{ destination.title }}</a>
-                    
                         <p class =""> {{ destination.description }}</p>
                     </a></h2>
                     <hr />
