@@ -16,7 +16,7 @@
                               alt="placeholder image">
                         {% else %}
                         <img class=" " src="{% static destination.featured_image.url %}"
-                        alt="destination.title">
+                        alt="{{ destination.title }}">
                         {% endif %}
                         </div>
                     </div>
