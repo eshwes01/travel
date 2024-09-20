@@ -111,7 +111,7 @@ nav ul li a:hover {
     width: 30%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    font-size: 1.4rem;
+    font-size: 0.5rem;
     letter-spacing: 0.2;
 }
 
@@ -134,12 +134,12 @@ div.polaroid {
 }
 
 .destination button {  
-    color: rgb(245, 218, 218);
+    color: rgb(58, 78, 167);
     border: solid;
     padding: 18px 15px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     transition: background-color 0.5s;
 }

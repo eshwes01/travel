@@ -1,0 +1,181 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Open Sans, sans-serif;
+    font-size : 15px;
+}
+
+/* Header (Navigation Bar) */
+header {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+nav ul li a:hover {
+    color: #92afec;
+    font-size: 25px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4B7BE5;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.hero-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(113, 146, 76);
+    text-shadow: 2px 2px 4px #063121;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.img-placeholder{
+    width: 30%;
+    height: 25%;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4B7BE5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.explore-btn:hover {
+    background-color: #3a6cd4;
+}
+
+
+/*  Destination Section */
+.destination-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-color: #f0f2f5;
+}
+
+.destination {
+    background-color: rgba(248, 247, 253, 0.3);
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 15px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    font-size: 0.5rem;
+    letter-spacing: 0.2;
+}
+
+.destination img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+div.polaroid {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+  }
+.btn-destination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border:rgba(248, 247, 253, 0.3);
+}
+
+.destination button {  
+    color: rgb(58, 78, 167);
+    border: solid;
+    padding: 18px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.5s;
+}
+
+.dropdown-item{
+    color: rgb(245, 218, 218);
+    background-color: #3a6cd4;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.created-on {
+    color : rgba(5, 28, 129, 0.3);
+    font-size: 1.8rem;
+    font-weight: 400;
+
+}
+/* Footer Section */
+footer {
+    background-color: #4B7BE5;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+.social-media img {
+    width: 30px;
+    margin: 0 10px;
+}
