@@ -1,5 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Destination(models.Model):
@@ -20,8 +21,9 @@ class Packages(models.Model):
     destination = models.ForeignKey(
         Destination,
         on_delete=models.CASCADE,
-        related_name = "package"
+        related_name = "packages"
     )
+
     body= models.TextField()
     price = models.FloatField(default="0.0")
     duration = models.CharField(max_length=200)

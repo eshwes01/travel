@@ -65,34 +65,31 @@ nav ul li a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(113, 146, 76);
-    text-shadow: 2px 2px 4px #063121;
+    color: #588C7E;
+    text-shadow: 2px 2px 4px #689581;
 }
 
-.hero-text h1 {
-    font-size: 48px;
+.hero-text{
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
 .img-placeholder{
-    width: 30%;
+    width: 25%;
     height: 25%;
 }
 
 .explore-btn {
     display: inline-block;
     padding: 20px 20px;
-    background-color: #FFCDAA;
-    color: #9CB898;
+    color: #f7f0f1;
     text-decoration: none;
-    border-radius: 8px;
 }
 
 .explore-btn:hover {
-    background-color: #a8e7e2;
-
+    font-size: 3.6rem;
+    border-radius : 8px; 
 }
-
 
 /*  Destination Section */
 .destination-container {
@@ -101,10 +98,12 @@ nav ul li a:hover {
     flex-wrap: wrap;
     margin-top: 5px;
     margin-bottom: 20px;
-    background-color: #964EC2;
+    background-color: #FFFFFF;
 }
+
 .destination article{
     font-size: 18px;
+    color : #EFDBCB;
 }
 
 .destination {
@@ -113,9 +112,14 @@ nav ul li a:hover {
     border-radius: 25px;
     padding: 15px;
     width: 30%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgb(150, 143, 143);
     margin-bottom: 20px;
     letter-spacing: 0.2;
+}
+
+.destination-title {
+    font-size : 3rem;
+    color : #EFDBCB;
 }
 
 .destination img {
@@ -129,6 +133,7 @@ div.polaroid {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 25px;
   }
+
 .btn-destination {
     display: flex;
     justify-content: space-between;
@@ -154,14 +159,14 @@ div.polaroid {
 }
 
 .created-on {
-    color : rgba(5, 28, 129, 0.3);
+    color : rgba(224, 243, 117, 0.3);
     font-size: 1.8rem;
     font-weight: 400;
 
 }
 /* Footer Section */
 footer {
-    background-color: #4B7BE5;
+    background-color: #412804;
     color: white;
     padding: 20px 0;
     display: flex;

@@ -19,6 +19,6 @@ from django.urls import path,include
 from destinations import views as destinations_views
 
 urlpatterns = [
-    path('',include('destinations.urls'), name="destinations-urls"), 
     path('admin/', admin.site.urls),
+    path('',include('destinations.urls'), name="destinations-urls"),    
 ]

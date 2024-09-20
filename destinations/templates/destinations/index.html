@@ -7,15 +7,14 @@
     <div class="destination-container">
         {% for destination in destination_list %}
         <div class="destination polaroid">
-            <a><h2 class=""><a href="" class="">{{ destination.title }}</a></h2>
                 {% if "placeholder" in destination.featured_image.url %}
                 <img class="img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image">
                 {% else %}
                 <img class="img-placeholder" src="{{ destination.featured_image.url }}" alt="{{ destination.title }}">
                 {% endif %}
-                
                 <article>
-                    <br><br>
+                    <h2 class="destination-title"><a>{{ destination.title }}</a></h2>
+                    <br>
                     <p> {{ destination.description }} </p>
                     <hr />
                     <p class="created-on"> {{ destination.created_on}} </p>
@@ -25,7 +24,7 @@
                       Our Packages
                     </button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">16 Days Classic Family</a>
+                      <a class="dropdown-item" href="{% url 'package_detail' destination.slug %}">16 Days Classic Family</a>
                       <a class="dropdown-item" href="#">14 Days Adventurious Solo</a>
                       <a class="dropdown-item" href="#">12 Days Wild Nature and Beach </a>
                       <a class="dropdown-item" href="#">7 Days Luxury Delux </a>
