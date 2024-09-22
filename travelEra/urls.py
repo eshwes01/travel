@@ -20,5 +20,6 @@ from destinations import views as destinations_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("accounts/", include("allauth.urls")),
     path('',include('destinations.urls'), name="destinations-urls"),    
 ]

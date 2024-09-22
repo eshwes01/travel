@@ -24,13 +24,14 @@ class Packages(models.Model):
         related_name = "packages"
     )
     package_title = models.CharField(max_length=250, unique=True, default="")
-    package_id = models.IntegerField(primary_key=True,default=0)
+    package_id = models.AutoField(primary_key=True,auto_created=True)
     body= models.TextField()
     price = models.FloatField(default="0.0")
     duration = models.CharField(max_length=200)
+    featured_image = CloudinaryField('image', default='placeholder')
 
     def __str__(self):
-        return f"{self.title} : {self.destination.title}"
+        return f"{self.package_title} : {self.destination.title}"
 
 class Itinerary(models.Model):
     package = models.ForeignKey(
@@ -41,7 +42,7 @@ class Itinerary(models.Model):
     day_schedule = models.TextField(default = "This is your Itinerary")
     
     def __str__(self):
-        return f"Itinerary for {self.package.title}"
+        return f"Itinerary for {self.package.package_title}"
 
 
     

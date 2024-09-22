@@ -6,4 +6,5 @@ from .models import Destination,Packages
 
 # @admin.register(Destination)
 admin.site.register(Destination)
+admin.site.register(Packages)
 

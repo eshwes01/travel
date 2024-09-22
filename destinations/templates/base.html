@@ -24,19 +24,23 @@
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="#">My Booking</a></li>
-                <li><a href="#">Log In / Register</a></li>
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+	                <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                    href="{% url 'account_signup' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+                </li>
+                {% endif %}
             </ul>
         </nav>
     </header> 
-    <div>   
-        <section class="hero">
-            <img src="static/images/hero_image.jpg" alt="Hero Image" class="hero-image">
-            <div class="hero-text">
-                <h1 class="">Travel with Peace</h1>
-                <a href="#" class="explore-btn">Explore <i class="fa-solid fa-arrow-right-long"></i></a>
-            </div>
-        </section>
-    </div>
+    
 
     <main class="">
 

@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block content %}
 
 <!DOCTYPE html>
@@ -9,12 +8,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Package Details</title>
-
-    <p> This is the package detail page</p>
     <div>
-        <p> {{ destination.title }} </p>
-        <a href="" class="package-link"></a>
+        {% for package in packages %}
+        {% if "placeholder" in destination.featured_image.url %}
+                <img class="img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="img-placeholder" src="{{ package.featured_image.url }}" alt="{{ package.title }}">
+                {% endif %}
+        <h1> {{package.package_title }} </h1>
+        <h3> £{{ package.price}}</h3>
+        <p> {{ package.body }}</p>
+        <p> {{ co_name }}</p>
+        {% endfor %}
+        
     </div>
+    
 </head>
 <body>
     

@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+<div>   
+    <section class="hero">
+        <img src="static/images/hero_image.jpg" alt="Hero Image" class="hero-image">
+        <div class="hero-text">
+            <h1 class="">Travel with Peace</h1>
+            <a href="#" class="explore-btn">Explore <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+    </section>
+</div>
 <div class="container-fluid">
     <!-- Destination Column -->
     <div class="destination-container">
@@ -14,21 +23,21 @@
                 <article>
                     <h2 class="destination-title"><a>{{ destination.title }}</a></h2>
                     <br>
-                    <p> {{ destination.description }} </p>
+                    <p> {{ destination.description }} </p> 
                     <hr />
                     <p class="created-on"> {{ destination.created_on}} </p>
                 </article>
                 <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                    <!-- <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
                       Our Packages
-                    </button>
-                    {% for package in packages %}
-                    <div class="dropdown-menu">
+                    </button> -->
+                    <!-- <div class="dropdown-menu">
                       <a class="dropdown-item" href="{% url 'package_detail' destination.slug %}">16 Days Classic Family</a>
                       <a class="dropdown-item" href="#">14 Days Adventurious Solo</a>
                       <a class="dropdown-item" href="#">12 Days Wild Nature and Beach </a>
                       <a class="dropdown-item" href="#">7 Days Luxury Delux </a>
-                    </div>
+                    </div> -->
+                    <p><a href="{% url 'package_detail' destination.slug %}"> Our Packages</a></p>
                     <button class="btn btn-primary btn-destination">More Info </button>
                   </div>
                 

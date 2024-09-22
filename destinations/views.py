@@ -13,15 +13,15 @@ class DestinationsList(generic.ListView):
     paginate_by = 3
 
 
-def package_detail(request, slug, package_id):
+def package_detail(request, slug):
 
     # dataset= Packages.objects.all()
     # package = get_object_or_404(dataset, slug=slug)
 
-    dataset= Destination.objects.all()
-    destination = get_object_or_404(dataset, slug=slug)
-    package = destination.packages
-
+    destinations= Destination.objects.all()
+    # packages = Packages.objects.all()
+    destination = get_object_or_404(destinations, slug=slug)
+    
     print("Package Detail page.")
 
     if request.method == "POST":
@@ -31,6 +31,8 @@ def package_detail(request, slug, package_id):
         request,
         "destinations/package_detail.html",
         {
-            "package" : package, 
+            "packages" : destination.packages.all(), 
+            "co_name" : "Travel Era",
+            "destination" :destination.title
         }
     )
