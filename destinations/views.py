@@ -13,7 +13,7 @@ class DestinationsList(generic.ListView):
     paginate_by = 3
 
 
-def package_detail(request, slug):
+def package_detail(request, slug, package_id):
 
     # dataset= Packages.objects.all()
     # package = get_object_or_404(dataset, slug=slug)
