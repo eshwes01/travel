@@ -16,8 +16,8 @@
                 <p> {{ package.body }}</p>
                 <p> {{ co_name }}</p>
             </article>
-            {{package.itinerary}}
-            <a href="{% url 'itinerary_detail' 1 %}" alt=""> Itinerary & Booking Reservation  </a> 
+            <!-- {{package.itinerary}} -->
+            <a href="{% url 'itinerary_detail' package.package_id %}" alt="Itinerary Detail"> Itinerary & Booking Reservation  </a> 
         </div>    
         {% if forloop.counter|divisibleby:2 %}
             {% endif %}

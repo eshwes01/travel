@@ -29,21 +29,10 @@ class Packages(models.Model):
     price = models.FloatField(default="0.0")
     duration = models.CharField(max_length=200)
     featured_image = CloudinaryField('image', default='placeholder')
+    itinerary = models.TextField(default = "Itinerary Detail")
 
     def __str__(self):
         return f"{self.package_title} : {self.destination.title}"
-
-class Itinerary(models.Model):
-    package = models.ForeignKey(
-        Packages,
-        on_delete=models.CASCADE,
-        related_name = 'itinerary'
-    )
-    day_schedule = models.TextField(default = "This is your Itinerary")
-    
-    def __str__(self):
-        return f"Itinerary for {self.package.package_title}"
-
 
 class Info(models.Model):
     destination = models.ForeignKey(

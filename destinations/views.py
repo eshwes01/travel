@@ -2,7 +2,7 @@ from django.shortcuts import render,get_object_or_404,reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Destination,Packages,Info,Itinerary
+from .models import Destination,Packages,Info
 
 
 class DestinationsList(generic.ListView):
@@ -48,14 +48,14 @@ def info_detail(request, slug):
         }
     )
 
-def itinerary_detail(request, itinerary_id):
+def itinerary_detail(request, package_id):
   
-    itinerary = get_object_or_404(Itinerary, pk=itinerary_id)
+    package = get_object_or_404(Packages, pk= package_id)
 
     return render(
         request,
         "destinations/itinerary_detail.html",
         {
-            'itinerary' : itinerary
+            'package' : package
         }
     )
