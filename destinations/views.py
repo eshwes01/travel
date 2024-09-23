@@ -21,8 +21,7 @@ def package_detail(request, slug):
     destinations= Destination.objects.all()
     # packages = Packages.objects.all()
     destination = get_object_or_404(destinations, slug=slug)
-    
-    print("Package Detail page.")
+    paginate_by = 2
 
     if request.method == "POST":
         print("Received the POST request")
@@ -32,7 +31,7 @@ def package_detail(request, slug):
         "destinations/package_detail.html",
         {
             "packages" : destination.packages.all(), 
-            "co_name" : "Travel Era",
+            "co_name" : "@ Travel Era",
             "destination" :destination.title
         }
     )
