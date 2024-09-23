@@ -1,15 +1,13 @@
 # Travel Era 
   This travel web site aiming to develop for Full Stack Software Development bootcamp final project at Code Institute.
 
-  The site purpose is to embrace families and individuals who love to make effortless travel around Sound East Asia region.
-Any user who didn't register can be able to see all types of tour packages and prices for each destinations shown . However, in order to request the itinerary or comments / review on the posts they will need to register and log in.
-
+  
 
 ### Outline key features  
 
  * Destinations
  * Tour Packages
- * Manage Booking Reservation
+ * Manage Booking Reservation (User can edit and delete bookings from booking history)
  * Registration/ Account Management
  * Comments CRUD on Destinations Info Post
 
@@ -78,8 +76,9 @@ Any user who didn't register can be able to see all types of tour packages and p
   # User Experience - UX
 
 ## Site Aims
+  The site purpose is to embrace families and individuals who love to make effortless travel around Sound East Asia region.
+  Any user who didn't register can be able to see all types of tour packages and prices for each destinations shown as well as requesting the booking for the specific packages. However, in order to request comments / review on the destination info page they will need to register.
 
-*
 ## Agile Methodology
 
 The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board. 
@@ -98,12 +97,45 @@ Please find my Kanban Board with my user stories [here]
 #### Related User Stories:
 * As a new user of site I want to create a user account by using my email and password
 So that I can access all the functionality of the site.
-- AC - There will be a button for registration on the Nav bar
+- AC - There will be a clearly defined button for registration on the Nav bar for Log in and Log out.
+
+### User Story 2 View paginated list of the destinations
+
+- As a site user I can see all available list of destinations in one page.
+So that I can visit to each available destination which site has to offer.
+
+  Acceptance Criteria
+- AC . When user click on destinations button on the Nav bar it will show the list of destinations from the database.
 
 
+### User Story-3 View Packages
+
+- As a site user I can see all available packages that the site has to offer for given destination
+So that I can choose suitable package for given destination
+
+    Acceptance Criteria
+- A.C - For each destination user will be given the dropdown list of available packages to see all the details of the package.
 
 
+### User Story-4 Request Booking
 
+-As a user , I can request the booking of the tour packages by providing name, email and contact number for the desired package
+So that the site admin can see my request and respond to the request by giving all the information to proceed.
+
+  Acceptance Criteria
+
+- AC . User can request booking via the form given under each package.
+- AC . All the fields will be required to fill by the user .
+- AC User will be given the notification once they submitted.
+
+
+### User Story-5 Destination Info
+
+As a user I can view more information about the specific destinations of my choice
+So that I can research more about the destination
+
+  Acceptance Criteria
+- AC . Under each destination user can see the Info button which take them to the more info page.
 
 ## Tasks
 
@@ -141,6 +173,7 @@ The tasks for the website development process was closely followed as mentioned 
 ![Home Page](static/images/destination_WF.png)
 ![Package Detail Page](static/images/package_Detail_WF.png)
 ![Info Detail Page](static/images/info.png)
+![My Booking list ](static/images/MyBooking_list.png)
 
 
 ----

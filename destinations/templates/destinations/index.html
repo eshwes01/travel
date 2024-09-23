@@ -15,13 +15,14 @@
     <div class="destination-container">
         {% for destination in destination_list %}
         <div class="destination polaroid">
+                <h2 class="destination-title"><a>{{ destination.title }}</a></h2>
                 {% if "placeholder" in destination.featured_image.url %}
                 <img class="img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image">
                 {% else %}
                 <img class="img-placeholder" src="{{ destination.featured_image.url }}" alt="{{ destination.title }}">
                 {% endif %}
                 <article>
-                    <h2 class="destination-title"><a>{{ destination.title }}</a></h2>
+                    
                     <br>
                     <p> {{ destination.description }} </p> 
                     <hr />
@@ -37,8 +38,8 @@
                       <a class="dropdown-item" href="#">12 Days Wild Nature and Beach </a>
                       <a class="dropdown-item" href="#">7 Days Luxury Delux </a>
                     </div> -->
-                    <a class="package_text" href="{% url 'package_detail' destination.slug %}"> Our Packages > </a>
-                    <a class="package_text" href="{% url 'info_detail' destination.slug %}" > More Info </a>
+                    <a class="destination_text" href="{% url 'package_detail' destination.slug %}"> Our Packages > </p>
+                    <a class="destination_text" href="{% url 'info_detail' destination.slug %}" > More Info </a>
                   </div>
                 
         </div>

@@ -8,7 +8,7 @@
 
 body {
     font-family: Open Sans, sans-serif;
-    font-size : 15px;
+    font-size : 14px;
 }
 
 /* Header (Navigation Bar) */
@@ -114,7 +114,7 @@ nav ul li a:hover {
 }
 
 .destination article{
-    font-size: 1rem;
+    font-size: 0.95rem;
     color : #EFDBCB;
 }
 
@@ -184,13 +184,17 @@ div.polaroid {
     font-weight: bold;
     transition: background-color 0.5s;
 }
-.package_text{
-    font-size : 2rem;
-    color : #f1f7f1;
-    background-color: #e7bc91;
-    border:skyblue;
+
+.destination_text{
+    font-size : 1.6rem;
+    color : #f8edeb;
+    background-color: #233d4d;
+    border:#051923;
+    border-style: solid;
     border-radius: 5px;  
     display:relative;
+    letter-spacing: 1.2px;
+    text-shadow: 2px 2px 5px red;
 }
 
 .dropdown-item{
