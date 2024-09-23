@@ -5,7 +5,7 @@
     <div class="row package-container">
         {% for package in packages %}
             <div class="col package-body">  
-            {% if "placeholder" in destination.featured_image.url %}
+            {% if "placeholder" in package.featured_image.url %}
             <img class="img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image">
             {% else %}
             <img class="img-placeholder" src="{{ package.featured_image.url }}" alt="{{ package.title }}">
@@ -16,10 +16,10 @@
                 <p> {{ package.body }}</p>
                 <p> {{ co_name }}</p>
             </article>
+            {{package.itinerary}}
+            <a href="{% url 'itinerary_detail' 1 %}" alt=""> Itinerary & Booking Reservation  </a> 
         </div>    
         {% if forloop.counter|divisibleby:2 %}
-        
-        
             {% endif %}
             {% endfor %}
         </div>

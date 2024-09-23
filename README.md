@@ -96,7 +96,9 @@ Please find my Kanban Board with my user stories [here]
 
 #### Related User Stories:
 * As a new user of site I want to create a user account by using my email and password
-So that I can access all the functionality of the site.
+  So that I can access all the functionality of the site.
+
+  Acceptance Criteria
 - AC - There will be a clearly defined button for registration on the Nav bar for Log in and Log out.
 
 ### User Story 2 View paginated list of the destinations
@@ -113,7 +115,7 @@ So that I can visit to each available destination which site has to offer.
 - As a site user I can see all available packages that the site has to offer for given destination
 So that I can choose suitable package for given destination
 
-    Acceptance Criteria
+  Acceptance Criteria
 - A.C - For each destination user will be given the dropdown list of available packages to see all the details of the package.
 
 
@@ -188,7 +190,7 @@ Lucidchart was used to create a database schema to visualise the types of custom
 
 
 ----
-
+# Features
 # UI Features
 
 ### Home:
@@ -250,7 +252,7 @@ Social Media Icons: Links to social media pages for further interaction with the
 
 ### Admin 'Comment' Model Management
 
-- U
+- 
 
 ### Admin 'Destination' Model Management
 
@@ -306,7 +308,7 @@ Social Media Icons: Links to social media pages for further interaction with the
 
 ## Future Implementation
 
-[Back to top ⇧](#content)
+
 
 
 ## Deployment

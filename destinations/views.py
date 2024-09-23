@@ -2,11 +2,10 @@ from django.shortcuts import render,get_object_or_404,reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Destination,Packages,Info
+from .models import Destination,Packages,Info,Itinerary
 
-# Create your views here.
+
 class DestinationsList(generic.ListView):
-    
     # model = Destination
     queryset = Destination.objects.all()
     template_name = "destinations/index.html"
@@ -40,13 +39,23 @@ def info_detail(request, slug):
     destinations = Destination.objects.all()
     destination = get_object_or_404(destinations, slug=slug)
     
-    if request.method == "POST":
-        print("Received a POST request")
     return render(
         request,
         "destinations/info.html",
         {
             "info" : destination.info.all(),
             "destination": destination.title
+        }
+    )
+
+def itinerary_detail(request, itinerary_id):
+  
+    itinerary = get_object_or_404(Itinerary, pk=itinerary_id)
+
+    return render(
+        request,
+        "destinations/itinerary_detail.html",
+        {
+            'itinerary' : itinerary
         }
     )
