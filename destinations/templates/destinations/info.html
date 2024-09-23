@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="container-fluid">
+        This is the info detail page.
+        {% if "placeholder" in destination.featured_image.url %}
+        <img class="img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+        {% else %}
+        <img class="img-placeholder" src="{{ package.featured_image.url }}" alt="{{ package.title }}">
+        {% endif %}
+        <h1>{{ destination }}</h1>
+        <p> {{ info.content }}</p>
+    </div>
+{% endblock content %}

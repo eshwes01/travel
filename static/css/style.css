@@ -75,8 +75,9 @@ nav ul li a:hover {
 }
 
 .img-placeholder{
-    width: 35%;
-    height: 25%;
+    width: 80%;
+    height: 35%;
+    padding : 5px 25px; 
 }
 
 .explore-btn {
@@ -92,8 +93,8 @@ nav ul li a:hover {
 }
 
 /*  Destination  */
-.destination-container,
-.package-container{
+.destination-container
+{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -129,13 +130,23 @@ nav ul li a:hover {
 }
 
 /* Package  */
+.package-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left : 25px;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+}
 .package-body{
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 10px 10px;
     width: 50%;
     box-shadow: 0 0 10px rgb(150, 143, 143);
-    margin-bottom: 20px;
+    margin : 25px 20px;
     letter-spacing: 0.2; 
 }
 
@@ -173,10 +184,15 @@ div.polaroid {
     font-weight: bold;
     transition: background-color 0.5s;
 }
-.our_package_text{
+.package_text{
     font-size : 2rem;
-    color : #8dee89;
+    color : #f1f7f1;
+    background-color: #e7bc91;
+    border:skyblue;
+    border-radius: 5px;  
+    display:relative;
 }
+
 .dropdown-item{
     color: rgb(245, 218, 218);
     font-size: 1.2rem;

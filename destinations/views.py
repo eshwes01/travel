@@ -2,7 +2,7 @@ from django.shortcuts import render,get_object_or_404,reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Destination,Packages
+from .models import Destination,Packages,Info
 
 # Create your views here.
 class DestinationsList(generic.ListView):
@@ -19,7 +19,6 @@ def package_detail(request, slug):
     # package = get_object_or_404(dataset, slug=slug)
 
     destinations= Destination.objects.all()
-    # packages = Packages.objects.all()
     destination = get_object_or_404(destinations, slug=slug)
     paginate_by = 2
 
@@ -28,10 +27,26 @@ def package_detail(request, slug):
 
     return render(
         request,
-        "destinations/package_detail.html",
+            "destinations/package_detail.html",
         {
             "packages" : destination.packages.all(), 
             "co_name" : "@ Travel Era",
             "destination" :destination.title
+        }
+    )
+
+def info_detail(request, slug):
+    
+    destinations = Destination.objects.all()
+    destination = get_object_or_404(destinations, slug=slug)
+    
+    if request.method == "POST":
+        print("Received a POST request")
+    return render(
+        request,
+        "destinations/info.html",
+        {
+            "info" : destination.info.all(),
+            "destination": destination.title
         }
     )

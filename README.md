@@ -1,6 +1,18 @@
 # Travel Era 
   This travel web site aiming to develop for Full Stack Software Development bootcamp final project at Code Institute.
-  
+
+  The site purpose is to embrace families and individuals who love to make effortless travel around Sound East Asia region.
+Any user who didn't register can be able to see all types of tour packages and prices for each destinations shown . However, in order to request the itinerary or comments / review on the posts they will need to register and log in.
+
+
+### Outline key features  
+
+ * Destinations
+ * Tour Packages
+ * Manage Booking Reservation
+ * Registration/ Account Management
+ * Comments CRUD on Destinations Info Post
+
   > ## Target Audiences
   Adventure Seekers , Cultural Enthusiasts – Tourists interested in exploring historical sites, traditional festivals, local customs, and UNESCO World Heritage locations.
 
@@ -126,7 +138,9 @@ The tasks for the website development process was closely followed as mentioned 
 ----
 ### Wireframes
 
-
+![Home Page](static/images/destination_WF.png)
+![Package Detail Page](static/images/package_Detail_WF.png)
+![Info Detail Page](static/images/info.png)
 
 
 ----
@@ -134,6 +148,8 @@ The tasks for the website development process was closely followed as mentioned 
 ## Database Diagram
 
 Lucidchart was used to create a database schema to visualise the types of custom models the project requires. Below is the Database structure that this project is based on. 
+
+![Entity Relationship Diagram ](static/images/ERD_1.png)
 
 
 
@@ -145,6 +161,13 @@ Lucidchart was used to create a database schema to visualise the types of custom
 ### Home:
  A button or link that brings the user to the homepage.
 
+### Destination Cards: 
+Different travel destination cards, each offering:
+    A placeholder image representing the destination.
+    A brief description of the destination.
+    "Our Packages" Button: Leads to detailed package offers for the specific destination.
+    "Info" Button: Provides more detailed information about the destination.
+
 ### Our Packages: 
 Links to a page displaying travel packages or details of available destinations.
 
@@ -153,18 +176,15 @@ My Booking: Provides access to a user’s current bookings or reservation histor
 Log In / Register: A login or registration page to access user accounts.
 Main Section (Travel Destinations):
 
-### Destination Cards: 
-Different travel destination cards, each offering:
-    A placeholder image representing the destination.
-    A brief description of the destination.
-    "Our Packages" Button: Leads to detailed package offers for the specific destination.
-    "Info" Button: Provides more detailed information about the destination.
+### More Info :
+Links to a page displaying more information i.e Things to do , Local Food , Culture about each destination which feature can give user to research more about the destination they want to explore.
 
 ### Footer Section:
 
 Rating: Shows customer ratings for the overall travel services or destinations.
+
 Reviews: Displays customer reviews or testimonials.
-Social Media Icons: Links to social media pages such as Facebook, Twitter, and Instagram for further interaction with the service.
+Social Media Icons: Links to social media pages for further interaction with the service.
 
 
 ----
