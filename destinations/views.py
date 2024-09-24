@@ -19,7 +19,6 @@ def package_detail(request, slug):
 
     destinations= Destination.objects.all()
     destination = get_object_or_404(destinations, slug=slug)
-    paginate_by = 6
 
     if request.method == "POST":
         print("Received the POST request")
@@ -38,10 +37,7 @@ def info_detail(request, slug):
     
     destinations = Destination.objects.all()
     destination = get_object_or_404(destinations, slug=slug)
-
-    print(destination.info)
-
-    
+  
     return render(
         request,
         "destinations/info.html",
