@@ -1,14 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-    <div class="container-fluid">
-        This is the info detail page.
-        {% if "placeholder" in destination.featured_image.url %}
-        <img class="img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image">
-        {% else %}
-        <img class="img-placeholder" src="{{ package.featured_image.url }}" alt="{{ package.title }}">
-        {% endif %}
-        <h1>{{ destination.title }}</h1>
-        <p>  {{ destination.info }} </p>
+<div class="container-fluid">
+    <div>   
+        <section class="hero">
+            <img src="./static/images/hero_image.jpg" alt="Hero Image" class="hero-image">
+            <div class="hero-text">
+                <h1 class="">Travel with Peace</h1>
+                <a href="#" class="explore-btn">Explore <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+        </section>
     </div>
+    <h1>{{ destination.title }}</h1>
+    <p>  {{ destination.info.things_to_do | safe }} </p>
+    <p>  {{ destination.info.localFood | safe }} </p>
+    <p>  {{ destination.info.places_to_explore | safe }} </p>
+</div>
 {% endblock content %}

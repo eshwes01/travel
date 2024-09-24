@@ -16,7 +16,7 @@ admin.site.register(Destination)
 @admin.register(Info)
 class InfoAdmin(SummernoteModelAdmin):
 
-    list_display = ('get_destination','id')
+    list_display = ('get_destination','destination')
     def get_destination(self,obj):
         return obj.destination.title
 

@@ -38,14 +38,16 @@ def info_detail(request, slug):
     
     destinations = Destination.objects.all()
     destination = get_object_or_404(destinations, slug=slug)
-    
+
+    print(destination.info)
+
     
     return render(
         request,
         "destinations/info.html",
         {
-            "info" : destination,
-            "destination": destination.title
+            # "info" : destination,
+            "destination": destination
         }
     )
 

@@ -2,7 +2,7 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 
-# Create your models here.
+    
 class Destination(models.Model):
     slug = models.SlugField(max_length=200, unique =True)
     title = models.CharField(max_length=200, unique=True)
@@ -10,12 +10,26 @@ class Destination(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     created_on = models.DateTimeField(auto_now_add=True)
 
-
+    
     def __str__(self):
         return f"Destination Title  {self.title}"
 
     class Meta:
         ordering = ["created_on"]
+
+class Info(models.Model):
+    destination = models.OneToOneField(
+        Destination,
+        on_delete= models.CASCADE,
+        primary_key=True
+    )
+    things_to_do = models.TextField(default = "Things to do")
+    localFood = models.TextField(default = "Local Food ")
+    places_to_explore = models.TextField(default = "Place to explore")
+    created_on = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Info for {self.destination.title}"
 
 class Packages(models.Model):
     destination = models.ForeignKey(
@@ -34,17 +48,4 @@ class Packages(models.Model):
     def __str__(self):
         return f"{self.package_title} : {self.destination.title}"
 
-class Info(models.Model):
-    destination = models.ForeignKey(
-        Destination,
-        on_delete = models.CASCADE,
-        related_name = "info"
-    )
-    things_to_do = models.TextField(default = "")
-    localFood = models.TextField(default = "")
-    places_to_explore = models.TextField(default = "")
-    created_on = models.DateField(auto_now_add=True)
 
-    def __str__(self):
-        return f"Info for {self.destination.title}"
-    
