@@ -27,7 +27,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'r8bzvij=ctdlu%p&1111111111'
+SECRET_KEY = 'KaZu2J9sPTGDp9BLOHApsM6flXNFhbnq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'destinations',
     'cloudinary_storage',
+    'django_summernote'
 ]
 
 SITE_ID = 1

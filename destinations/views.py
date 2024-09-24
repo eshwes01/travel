@@ -9,7 +9,7 @@ class DestinationsList(generic.ListView):
     # model = Destination
     queryset = Destination.objects.all()
     template_name = "destinations/index.html"
-    paginate_by = 3
+    paginate_by = 6
 
 
 def package_detail(request, slug):
@@ -19,7 +19,7 @@ def package_detail(request, slug):
 
     destinations= Destination.objects.all()
     destination = get_object_or_404(destinations, slug=slug)
-    paginate_by = 2
+    paginate_by = 6
 
     if request.method == "POST":
         print("Received the POST request")
@@ -39,11 +39,12 @@ def info_detail(request, slug):
     destinations = Destination.objects.all()
     destination = get_object_or_404(destinations, slug=slug)
     
+    
     return render(
         request,
         "destinations/info.html",
         {
-            "info" : destination.info.all(),
+            "info" : destination,
             "destination": destination.title
         }
     )

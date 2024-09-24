@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div>
-    <h1>{{ package.package_title}}</h1>
-    <p> {{ package.itinerary }}</p>
+
+<div class="package-container">
+    <article class="package-body">
+    <h1 >{{ package.package_title}}</h1>
+    <p> {{ package.itinerary | safe }}</p>
+    </article>
 </div>
 {% endblock content%}

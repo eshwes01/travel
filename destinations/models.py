@@ -37,11 +37,12 @@ class Packages(models.Model):
 class Info(models.Model):
     destination = models.ForeignKey(
         Destination,
-        on_delete=models.CASCADE,
+        on_delete = models.CASCADE,
         related_name = "info"
     )
-    content = models.TextField(default = "This is the info page")
-    featured_image = CloudinaryField('image', default='placeholder')
+    things_to_do = models.TextField(default = "")
+    localFood = models.TextField(default = "")
+    places_to_explore = models.TextField(default = "")
     created_on = models.DateField(auto_now_add=True)
 
     def __str__(self):

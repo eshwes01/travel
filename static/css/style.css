@@ -140,6 +140,7 @@ nav ul li a:hover {
     height: auto;
     background-color: #ffffff;
 }
+
 .package-body{
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -150,15 +151,23 @@ nav ul li a:hover {
     letter-spacing: 0.2; 
 }
 
+.package-text{
+    font-size : 1.6rem;
+    color : #f8edeb;
+    display:relative;
+    letter-spacing: 1.2px;
+    text-shadow: 2px 2px 5px rgb(65, 76, 230);
+}
+
 .package-body article{
     font-size: 1rem;
     color : hsl(27, 64%, 41%);
 }
 .package_price{
     color : #311fe2;
-    font-size: 1.3rem;
+    font-size: 2rem;
     font-style: italic;
-    font-weight: 400px;
+    font-weight: 600px;
 }
 
 div.polaroid {
@@ -196,6 +205,7 @@ div.polaroid {
     letter-spacing: 1.2px;
     text-shadow: 2px 2px 5px red;
 }
+
 
 .dropdown-item{
     color: rgb(245, 218, 218);

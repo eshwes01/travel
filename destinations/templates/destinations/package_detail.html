@@ -4,7 +4,7 @@
 <div class="container-fluid">
     <div class="row package-container">
         {% for package in packages %}
-            <div class="col package-body">  
+        <div class="col package-body">
             {% if "placeholder" in package.featured_image.url %}
             <img class="img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image">
             {% else %}
@@ -16,26 +16,28 @@
                 <p> {{ package.body }}</p>
                 <p> {{ co_name }}</p>
             </article>
-            <!-- {{package.itinerary}} -->
-            <a href="{% url 'itinerary_detail' package.package_id %}" alt="Itinerary Detail"> Itinerary & Booking Reservation  </a> 
-        </div>    
-        {% if forloop.counter|divisibleby:2 %}
-            {% endif %}
-            {% endfor %}
+            <!-- package.itinerary -->
+            <p >
+                <a class="package-text" href="{% url 'itinerary_detail' package.package_id %}" alt="Itinerary Detail"> Itinerary & Booking
+                    Reservation </a>
+            </p>
         </div>
-        </div>    
-                {% if is_paginated %}
-                <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-center">
-                    {% if page_obj.has_previous %}
-                    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-                    {% endif %}
-                    {% if page_obj.has_next %}
-                    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-                    {% endif %}
-                </ul>
-            </nav>
-        </div>
-    {% endif %}
+        {% endfor %}
+    </div>
+<div>
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+        {% endif %}
+    </ul>
+</nav>
+</div>
+{% endif %}
+</div>
 </div>
 {% endblock content%}

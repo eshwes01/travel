@@ -8,7 +8,7 @@
         {% else %}
         <img class="img-placeholder" src="{{ package.featured_image.url }}" alt="{{ package.title }}">
         {% endif %}
-        <h1>{{ destination }}</h1>
-        <p> {{ info.content }}</p>
+        <h1>{{ destination.title }}</h1>
+        <p>  {{ destination.info }} </p>
     </div>
 {% endblock content %}

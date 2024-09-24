@@ -21,5 +21,6 @@ from destinations import views as destinations_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("accounts/", include("allauth.urls")),
+    path('summernote/', include('django_summernote.urls')),
     path('',include('destinations.urls'), name="destinations-urls"),    
 ]
