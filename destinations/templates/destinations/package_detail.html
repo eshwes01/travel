@@ -3,23 +3,27 @@
 {% block content %}
     <div class="package-container">
         {% for package in packages %}
-        <div class="mx-auto package-body">
+        <div class="mx-auto package-body row">
+            <div class="col">
             {% if "placeholder" in package.featured_image.url %}
-            <img class="img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+            <img class="package-img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image">
             {% else %}
-            <img class="img-placeholder" src="{{ package.featured_image.url }}" alt="{{ package.title }}">
+            <img class="package-img-placeholder" src="{{ package.featured_image.url }}" alt="{{ package.title }}">
             {% endif %}
+            </div>
+            <div class="col">
             <article>
                 <h1> {{package.package_title }} </h1>
                 <p class="package_price"> £{{ package.price}}</p>
                 <p> {{ package.body }}</p>
                 <p> {{ co_name }}</p>
+                <p >
+                    <a class="package-text" href="{% url 'itinerary_detail' package.package_id %}" alt="Itinerary Detail"> Itinerary & Booking
+                        Reservation </a>
+                </p>
             </article>
             <!-- package.itinerary -->
-            <p >
-                <a class="package-text" href="{% url 'itinerary_detail' package.package_id %}" alt="Itinerary Detail"> Itinerary & Booking
-                    Reservation </a>
-            </p>
+            </div>
         </div>
         {% endfor %}
     </div>
