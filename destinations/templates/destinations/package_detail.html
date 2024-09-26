@@ -17,9 +17,9 @@
                 <p class="package_price"> £{{ package.price}}</p>
                 <p> {{ package.body }}</p>
                 <p> {{ co_name }}</p>
-                <p >
-                    <a class="package-text" href="{% url 'itinerary_detail' package.package_id %}" alt="Itinerary Detail"> Itinerary & Booking
-                        Reservation </a>
+                <p class= "package-text">
+                    <a href="{% url 'itinerary_detail' package.package_id %}" 
+                        alt="Itinerary Detail"> Itinerary & Booking Reservation </a>
                 </p>
             </article>
             <!-- package.itinerary -->

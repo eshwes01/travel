@@ -8,7 +8,7 @@
 
 body {
     font-family: Open Sans, sans-serif;
-    font-size : 14px;
+    font-size : 13px;
 }
 
 /* Header (Navigation Bar) */
@@ -75,15 +75,18 @@ nav ul li a:hover {
 }
 
 .img-placeholder{
-    width: 80%;
+    border-radius: 15px 50px 30px 5px;
+    width: 95%;
     height: 35%;
-    padding : 5px 25px; 
+    padding : 5px; 
+    box-shadow: 5px 3px 5px #cad2c5;
 }
 
 .package-img-placeholder{
-    width :75%;
-    height: 75%;
-    padding : 10px 10px;
+    width :80%;
+    height: 85%;
+    border-radius: 15px 50px 30px;
+    padding : 5px;
 }
 
 .explore-btn {
@@ -114,14 +117,14 @@ nav ul li a:hover {
     border-radius: 25px;
     padding: 15px;
     width: 30%;
-    box-shadow: 0 0 10px rgb(150, 143, 143);
+    box-shadow: 0 0 10px rgb(95, 89, 89);
     margin-bottom: 20px;
     letter-spacing: 0.2;
 }
 
 .destination article{
     font-size: 0.95rem;
-    color : #EFDBCB;
+    color : #4c321c;
 }
 
 .destination-title {
@@ -133,6 +136,18 @@ nav ul li a:hover {
     width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+.destination_text{
+    font-size : 1.6rem;
+    color : #f8edeb;
+    background-color: #233d4d;
+    border:#051923;
+    border-style: solid;
+    border-radius: 5px;  
+    display:relative;
+    letter-spacing: 1.2px;
+    text-shadow: 2px 2px 5px red;
 }
 
 /* Package  */
@@ -152,22 +167,23 @@ nav ul li a:hover {
     padding: 20px 30px;
     width: 60%;
     box-shadow: 0 0 10px rgb(150, 143, 143);
-    margin : 25px 40px;
+    margin : 5px;
     letter-spacing: 0.2; 
 }
 
 .package-text{
     font-size : 1.6rem;
-    color : #f8edeb;
+    color : #6f1d1b;
     display:relative;
     letter-spacing: 1.2px;
-    text-shadow: 2px 2px 5px rgb(65, 76, 230);
+    text-shadow: 2px 2px 5px #ffe6a7;
 }
 
 .package-body article{
     font-size: 1rem;
-    color : hsl(27, 64%, 41%);
+    color : hsl(27, 56%, 22%);
 }
+
 .package_price{
     color : #311fe2;
     font-size: 2rem;
@@ -176,19 +192,19 @@ nav ul li a:hover {
 }
 
 div.polaroid {
-    background-color: #313866;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #84a59d;
+    box-shadow: 0 4px 8px 0 rgba(171, 102, 102, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 25px;
   }
 
-.btn-destination {
+/* .btn-destination {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
     border:rgba(248, 247, 253, 0.3);
-}
+} */
 
-.destination button {  
+/* .destination button {  
     color: rgb(245, 246, 252);
     border: solid;
     padding: 18px 15px;
@@ -197,18 +213,17 @@ div.polaroid {
     font-size: 1.2rem;
     font-weight: bold;
     transition: background-color 0.5s;
-}
+} */
 
-.destination_text{
-    font-size : 1.6rem;
-    color : #f8edeb;
-    background-color: #233d4d;
-    border:#051923;
-    border-style: solid;
-    border-radius: 5px;  
-    display:relative;
-    letter-spacing: 1.2px;
-    text-shadow: 2px 2px 5px red;
+.info{
+    display: relative;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0 0 10px #84a59d;
+    margin-top :2px;
+    padding : 25px 20px;
+    background-color: #cce3de;
 }
 
 

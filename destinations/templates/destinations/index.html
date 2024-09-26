@@ -15,6 +15,7 @@
     <div class="destination-container">
         {% for destination in destination_list %}
         <div class="destination polaroid">
+                <article>
                 <h2 class="destination-title">{{ destination.title }}</h2>
                 {% if "placeholder" in destination.featured_image.url %}
                 <a href="{% url 'package_detail' destination.slug %}">
@@ -23,10 +24,8 @@
                 <a href="{% url 'package_detail' destination.slug %}">
                     <img class="img-placeholder" src="{{ destination.featured_image.url }}" alt="{{ destination.title }}"></a>
                 {% endif %}
-                <article>
-                    <br>
-                    <!-- <p> {{ destination.description }} </p>  -->
-                    <p class="created-on"> {{ destination.created_on}} </p>
+                   
+                     <p> {{ destination.description }} </p>
                 </article>
                 <div class="dropdown">
                     <!-- <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">

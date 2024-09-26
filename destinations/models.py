@@ -49,3 +49,13 @@ class Packages(models.Model):
         return f"{self.package_title} : {self.destination.title}"
 
 
+class Comment(models.Model):
+    destination = models.ForeignKey(
+        Destination,
+        on_delete=models.CASCADE,
+        related_name = "comments"
+    )
+    body = models.TextField()
+    approved = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+    

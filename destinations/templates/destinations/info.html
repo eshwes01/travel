@@ -1,19 +1,21 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="container-fluid">
-    <div>   
-        <section class="hero">
-            <img src="./static/images/hero_image.jpg" alt="Hero Image" class="hero-image">
-            <div class="hero-text">
-                <h1 class="">Travel with Peace</h1>
-                <a href="#" class="explore-btn">Explore <i class="fa-solid fa-arrow-right-long"></i></a>
-            </div>
-        </section>
+    <!-- Header Image  -->
+    <section class="hero">
+        {% if "placeholder" in destination.featured_image.url %}
+        <img src= "{% static 'images/default.jpg' %}" alt="Hero Image" class="hero-image">
+        {% else %}
+        <img src= "{{ destination.featured_image.url }}" alt="Hero Image" class="hero-image">
+        {% endif %}
+    </section>
+    <!-- Info body start here  -->
+    <div class="mx-auto info">
+        <article >
+            <h1>{{ destination.title }}</h1>
+            <p>  {{ destination.info.things_to_do | safe }} </p>
+            <p>  {{ destination.info.localFood | safe }} </p>
+            <p>  {{ destination.info.places_to_explore | safe }} </p>
+        </article>
     </div>
-    <h1>{{ destination.title }}</h1>
-    <p>  {{ destination.info.things_to_do | safe }} </p>
-    <p>  {{ destination.info.localFood | safe }} </p>
-    <p>  {{ destination.info.places_to_explore | safe }} </p>
-</div>
 {% endblock content %}
