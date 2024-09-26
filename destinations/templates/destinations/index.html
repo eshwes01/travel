@@ -15,17 +15,18 @@
     <div class="destination-container">
         {% for destination in destination_list %}
         <div class="destination polaroid">
-                <article>
-                <h2 class="destination-title">{{ destination.title }}</h2>
-                {% if "placeholder" in destination.featured_image.url %}
-                <a href="{% url 'package_detail' destination.slug %}">
-                    <img class="img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image"></a>
-                {% else %}
-                <a href="{% url 'package_detail' destination.slug %}">
-                    <img class="img-placeholder" src="{{ destination.featured_image.url }}" alt="{{ destination.title }}"></a>
-                {% endif %}
-                   
-                     <p> {{ destination.description }} </p>
+                <section>
+                    <h2 class="destination-title">{{ destination.title }}</h2>
+                    {% if "placeholder" in destination.featured_image.url %}
+                    <a href="{% url 'package_detail' destination.slug %}">
+                        <img class="img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image"></a>
+                    {% else %}
+                    <a href="{% url 'package_detail' destination.slug %}">
+                        <img class="img-placeholder" src="{{ destination.featured_image.url }}" alt="{{ destination.title }}"></a>
+                    {% endif %}
+                </section>
+                <article>   
+                     <p> {{destination.description}} </p>
                 </article>
                 <div class="dropdown">
                     <!-- <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
@@ -41,8 +42,7 @@
                     {% if destination.info %}
                     <a class="destination_text" href="{% url 'info_detail' destination.slug %}" > More Info </a>
                     {% endif %}
-                  </div>
-                
+                </div>
         </div>
         {% if forloop.counter|divisibleby:6 %}
     </div>
