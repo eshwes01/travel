@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+.package-text a { 
+    text-decoration: none;
+}
+
 body {
     font-family: Open Sans, sans-serif;
     font-size : 13px;
@@ -128,12 +132,15 @@ nav ul li a:hover {
 }
 
 .destination-title {
-    position: absolute;
-    font-size : 2rem;
-    color : #d8e2dc;
+    margin-top: -51px;
+    font-size: 2rem;
+    color: #d8e2dc;
     font-weight: bold;
-    text-shadow : 2px 1px #160f29;
+    text-shadow: 2px 1px #160f29;
+    margin-left: 10px;
+    margin-bottom: 19px;
 }
+
 
 .destination img {
     width: 100%;
@@ -177,7 +184,7 @@ nav ul li a:hover {
 
 .package-text{
     font-size : 1.6rem;
-    color : #6f1d1b;
+    color : hsl(1, 61%, 27%);
     display:relative;
     letter-spacing: 1.2px;
     text-shadow: 2px 2px 5px #ffe6a7;
@@ -221,10 +228,10 @@ div.polaroid {
 
 .info{
     display: relative;
-    border: 2px solid #ddd;
+    border: 2px solid #473d3d;
     border-radius: 10px;
     width: 60%;
-    box-shadow: 0 0 10px #84a59d;
+    box-shadow: 0 0 10px #06241c;
     margin-top :2px;
     padding : 25px 20px;
     background : #cfbaf0;

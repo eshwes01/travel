@@ -16,7 +16,6 @@
         {% for destination in destination_list %}
         <div class="destination polaroid">
                 <section>
-                    <h2 class="destination-title">{{ destination.title }}</h2>
                     {% if "placeholder" in destination.featured_image.url %}
                     <a href="{% url 'package_detail' destination.slug %}">
                         <img class="img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image"></a>
@@ -24,6 +23,7 @@
                     <a href="{% url 'package_detail' destination.slug %}">
                         <img class="img-placeholder" src="{{ destination.featured_image.url }}" alt="{{ destination.title }}"></a>
                     {% endif %}
+                    <h2 class="destination-title">{{ destination.title }}</h2>
                 </section>
                 <article>   
                      <p> {{destination.description}} </p>

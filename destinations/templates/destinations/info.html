@@ -10,12 +10,49 @@
         {% endif %}
     </section>
     <!-- Info body start here  -->
-    <div class="mx-auto info">
+<div class="mx-auto info">
         <article >
             <h1>{{ destination.title }}</h1>
             <p>  {{ destination.info.things_to_do | safe }} </p>
             <p>  {{ destination.info.localFood | safe }} </p>
             <p>  {{ destination.info.places_to_explore | safe }} </p>
         </article>
+    
+    <div class="row">
+        <div class="col">
+            <i class="far fa-comments"></i> {{comment_count }}
+        </div>
+        <div class="col-12">
+            <hr>
+        </div>
     </div>
+    <div class="row">
+        <div class="col">
+            <h2> Comments : </h2>
+            <div>
+                {% for comment in comments %}
+                <div class="p-2 comments 
+                    {% if not comment.approved and comment.author == user %}
+                    faded{% elif not comment.approved %} d-none{% endif %}">
+                    <p class="">
+                         
+                        <span class="">
+                        {{ comment.created_on }} | {{ comment.author }} 
+                        </span> wrote:
+                    </p>
+                    <div id="comment{{ comment.id }}">
+                        {{ comment.body | safe }}
+                    </div>
+                    {% if not comment.approved and comment.author == user %}
+                    <p class="approval">
+                    This comment is awaiting approval
+                    </p>
+                    {% endif %}
+                </div>
+              
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}

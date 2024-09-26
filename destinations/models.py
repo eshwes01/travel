@@ -2,7 +2,7 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 
-    
+# Destination model 
 class Destination(models.Model):
     slug = models.SlugField(max_length=200, unique =True)
     title = models.CharField(max_length=200, unique=True)
@@ -17,6 +17,7 @@ class Destination(models.Model):
     class Meta:
         ordering = ["created_on"]
 
+# Info model
 class Info(models.Model):
     destination = models.OneToOneField(
         Destination,
@@ -31,6 +32,7 @@ class Info(models.Model):
     def __str__(self):
         return f"Info for {self.destination.title}"
 
+# Package model 
 class Packages(models.Model):
     destination = models.ForeignKey(
         Destination,
@@ -48,13 +50,20 @@ class Packages(models.Model):
     def __str__(self):
         return f"{self.package_title} : {self.destination.title}"
 
-
+# Comment model
 class Comment(models.Model):
     destination = models.ForeignKey(
         Destination,
         on_delete=models.CASCADE,
         related_name = "comments"
     )
+
+    author = models.ForeignKey(
+        User,
+        on_delete = models.CASCADE,
+        related_name = "commenter"
+    )
+
     body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)

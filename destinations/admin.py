@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Destination,Packages,Info
+from .models import Destination,Packages,Info,Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Packages)
@@ -25,3 +25,9 @@ class InfoAdmin(SummernoteModelAdmin):
     summernote_fields = ('things_to_do', 'localFood','places_to_explore')
 # admin.site.register(Packages)
 
+@admin.register(Comment)
+class CommentAdmin(SummernoteModelAdmin):
+    list_display = ('get_destination','approved','created_on')
+    
+    def get_destination(self,obj):
+        return obj.destination.title

@@ -37,13 +37,17 @@ def info_detail(request, slug):
     
     destinations = Destination.objects.all()
     destination = get_object_or_404(destinations, slug=slug)
-  
+    comments = destination.comments.all().order_by("-created_on")
+    comment_count = destination.comments.filter(approved=True).count()
+
     return render(
         request,
         "destinations/info.html",
         {
             # "info" : destination,
-            "destination": destination
+            "destination": destination,
+            "comments" : comments,
+            "comment_count" : comment_count,
         }
     )
 
