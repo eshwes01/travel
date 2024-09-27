@@ -6,7 +6,8 @@
     box-sizing: border-box;
 }
 
-.package-text a { 
+.package-text a,
+div a { 
     text-decoration: none;
 }
 
@@ -69,7 +70,7 @@ nav ul li a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #588C7E;
+    color: #1b4332;
     text-shadow: 2px 2px 4px #689581;
 }
 
@@ -112,7 +113,7 @@ nav ul li a:hover {
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background-color: #faf6f6;
 }
 
@@ -122,13 +123,8 @@ nav ul li a:hover {
     padding: 15px;
     width: 30%;
     box-shadow: 0 0 10px rgb(95, 89, 89);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     letter-spacing: 0.2;
-}
-
-.destination article{
-    font-size: 0.95rem;
-    color : #4c321c;
 }
 
 .destination-title {
@@ -141,7 +137,6 @@ nav ul li a:hover {
     margin-bottom: 19px;
 }
 
-
 .destination img {
     width: 100%;
     height: auto;
@@ -149,17 +144,22 @@ nav ul li a:hover {
 }
 
 .destination_text{
+    display:relative;
     font-size : 1.6rem;
     color : #f8edeb;
     background-color: #233d4d;
-    border:#051923;
-    border-style: solid;
-    border-radius: 5px;  
-    display:relative;
+    border-radius: 11px;
     letter-spacing: 1.2px;
     text-shadow: 2px 2px 5px red;
+    margin-left : 10px;
+    padding:5px 10px;
+    width:100%;
 }
 
+article .description_text{
+    font-size : 14px;
+    color : #f7e1d7;
+}
 
 /* Package  */
 .package-container{
@@ -235,7 +235,7 @@ div.polaroid {
     margin-top :2px;
     padding : 25px 20px;
     background : #cfbaf0;
-
+    color: #012a4a;
 }
 
 .dropdown-item{
@@ -248,7 +248,15 @@ div.polaroid {
     color : rgba(224, 243, 117, 0.3);
     font-size: 1.8rem;
     font-weight: 400;
+}
 
+/* Comment Section */
+h5 i{
+    font-size: 3rem;
+}
+
+.comment-body{
+    color : #fcf6bd;
 }
 /* Footer Section */
 footer {
@@ -268,7 +276,9 @@ footer p {
     font-size: 16px;
 }
 
-.social-media img {
-    width: 30px;
-    margin: 0 10px;
+.social-media-item {
+    width: 120px;
+    margin: 10px 10px;
+    font-size: 2rem;
+    color : #a2d2ff;
 }

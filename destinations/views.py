@@ -3,6 +3,7 @@ from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Destination,Packages,Info
+from .forms import CommentForm
 
 
 class DestinationsList(generic.ListView):
@@ -40,6 +41,16 @@ def info_detail(request, slug):
     comments = destination.comments.all().order_by("-created_on")
     comment_count = destination.comments.filter(approved=True).count()
 
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.author = request.user
+            comment.destination = destination
+            comment.save()
+
+    comment_form = CommentForm()
+
     return render(
         request,
         "destinations/info.html",
@@ -48,6 +59,7 @@ def info_detail(request, slug):
             "destination": destination,
             "comments" : comments,
             "comment_count" : comment_count,
+            "comment_form": comment_form,
         }
     )
 

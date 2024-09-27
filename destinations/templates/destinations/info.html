@@ -1,23 +1,25 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-    <!-- Header Image  -->
-    <section class="hero">
-        {% if "placeholder" in destination.featured_image.url %}
-        <img src= "{% static 'images/default.jpg' %}" alt="Hero Image" class="hero-image">
-        {% else %}
-        <img src= "{{ destination.featured_image.url }}" alt="Hero Image" class="hero-image">
-        {% endif %}
-    </section>
-    <!-- Info body start here  -->
+{% load crispy_forms_tags %}
+
+<!-- Header Image  -->
+<section class="hero">
+    {% if "placeholder" in destination.featured_image.url %}
+    <img src="{% static 'images/default.jpg' %}" alt="Hero Image" class="hero-image">
+    {% else %}
+    <img src="{{ destination.featured_image.url }}" alt="Hero Image" class="hero-image">
+    {% endif %}
+</section>
+<!-- Info body start here  -->
 <div class="mx-auto info">
-        <article >
-            <h1>{{ destination.title }}</h1>
-            <p>  {{ destination.info.things_to_do | safe }} </p>
-            <p>  {{ destination.info.localFood | safe }} </p>
-            <p>  {{ destination.info.places_to_explore | safe }} </p>
-        </article>
-    
+    <article>
+        <h1>{{ destination.title }}</h1>
+        <p> {{ destination.info.things_to_do | safe }} </p>
+        <p> {{ destination.info.localFood | safe }} </p>
+        <p> {{ destination.info.places_to_explore | safe }} </p>
+    </article>
+
     <div class="row">
         <div class="col">
             <i class="far fa-comments"></i> {{comment_count }}
@@ -27,17 +29,15 @@
         </div>
     </div>
     <div class="row">
-        <div class="col">
-            <h2> Comments : </h2>
+        <div class="col comment-body">
+            <h3> <i class="fa-solid fa-quote-left"></i> Comments : </h3>
             <div>
                 {% for comment in comments %}
-                <div class="p-2 comments 
-                    {% if not comment.approved and comment.author == user %}
-                    faded{% elif not comment.approved %} d-none{% endif %}">
+                <div class="p-2 comments {% if not comment.approved and comment.author == user %} 
+                faded {% elif not comment.approved %} d-none {% endif %}">
                     <p class="">
-                         
                         <span class="">
-                        {{ comment.created_on }} | {{ comment.author }} 
+                            {{ comment.created_on }} | {{ comment.author }}
                         </span> wrote:
                     </p>
                     <div id="comment{{ comment.id }}">
@@ -45,14 +45,31 @@
                     </div>
                     {% if not comment.approved and comment.author == user %}
                     <p class="approval">
-                    This comment is awaiting approval
+                        This comment is awaiting approval
                     </p>
                     {% endif %}
                 </div>
-              
-              {% endfor %}
+
+                {% endfor %}
             </div>
         </div>
+    </div>
+    <div class="row">
+     <!--  New Comments -->
+     <div class="col-md-4 ">
+          {% if user.is_authenticated %}
+          <h5> <i class="fa-solid fa-quote-left"></i> Leave your comment/suggestion : </h5>
+          <p>Posting as: {{ user.username }}</p>
+          <form id="commentForm" method="post" style="margin-top: 1.3em;">
+            {{ comment_form | crispy }}
+            {% csrf_token %}
+            <button id="submitButton" type="submit"
+              class="btn btn-primary btn-lg">Submit</button>
+          </form>
+          {% else %}
+          <p>Please Log in to leave a comment</p>
+          {% endif %}
+      </div>
     </div>
 </div>
 {% endblock content %}
