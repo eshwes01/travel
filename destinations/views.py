@@ -69,13 +69,14 @@ def comment_edit(request, slug, comment_id):
       view to edit comment
     """
     if request.method == "POST":
-        queryset = Info.objects.all()
-        info = get_object_or_404(queryset, slug=slug)
+        queryset = Destination.objects.all()
+        destination = get_object_or_404(queryset, slug=slug)
+        info = destination.info
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm (data=request.POST, instance=comment)
         if comment_form.is_valid() and comment.author == request.user:
             comment = comment_form.save(commit=False)
-            commnet.info = info
+            comment.info = info
             info.approved = False
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
