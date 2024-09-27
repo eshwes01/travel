@@ -2,7 +2,7 @@ from django.shortcuts import render,get_object_or_404,reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Destination,Packages,Info
+from .models import Destination,Packages,Info,Comment
 from .forms import CommentForm
 
 
@@ -14,10 +14,8 @@ class DestinationsList(generic.ListView):
 
 
 def package_detail(request, slug):
-
     # dataset= Packages.objects.all()
     # package = get_object_or_404(dataset, slug=slug)
-
     destinations= Destination.objects.all()
     destination = get_object_or_404(destinations, slug=slug)
 
@@ -49,6 +47,10 @@ def info_detail(request, slug):
             comment.destination = destination
             comment.save()
 
+            messages.add_message(
+                request,messages.SUCCESS,
+                'Comment submitted and awaiting approval!'
+            )
     comment_form = CommentForm()
 
     return render(
@@ -62,7 +64,25 @@ def info_detail(request, slug):
             "comment_form": comment_form,
         }
     )
-
+def comment_edit(request, slug, comment_id):
+    """
+      view to edit comment
+    """
+    if request.method == "POST":
+        queryset = Info.objects.all()
+        info = get_object_or_404(queryset, slug=slug)
+        comment = get_object_or_404(Comment, pk=comment_id)
+        comment_form = CommentForm (data=request.POST, instance=comment)
+        if comment_form.is_valid() and comment.author == request.user:
+            comment = comment_form.save(commit=False)
+            commnet.info = info
+            info.approved = False
+            comment.save()
+            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+        else :
+            messages.add_message(request, messages.ERROR, 'Error on Update') 
+        return HttpResponseRedirect(reverse('info_detail',args = [slug]))
+        
 def itinerary_detail(request, package_id):
   
     package = get_object_or_404(Packages, pk= package_id)

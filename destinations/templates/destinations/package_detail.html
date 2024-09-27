@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+<!-- Header Image  -->
+<div>   
+    <section class="hero">
+        <img src="{% static 'images/hero_image_packages.jpg' %}" alt="Hero Image" class="hero-image">
+        <div class=" hero-text hero-text-package">
+            <h1 class=""> {{ destination }} Tour </h1>
+        </div>
+    </section>
+</div>
 <div class="package-container">
     {% for package in packages %}
         <div class="mx-auto package-body row">
@@ -15,15 +24,15 @@
             </div>
             <div class="col">
                 <article>
-                    <h1 class="package-text">
-                        {{package.package_title }} </h1>
+                    <h1 class="package-text"> {{package.package_title }} </h1>
                     <p class="package_price"> £{{ package.price}}</p>
-                    <p> {{ package.body }}</p>
-                    <p> {{ co_name }}</p>
-                    <p class="package-text">
+                    <p class="package-text"></p>
                         <a href="{% url 'itinerary_detail' package.package_id %}" alt="Itinerary Detail"> Itinerary
                             Details & Booking </a>
                     </p>
+                    <p> {{ package.body }}</p>
+                    <p> {{ co_name }}</p>
+                    
                 </article>
                 <!-- package.itinerary -->
             </div>
