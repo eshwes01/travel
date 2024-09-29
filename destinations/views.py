@@ -28,7 +28,7 @@ def my_booking(request):
 
     return render(request, 'destinations/no_bookings.html', {'message' : 'Plase log in to make the booking ',})
 
-
+# Package Detail page will call this method
 def package_detail(request, slug):
     # dataset= Packages.objects.all()
     # package = get_object_or_404(dataset, slug=slug)
@@ -47,6 +47,8 @@ def package_detail(request, slug):
             "destination" :destination.title
         }
     )
+
+# Info Detail page will calll this method 
 
 def info_detail(request, slug):
     
@@ -81,6 +83,7 @@ def info_detail(request, slug):
         }
     )
 
+# Editing a comment 
 def comment_edit(request, slug, comment_id):
     """
       view to edit comment
@@ -102,7 +105,21 @@ def comment_edit(request, slug, comment_id):
             messages.add_message(request, messages.ERROR, 'Error on Update') 
         return HttpResponseRedirect(reverse('info_detail',args = [slug]))
 
+# Deleting a comment
+def comment_delete(request, slug, comment_id):
+        queryset = Destination.objects.all()
+        destination = get_object_or_404(queryset, slug=slug) 
+        comment = get_object_or_404(Comment, pk=comment_id)
 
+        if comment.author == request.user:
+            comment.delete()
+            messages.add_message(request, messages.SUCCESS, "Comment Deleted! ")
+        else:
+            messages.add_message(request, messages.ERROR, "You can only delete your own comment! ")
+        return HttpResponseRedirect(reverse('info_detail',args = [slug]))
+
+
+# Itinerary Detail page will call this method.
 def itinerary_detail(request, package_id):
 
         queryset = Packages.objects.all()
