@@ -82,6 +82,9 @@ class Booking(models.Model):
     month = models.IntegerField()
     no_of_people = models.IntegerField(default = 1)
 
+    def __str__(self):
+        return f"Booking for {self.no_of_people} people in {self.month}"
+        
 # def profile_page(request):
 #     user = get_object_or_404(User, user=request.user)
 #     # Retrieve all comments for the user object

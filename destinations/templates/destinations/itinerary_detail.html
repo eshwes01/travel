@@ -15,16 +15,18 @@
             <!-- Booking form section start here  -->
             <div class="col-md-4 booking-body">
                 {% if user.is_authenticated %}
-                <h5> Booking Request </h5>
-                <p> {{package.price}}</p>
+                <h3 class =""> Booking Request </h3>
+                <p class="package_price"> {{package.price}}</p>
                 <form id="bookingForm" method="post" style="margin-top: 1.3em;">
                   {{ booking_form | crispy }}
                   {% csrf_token %}
                   <button id="submitButton" type="submit"
-                    class="btn btn-primary btn-lg">Submit</button>
+                    class="btn btn-primary btn-lg">Request</button>
                 </form>
                 {% else %}
                 <p>Please Log in to make the Booking Request</p>
+                <h3 class =""> Booking Request </h3>
+                <p class="package_price"> {{package.price}}</p>
                 {% endif %}
             </div>
     </div>

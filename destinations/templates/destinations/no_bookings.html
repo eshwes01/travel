@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div>   
+    <section class="hero">
+        <img src="{% static 'images/hero_image.jpg' %}" alt="Hero Image" class="hero-image">
+        <div class="hero-text">
+            <h1 class="">Travel with Peace</h1>
+            <!-- <a href="#" class="explore-btn">Explore <i class="fa-solid fa-plane-departure"></i></a> -->
+        </div>
+    </section>
+</div>
+<div class="container-fluid">
+    <!-- Booking list column start here -->
+    <div class="row">
+        <div class="col-md-8 myBooking_body mx-auto">
+            <article>
+            {% if user.is_authenticated %}
+            <h2> You haven't got any bookings yet ,  {{user.username }}.</h2>
+            </hr>
+            {%else %}
+            <p> 
+                Please log in here.   
+                <a  aria-current="page" href="{% url 'account_login' %}">
+                Login <i class="fa-solid fa-right-to-bracket"></i></a>
+            </p>
+            {% endif %}    
+            </article>
+        </div>   
+    </div>        
+</div>
+{% endblock content%}

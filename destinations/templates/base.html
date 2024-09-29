@@ -31,7 +31,7 @@
                         <li class="nav-item">
                             <a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Home</a></li>
                         <li class="nav-item">
-                            <a href="#"><i class="fa-solid fa-suitcase"></i> My Booking</a>
+                            <a href="{% url 'my_booking' %}"><i class="fa-solid fa-suitcase"></i> My Booking</a>
                         </li>
                         {% if user.is_authenticated %}
                         <li class="">
@@ -79,7 +79,7 @@
      </div>
 
     <!-- Main session -->
-    <main class="">
+    <main class="main_body">
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}

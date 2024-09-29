@@ -1,7 +1,8 @@
-from django.shortcuts import render,get_object_or_404,reverse
+from django.shortcuts import render,get_object_or_404,reverse,redirect
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from .models import Destination,Packages,Info,Comment,Booking
 from .forms import CommentForm,BookingForm
 
@@ -11,6 +12,21 @@ class DestinationsList(generic.ListView):
     queryset = Destination.objects.all()
     template_name = "destinations/index.html"
     paginate_by = 6
+
+@login_required 
+def my_booking(request):
+    
+    if request.user.is_authenticated:
+        bookings = Booking.objects.filter(user=request.user)
+        
+        if bookings.exists():
+            # Render bookings if found
+            return render(request, 'destinations/myBooking.html', {'bookings': bookings.all,})
+        else:
+            # if no bookings are found
+            return render(request, 'destinations/no_bookings.html', {'message' : 'You have no bookings to show.',})
+
+    return render(request, 'destinations/no_bookings.html', {'message' : 'Plase log in to make the booking ',})
 
 
 def package_detail(request, slug):
@@ -99,15 +115,15 @@ def itinerary_detail(request, package_id):
             print("Received a POST request")
             booking_form = BookingForm(data=request.POST)
 
-            if booking_form.is_valid() and booking.user == request.user:
+            if booking_form.is_valid():
                 booking = booking_form.save(commit=False)
                 booking.user = request.user
                 booking.package = package
                 booking.save()
-                messages.add_message(request, messages.SUCCESS, '')
+                messages.add_message(request, messages.SUCCESS, 'Your booking is successfully submitted. One of our advisor will be contacted you very shortly!')
             else :
                 messages.add_message(request, messages.ERROR, 'Error on Booking')
-            return HttpResponseRedirect(reverse('itinerary_detail',args = [slug]))
+            return HttpResponseRedirect(reverse('itinerary_detail',args = [package_id]))
         booking_form = BookingForm()
 
         return render(
