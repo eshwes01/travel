@@ -1,12 +1,32 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-    <div class="row">
-    <div class="col "> 
-        <article class="mx-auto info">
-                <h1 >{{ package.package_title}}</h1>
-                <p> {{ package.itinerary | safe }}</p>
-        </article>
+{% load crispy_forms_tags %}
+
+    <div class= "container">
+        <div class="row">
+            <!-- Itinerary detail section -->
+        <div class="col-md-8"> 
+            <article class="info mx-auto">
+                    <h1 >{{ package.package_title}}</h1>
+                    <p> {{ package.itinerary | safe }}</p>
+            </article>
+        </div>
+            <!-- Booking form section start here  -->
+            <div class="col-md-4 booking-body">
+                {% if user.is_authenticated %}
+                <h5> Booking Request </h5>
+                <p> {{package.price}}</p>
+                <form id="bookingForm" method="post" style="margin-top: 1.3em;">
+                  {{ booking_form | crispy }}
+                  {% csrf_token %}
+                  <button id="submitButton" type="submit"
+                    class="btn btn-primary btn-lg">Submit</button>
+                </form>
+                {% else %}
+                <p>Please Log in to make the Booking Request</p>
+                {% endif %}
+            </div>
     </div>
-    </div>
+</div>
 {% endblock content%}

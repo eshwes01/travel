@@ -2,8 +2,8 @@ from django.shortcuts import render,get_object_or_404,reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Destination,Packages,Info,Comment
-from .forms import CommentForm
+from .models import Destination,Packages,Info,Comment,Booking
+from .forms import CommentForm,BookingForm
 
 
 class DestinationsList(generic.ListView):
@@ -64,6 +64,7 @@ def info_detail(request, slug):
             "comment_form": comment_form,
         }
     )
+
 def comment_edit(request, slug, comment_id):
     """
       view to edit comment
@@ -74,6 +75,7 @@ def comment_edit(request, slug, comment_id):
         info = destination.info
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm (data=request.POST, instance=comment)
+
         if comment_form.is_valid() and comment.author == request.user:
             comment = comment_form.save(commit=False)
             comment.info = info
@@ -83,15 +85,38 @@ def comment_edit(request, slug, comment_id):
         else :
             messages.add_message(request, messages.ERROR, 'Error on Update') 
         return HttpResponseRedirect(reverse('info_detail',args = [slug]))
-        
-def itinerary_detail(request, package_id):
-  
-    package = get_object_or_404(Packages, pk= package_id)
 
-    return render(
-        request,
-        "destinations/itinerary_detail.html",
-        {
-            'package' : package
-        }
+
+def itinerary_detail(request, package_id):
+
+        queryset = Packages.objects.all()
+        package = get_object_or_404(queryset, pk= package_id)
+
+        bookings = package.bookings.all()
+        # booking_count = package.bookings.filter(request.user).count()
+
+        if request.method == "POST":
+            print("Received a POST request")
+            booking_form = BookingForm(data=request.POST)
+
+            if booking_form.is_valid() and booking.user == request.user:
+                booking = booking_form.save(commit=False)
+                booking.user = request.user
+                booking.package = package
+                booking.save()
+                messages.add_message(request, messages.SUCCESS, '')
+            else :
+                messages.add_message(request, messages.ERROR, 'Error on Booking')
+            return HttpResponseRedirect(reverse('itinerary_detail',args = [slug]))
+        booking_form = BookingForm()
+
+        return render(
+            request,
+            "destinations/itinerary_detail.html",
+            {
+                'package' : package,
+                'bookings' : bookings,
+                # 'booking_count' : booking_count,
+                'booking_form' : booking_form,
+            }
     )

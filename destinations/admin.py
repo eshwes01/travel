@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Destination,Packages,Info,Comment
+from .models import Destination,Packages,Info,Comment,Booking
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Packages)
@@ -31,3 +31,14 @@ class CommentAdmin(SummernoteModelAdmin):
     
     def get_destination(self,obj):
         return obj.destination.title
+
+
+@admin.register(Booking)
+class BookingAdmin(admin.ModelAdmin):
+    list_display = ('get_package','get_user','month','no_of_people')
+
+    def get_package(self,obj):
+        return obj.package.package_title
+
+    def get_user(self,obj):
+        return obj.user.username

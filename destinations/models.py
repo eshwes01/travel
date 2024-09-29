@@ -68,3 +68,21 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
     
+class Booking(models.Model):
+    user = models.ForeignKey(
+        User,
+        on_delete= models.CASCADE,
+        related_name = "user"
+    )
+    package = models.ForeignKey(
+        Packages,
+        on_delete=models.CASCADE,
+        related_name= "bookings"
+    )
+    month = models.IntegerField()
+    no_of_people = models.IntegerField(default = 1)
+
+# def profile_page(request):
+#     user = get_object_or_404(User, user=request.user)
+#     # Retrieve all comments for the user object
+#     comments = user.commenter.all()
