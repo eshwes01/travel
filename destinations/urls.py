@@ -8,5 +8,7 @@ urlpatterns = [
         path('<slug:slug>/info_detail/edit_comment/<int:comment_id>',views.comment_edit, name='comment_edit'),
         path('<slug:slug>/info_detail/delete_comment/<int:comment_id>',views.comment_delete, name='comment_delete'),
         path('mybooking/', views.my_booking, name='my_booking'), 
+        path('edit/<int:booking_id>/',views.edit_booking,name= 'edit_booking'),
+        path('delete/<int:booking_id>/',views.delete_booking,name= 'delete_booking'),
         path('',views.DestinationsList.as_view(), name='home'),   
 ]

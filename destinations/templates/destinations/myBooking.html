@@ -27,8 +27,10 @@
                     </span>
                     </hr>
                     <span>
-                        <button class="btn btn-primary btn-lg"> Edit </button>
-                        <button class="btn btn-primary btn-lg"> Delete </button>
+                        <button class="btn btn-primary btn-lg btn-booking-edit" 
+                         data-booking_id = "{{booking.id}}"> Edit </button>
+                        <button class="btn btn-primary btn-lg btn-booking-delete"
+                        data-booking_id = "{{booking.id}}"> Delete </button>
                     </span>
                          
                 </div>
@@ -42,4 +44,56 @@
         </div>
     </div>
 </div>
+<!-- Edit Booking Moda; -->
+<div class="modal fade" id="editBookingModal" tabindex="-1"
+  aria-labelledby="editBookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Edit Booking?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        You are editing the booking for {{ booking.id }} 
+        <form>
+            <div class="form-group">
+                <label for="{{booking.month }}" class="col-form-label"> Month </label>
+                <input type="text" class="form-control" id="{{booking.month }}">
+                <label for="{{booking.no_of_people}}" class="col-form-label"> Number of People </label>
+                <input type="text" class="form-control" id="{{booking.no_of_people}}">
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Close </button>
+        <a id="editConfirm" href="#" class="btn btn-danger">Edit</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  Delete Booking  -->
+<<div class="modal fade" id="deleteBookingModal" tabindex="-1"
+  aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Delete Booking ?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete your booking ?
+        This action cannot be undone.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Close </button>
+        <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock content%}
+
+{% block extras %}
+<script src="{% static 'js/bookings.js' %}"></script>
+{% endblock %}

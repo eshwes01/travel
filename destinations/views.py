@@ -119,6 +119,30 @@ def comment_delete(request, slug, comment_id):
         return HttpResponseRedirect(reverse('info_detail',args = [slug]))
 
 
+# Editing the booking
+def edit_booking(request,booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save() 
+            return redirect('my_booking')
+    else:
+         messages.add_message(request, messages.ERROR, 'Error on Update') 
+    
+    return HttpResponseRedirect(reverse('my_booking',args = [slug]))
+
+# Deleting the booking
+def delete_booking(request,booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+
+    if request.method == 'POST':
+        booking.delete()
+        return redirect('my_booking')
+
+    return HttpResponseRedirect(reverse('my_booking',args = [slug]))
+
+
 # Itinerary Detail page will call this method.
 def itinerary_detail(request, package_id):
 
