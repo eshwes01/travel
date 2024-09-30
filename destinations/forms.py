@@ -10,8 +10,8 @@ class CommentForm(forms.ModelForm):
 
 class BookingForm(forms.ModelForm):
     booking_month = forms.CharField(
-        widget=forms.TextInput(attrs={'type': 'month'}),  # HTML5 month picker
-        label="Booking Month",
+        widget=forms.TextInput(attrs={'type': 'month'}),  # month picker
+        label="Please Choose the Month to book",
     )
 
     class Meta:

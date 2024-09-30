@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+{% load crispy_forms_tags %}
 
 <div class="container-fluid">
     <!-- Booking Column start here -->
@@ -19,8 +20,10 @@
                     </span>
                     </hr>
                     <span>
-                        <button class="btn btn-primary btn-lg btn-booking-edit" 
-                         data-booking_id = "{{booking.id}}"> Edit </button>
+                        <a href="{% url 'edit_booking' booking.id %}">
+                          <button class="btn btn-primary btn-lg btn-booking-edit" 
+                          data-booking_id = "{{booking.id}}"> Edit </button>
+                        </a>
                         <button class="btn btn-primary btn-lg btn-booking-delete"
                         data-booking_id = "{{booking.id}}"> Delete </button>
                     </span>
@@ -36,8 +39,8 @@
         </div>
     </div>
 </div>
-<!-- Edit Booking Moda; -->
-<div class="modal fade" id="editBookingModal" tabindex="-1"
+<!-- Edit Booking Modal -->
+<!-- <div class="modal fade" id="editBookingModal" tabindex="-1"
   aria-labelledby="editBookingModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -47,14 +50,14 @@
       </div>
       <div class="modal-body">
         You are editing the booking for {{ booking.id }} 
-        <form>
-            <div class="form-group">
-                <label for="{{booking.month }}" class="col-form-label"> Month </label>
-                <input type="text" class="form-control" id="{{booking.month }}">
-                <label for="{{booking.no_of_people}}" class="col-form-label"> Number of People </label>
-                <input type="text" class="form-control" id="{{booking.no_of_people}}">
-            </div>
-        </form>
+        <form>    
+          <div class="form-group">
+              <label for="{{booking.booking_month }}" class="col-form-label"> Booking Month </label>
+              <input type="text" class="form-control" data-booking_id= {{booking.booking_month}} value=" ">
+              <label for="{{booking.no_of_people}}" class="col-form-label"> {{ booking.no_of_people }} </label>
+              <input type="text" class="form-control" id="{{booking.no_of_people}}">
+          </div>
+      </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Close </button>
@@ -62,7 +65,8 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
 
 <!--  Delete Booking  -->
 <<div class="modal fade" id="deleteBookingModal" tabindex="-1"

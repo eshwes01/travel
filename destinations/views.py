@@ -18,15 +18,26 @@ def my_booking(request):
     
     if request.user.is_authenticated:
         bookings = Booking.objects.filter(user=request.user)
+        booking_form = BookingForm(data=request.POST)
         
         if bookings.exists():
             # Render bookings if found
-            return render(request, 'destinations/myBooking.html', {'bookings': bookings.all,})
+            return render(request, 'destinations/myBooking.html', {
+                'bookings': bookings.all,
+                'booking_form' : booking_form,
+                })
         else:
             # if no bookings are found
-            return render(request, 'destinations/no_bookings.html', {'message' : 'You have no bookings to show.',})
+            return render(request, 'destinations/no_bookings.html', {
+                'message' : 'You have no bookings to show.',
+                })
 
-    return render(request, 'destinations/no_bookings.html', {'message' : 'Plase log in to make the booking ',})
+    return render(request, 'destinations/no_bookings.html', 
+    {
+        'message' : 'Plase log in to make the booking ',
+        
+    }
+    )
 
 # Package Detail page will call this method
 def package_detail(request, slug):
@@ -123,14 +134,18 @@ def comment_delete(request, slug, comment_id):
 def edit_booking(request,booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
     if request.method == 'POST':
-        form = BookingForm(request.POST, instance=booking)
-        if form.is_valid():
-            form.save() 
-            return redirect('my_booking')
+        booking_form = BookingForm(request.POST, instance=booking)
+        if booking_form.is_valid():
+            booking_form.save() 
+            messages.add_message(request, messages.SUCCESS, 'Booking Updated!')
     else:
-         messages.add_message(request, messages.ERROR, 'Error on Update') 
-    
-    return HttpResponseRedirect(reverse('my_booking'))
+         booking_form = BookingForm(instance=booking)
+    # return HttpResponseRedirect(reverse('my_booking'))
+    return render(request, 'destinations/edit_booking.html', 
+                {   
+                    'booking_form': booking_form, 
+                    'booking': booking
+                })
 
 # Deleting the booking
 def delete_booking(request,booking_id):   
@@ -154,8 +169,6 @@ def itinerary_detail(request, package_id):
         if request.method == "POST":
             print("Received a POST request")
             booking_form = BookingForm(data=request.POST)
-            print(booking_form.errors)
-            print(booking_form.is_valid())
 
             if booking_form.is_valid():
                 booking = booking_form.save(commit=False)

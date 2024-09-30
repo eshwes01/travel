@@ -10,6 +10,8 @@ for (let button of editButtons) {
     button.addEventListener("click", (e) => {
       let bookingId = e.target.getAttribute("data-booking_id");
       editConfirm.href = `edit_booking/${bookingId}`
+      //let bookingMonth = e.target.getAttribut("");
+      //booking.booking_month = 
       editBookingModal.show();
     });
   }

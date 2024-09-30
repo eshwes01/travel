@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="container-fluid">
+    <!-- Booking Column start here -->
+    <div class="row">
+        <div class="col-md-8 myBooking_body mx-auto">
+            <!-- check if user is authenticated  -->
+            {% if user.is_authenticated %}
+            <h2> Hi , {{user.username}} </h1>
+                <h2>Edit Booking</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ booking_form.as_p }}
+                    <button type="submit">Save changes</button>
+                </form>
+                <a href="{% url 'my_booking' %}">Back to Booking List</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock content%}
+
+{% block extras %}
+<script src="{% static 'js/bookings.js' %}"></script>
+{% endblock %}
