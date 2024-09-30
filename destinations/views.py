@@ -130,17 +130,16 @@ def edit_booking(request,booking_id):
     else:
          messages.add_message(request, messages.ERROR, 'Error on Update') 
     
-    return HttpResponseRedirect(reverse('my_booking',args = [slug]))
+    return HttpResponseRedirect(reverse('my_booking'))
 
 # Deleting the booking
-def delete_booking(request,booking_id):
+def delete_booking(request,booking_id):   
     booking = get_object_or_404(Booking, id=booking_id)
 
-    if request.method == 'POST':
+    if booking.user == request.user:
         booking.delete()
-        return redirect('my_booking')
-
-    return HttpResponseRedirect(reverse('my_booking',args = [slug]))
+        messages.add_message(request, messages.SUCCESS, "Booking Deleted!")
+    return HttpResponseRedirect(reverse('my_booking'))
 
 
 # Itinerary Detail page will call this method.
