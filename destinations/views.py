@@ -154,6 +154,8 @@ def itinerary_detail(request, package_id):
         if request.method == "POST":
             print("Received a POST request")
             booking_form = BookingForm(data=request.POST)
+            print(booking_form.errors)
+            print(booking_form.is_valid())
 
             if booking_form.is_valid():
                 booking = booking_form.save(commit=False)

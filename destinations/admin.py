@@ -35,7 +35,7 @@ class CommentAdmin(SummernoteModelAdmin):
 
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
-    list_display = ('get_package','get_user','month','no_of_people')
+    list_display = ('get_package','get_user','booking_month','no_of_people')
 
     def get_package(self,obj):
         return obj.package.package_title

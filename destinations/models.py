@@ -1,6 +1,7 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
+from datetime import date
 
 # Destination model 
 class Destination(models.Model):
@@ -79,11 +80,12 @@ class Booking(models.Model):
         on_delete=models.CASCADE,
         related_name= "bookings"
     )
-    month = models.IntegerField()
+
+    booking_month = models.DateField(default=date.today)
     no_of_people = models.IntegerField(default = 1)
 
     def __str__(self):
-        return f"Booking for {self.no_of_people} people in {self.month}"
+        return f"Booking for {self.no_of_people} people in {self.booking_month}"
         
 # def profile_page(request):
 #     user = get_object_or_404(User, user=request.user)
