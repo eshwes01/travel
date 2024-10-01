@@ -1,15 +1,23 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% load i18n %}
-
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
-
 {% block content %}
+<div>   
+    <section class="hero">
+        <img src="{% static 'images/hero_image.jpg' %}" alt="Hero Image" class="hero-image" width = 100%
+        height= 200px object-fit = cover>
+        <div class="hero-text">
+            <h1 class="">Travel with Peace</h1>
+            <!-- <a href="#" class="explore-btn">Explore <i class="fa-solid fa-plane-departure"></i></a> -->
+        </div>
+    </section>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
             <h3>{% trans "Sign Out" %}</h3>
-
+            <hr>
             <p>{% trans 'Are you sure you want to sign out?' %}</p>
         </div>
     </div>
@@ -19,9 +27,10 @@
             <form method="post" action="{% url 'account_logout' %}">
                 {% csrf_token %}
                 {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                <input type="hidden" name="{{ redirect_field_name }}" 
+                value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button class="btn btn-signup right" type="submit">{% trans 'Sign Out' %}</button>
+                <button class="btn btn-success right" type="submit">{% trans 'Sign Out' %}</button>
             </form>
         </div>
     </div>
