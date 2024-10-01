@@ -241,6 +241,12 @@ div.polaroid {
     padding: 5px 10px;
 }
 
+.btn-delete{
+    background-color: #ac3931;
+}
+.btn-edit {
+    background-color : #72b01d;
+}
 /* Booking Form */
 .booking-body {
     background-color: #f3ffe1;
@@ -273,12 +279,13 @@ div.polaroid {
     background: #e8e5ee;
 }
 /* Comment Section */
-h5 i {
-    font-size: 3rem;
-}
 
 .comment-body {
     color: #3c391d;
+}
+
+h5 i {
+    font-size: 3rem;
 }
 
 
@@ -299,6 +306,7 @@ footer h3 {
 footer p {
     font-size: 16px;
 }
+
 
 .social-media-item {
     width: 120px;

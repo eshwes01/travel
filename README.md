@@ -6,10 +6,15 @@
 ### Outline key features  
 
  * Destinations
+
  * Tour Packages
- * Manage Booking Reservation (User can edit and delete bookings from booking history)
+
+ * Manage Booking Reservation (User can edit and delete bookings from booking history CRUD)
+
  * Registration/ Account Management
+
  * Comments CRUD on Destinations Info Post
+
 
   > ## Target Audiences
   Adventure Seekers , Cultural Enthusiasts – Tourists interested in exploring historical sites, traditional festivals, local customs, and UNESCO World Heritage locations.
@@ -75,15 +80,20 @@
 
   # User Experience - UX
 
+
 ## Site Aims
+
   The site purpose is to embrace families and individuals who love to make effortless travel around Sound East Asia region.
-  Any user who didn't register can be able to see all types of tour packages and prices for each destinations shown as well as requesting the booking for the specific packages. However, in order to request comments / review on the destination info page they will need to register.
+
+  Any user who didn't register can be able to see all types of tour packages and prices for each destinations shown as well as requesting the booking for the specific packages. 
+  
+  However, in order to request the booking for desired package and adding the comments on the destination info page they will need to be registered.
 
 ## Agile Methodology
 
 The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board. 
 
-Please find my Kanban Board with my user stories [here]
+Please find my Kanban Board with my user stories [https://github.com/users/eshwes01/projects/4]
 
 ## Epics and User Stories
 
@@ -138,6 +148,60 @@ So that I can research more about the destination
 
   Acceptance Criteria
 - AC . Under each destination user can see the Info button which take them to the more info page.
+
+
+### User Story-6 My Booking Page
+
+As an registered user I can go to the "My Booking" link
+So that can see all the booking history that I made.
+
+Acceptance Criteria
+- AC - My Booking link will be displayed on the Nav bar easily reachable in any pages of the site
+- AC - User must Log In to see the list of the Booking reservation.
+
+### Comment in the More Info Page
+As a site user I can comment on the post of "More Info" page offered by each destination
+So that I can ask more questions/ tips about anything that I need to know before the tour.
+
+Acceptance Criteria
+- AC - User must Log In to comment on the "More Info" post .
+- AC - All Users both registered or non-registered users can see all the comments which has been shown.
+
+### Comment in the More Info Page
+As a site user I can comment on the post of "More Info" page offered by each destination
+So that I can ask more questions/ tips about anything that I need to know before the tour.
+
+Acceptance Criteria
+
+- AC - User must Log In to comment on the "More Info" post .
+- AC - All Users both registered or non-registered users can see all the comments which has been shown.
+
+### Edit Comments
+
+As a registered user I can EDIT of the previous comments
+
+Acceptance Criteria
+- AC : User can find the edit button on the comments that given
+- AC: User must be Logged In before editing the comments
+- AC: User can only edit his/her comments .
+
+
+### Delete Comments
+As a registered user I can DELETE of my previous unwanted comments
+
+Acceptance Criteria
+- AC : User can find the DELETE button on the comments that given
+- AC: User must be Logged In before deleting the comments
+- AC: User can only delete his/her comments .
+
+
+### Modifying / Deleting the Booking request
+As a registered user I can EDIT / DELETE the booking request I made.
+
+Acceptance Criteria
+- AC : User can find the Edit / Delete button right under each booking request he made on My Booking page.
+- AC : User must logged In before editing / deleting the requests.
+
 
 ## Tasks
 
