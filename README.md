@@ -426,7 +426,9 @@ In the IDE:
 
 ## Content and Media
 
+## Important Notice 
 
+  During development SECRET KEY in setting has been committed to GitHub unintentionally . However , the key has already taken out and securely added in the env.py file.
 
 ----
 
