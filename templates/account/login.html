@@ -1,0 +1,45 @@
+{% extends "account/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock head_title %}
+
+{% block content %}
+<div>   
+  <section class="hero">
+      <!-- <img src="{% static 'images/hero_image.jpg' %}" 
+        alt="Hero Image" class="hero-image"> -->
+      <div class="hero-text">
+          <h1 class="">Travel with Peace</h1>
+          <!-- <a href="#" class="explore-btn">Explore <i class="fa-solid fa-plane-departure"></i></a> -->
+      </div>
+  </section>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h3>{% trans "Sign In" %}</h3>
+
+            <p> {% blocktrans %} Welcome Travel Era . 
+               To make the booking request and comments in the info page, please log in. 
+               If you have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
+                first.
+                {% endblocktrans %}
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <form class="login" method="POST" action="{% url 'account_login' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
