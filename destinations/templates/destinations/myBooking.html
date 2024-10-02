@@ -2,32 +2,37 @@
 {% load static %}
 {% block content %}
 {% load crispy_forms_tags %}
-
-<div class="container-fluid">
+<div>   
+  <section class="hero">
+      <img src="{% static 'images/hero_image_packages.jpg' %}" alt="Hero Image" class="hero-image">
+  </section>
+</div>
+<div class="container-fluid my-booking-container">
     <!-- Booking Column start here -->
     <div class="row">
         <div class="col-md-8 myBooking_body mx-auto">
             <!-- check if user is authenticated  -->
             {% if user.is_authenticated %}
-            <h2> Hi , {{user.username}} </h1>
-            <h2>  This is your booking list  </h2>
+            <h2 class="package-text"> Hi , {{user.username}} </h1>
+            <h4 class = "package-text">  This is your booking list  </h4>
+            <hr>
             {% for booking in bookings %}
                 <div class="row"> 
-                    <span> 
-                        The package {{ booking.package }} | 
+                    <span class="my_booking_content"> 
+                        {{ booking.package }} | 
+                        <br>
                         You booked for Month  {{ booking.booking_month }} | 
                         Number of people {{ booking.no_of_people }}
                     </span>
-                    </hr>
+                    <br><br>
                     <span>
                         <a href="{% url 'edit_booking' booking.id %}">
-                          <button class="btn btn-primary btn-lg btn-booking-edit" 
+                          <button class="btn btn-success btn-lg btn-booking-edit" 
                           data-booking_id = "{{booking.id}}"> Edit </button>
                         </a>
-                        <button class="btn btn-primary btn-lg btn-booking-delete"
+                        <button class="btn btn-danger btn-lg btn-booking-delete"
                         data-booking_id = "{{booking.id}}"> Delete </button>
-                    </span>
-                         
+                    </span>            
                 </div>
             {% endfor %}
             {% else %}

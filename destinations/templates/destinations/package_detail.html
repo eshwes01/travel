@@ -13,7 +13,7 @@
 <div class="package-container">
     {% for package in packages %}
         <div class="mx-auto package-body row">
-            <div class="col">
+            <div class="col package-image">
                 <a href="{% url 'itinerary_detail' package.package_id %}" alt="Itinerary Detail">
                 {% if "placeholder" in package.featured_image.url %}
                 <img class="package-img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image">

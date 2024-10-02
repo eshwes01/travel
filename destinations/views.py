@@ -94,7 +94,7 @@ def info_detail(request, slug):
         }
     )
 
-# Editing a comment 
+#Editing a comment
 def comment_edit(request, slug, comment_id):
     """
       view to edit comment
@@ -116,8 +116,10 @@ def comment_edit(request, slug, comment_id):
             messages.add_message(request, messages.ERROR, 'Error on Update') 
         return HttpResponseRedirect(reverse('info_detail',args = [slug]))
 
+
 # Deleting a comment
 def comment_delete(request, slug, comment_id):
+    
         queryset = Destination.objects.all()
         destination = get_object_or_404(queryset, slug=slug) 
         comment = get_object_or_404(Comment, pk=comment_id)

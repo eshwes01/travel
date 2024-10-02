@@ -15,7 +15,7 @@
             <!-- Booking form section start here  -->
             <div class="col-md-4 booking-body">
                 {% if user.is_authenticated %}
-                <h3 class =""> Booking Request </h3>
+                <h3 class ="package-text"> Booking Request </h3>
                 <p class="package_price"> {{package.price}}</p>
                 <form id="bookingForm" method="post" style="margin-top: 1.3em;">
                   {{ booking_form | crispy }}
