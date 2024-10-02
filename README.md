@@ -26,9 +26,7 @@
 
   Digital Nomads – Remote workers looking to combine travel with work, interested in exploring Southeast Asia’s growing coworking spaces, long-term stay options, and vibrant urban hubs.
      
-
-
-       Introduction](#Travel Era---introduction)
+     Table of Contents 
   - [User Experience - UX](#user-experience---ux)
     - [Site Aims](#site-aims)
     - [Agile Methodology](#agile-methodology)
@@ -40,18 +38,7 @@
     - [Imagery](#imagery)
     - [Wireframes](#wireframes)
   - [Database Diagram](#database-diagram)
-  - [Features](#features)
-    - [Home Page](#home-page)
-      - [Navbar](#navbar)
-      - [Hero Image](#hero-image)
-      - [Destination Section](#destination-section)
-      - [Footer](#footer)
-  
-    - [Register](#register)
-    - [Login](#login)
-    - [Logout](#logout)
-    - [Destinations](#destinations)
-    - [Alert Messages](#alert-messages)      
+  - [Features](#features)      
 
   - [Admin Panel/Superuser](#admin-panelsuperuser)
   - [Technologies Used](#technologies-used)
@@ -158,15 +145,9 @@ Acceptance Criteria
 - AC : My Booking link will be displayed on the Nav bar easily reachable in any pages of the site
 - AC : User must Log In to see the list of the Booking reservation.
 
-### Comment in the More Info Page
-As a site user I can comment on the post of "More Info" page offered by each destination
-So that I can ask more questions/ tips about anything that I need to know before the tour.
 
-Acceptance Criteria
-- AC : User must Log In to comment on the "More Info" post .
-- AC : All Users both registered or non-registered users can see all the comments which has been shown.
 
-### Comment in the More Info Page
+### User Story-7 Comment in the Info Page
 As a site user I can comment on the post of "More Info" page offered by each destination
 So that I can ask more questions/ tips about anything that I need to know before the tour.
 
@@ -176,7 +157,7 @@ Acceptance Criteria
 - AC : All Users both registered or non-registered users can see all the comments which has been shown.
 - AC : Only registered users can be able to Update or Delete Comments.
 
-### Edit Comments
+### User Story-8 Edit Comments
 
 As a registered user I can EDIT of the previous comments
 
@@ -186,7 +167,7 @@ Acceptance Criteria
 - AC: User can only edit his/her comments .
 
 
-### Delete Comments
+### User Story-9 Delete Comments
 As a registered user I can DELETE of my previous unwanted comments
 
 Acceptance Criteria
@@ -195,7 +176,7 @@ Acceptance Criteria
 - AC: User can only delete his/her comments .
 
 
-### Modifying / Deleting the Booking request
+### User Story-10  Modifying / Deleting the Booking request
 As a registered user I can EDIT / DELETE the booking request I made.
 
 Acceptance Criteria
@@ -207,17 +188,6 @@ Acceptance Criteria
 
 The tasks for the website development process was closely followed as mentioned in CI's Django module "I Think Therefore I Blog" walkthrough project. 
 
-
-**Before Project Inception**
-
-
-
-
-**Creation of Project in GitPod**
-
--
-
------
 
 
 ## Design
@@ -239,6 +209,7 @@ The tasks for the website development process was closely followed as mentioned 
 ![Home Page](static/images/destination_WF.png)
 ![Package Detail Page](static/images/package_Detail_WF.png)
 ![Info Detail Page](static/images/info.png)
+![Itinerary Detail Page ](static/images/itinerary_detail.png)
 ![My Booking list ](static/images/MyBooking_list.png)
 
 
@@ -248,35 +219,61 @@ The tasks for the website development process was closely followed as mentioned 
 
 Lucidchart was used to create a database schema to visualise the types of custom models the project requires. Below is the Database structure that this project is based on. 
 
-![Entity Relationship Diagram ](static/images/ERD_1.png)
-
-
+![Entity Relationship Diagram](static/images/ERDUpdated.png)
 
 
 ----
 # Features
 # UI Features
 
-### Home:
+## Home:
  A button or link that brings the user to the homepage.
 
-### Destination Cards: 
+## Destination Cards: 
 Different travel destination cards, each offering:
     A placeholder image representing the destination.
     A brief description of the destination.
     "Our Packages" Button: Leads to detailed package offers for the specific destination.
     "Info" Button: Provides more detailed information about the destination.
 
-### Our Packages: 
+
+## Our Packages: 
 Links to a page displaying travel packages or details of available destinations.
 
 My Booking: Provides access to a user’s current bookings or reservation history.
+![My Booking list ](static/images/my_booking.png)
 
 Log In / Register: A login or registration page to access user accounts.
 Main Section (Travel Destinations):
 
-### More Info :
+## More Info :
 Links to a page displaying more information i.e Things to do , Local Food , Culture about each destination which feature can give user to research more about the destination they want to explore.
+
+![Itinerary Detail ](static/images/info_page.png)
+
+
+### Itinerary Details & Booking
+
+Itinerary deatils link can be seen when user click "Our package" in landing page as below 
+![Itinerary Detail ](static/images/package_detail_page.png)
+
+### My Booking
+Booking Details: Below the greeting, each booking is listed with relevant information such as:
+Trip Description: For each trip, details such as the number of days (e.g., "12 days, Classic Vietnam and beach"), the destination (e.g., "Vietnam"), 
+and the booking month (e.g., "You booked for Month Nov. 1, 2024") are displayed.
+Number of People: It also mentions how many people are included in the booking (e.g., "Number of people: 1").
+![Itinerary Detail ](static/images/my_booking.png)
+
+
+
+### Edit Booking 
+
+![Itinerary Detail ](static/images/edit_booking.png)
+
+###  Delete Booking
+
+![Itinerary Detail ](static/images/delete_booking.png)
+
 
 ### Footer Section:
 

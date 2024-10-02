@@ -10,7 +10,7 @@
 <div class="container-fluid my-booking-container">
     <!-- Booking Column start here -->
     <div class="row">
-        <div class="col-md-8 myBooking_body mx-auto">
+        <div class="col mx-auto myBooking_body">
             <!-- check if user is authenticated  -->
             {% if user.is_authenticated %}
             <h2 class="package-text"> Hi , {{user.username}} </h1>
@@ -27,10 +27,10 @@
                     <br><br>
                     <span>
                         <a href="{% url 'edit_booking' booking.id %}">
-                          <button class="btn btn-success btn-lg btn-booking-edit" 
+                          <button class="btn btn-outline-success btn-lg btn-booking-edit" 
                           data-booking_id = "{{booking.id}}"> Edit </button>
                         </a>
-                        <button class="btn btn-danger btn-lg btn-booking-delete"
+                        <button class="btn btn-outline-danger btn-lg btn-booking-delete"
                         data-booking_id = "{{booking.id}}"> Delete </button>
                     </span>            
                 </div>
