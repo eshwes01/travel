@@ -46,21 +46,19 @@
       - [Hero Image](#hero-image)
       - [Destination Section](#destination-section)
       - [Footer](#footer)
-    - [User Page](#user-page)
-    - [About Page](#about-page)
-    - [Blog Page](#blog-page)
-      - [Blog Details](#blog-details)
-      - [Blog Comments](#blog-comments)
+  
     - [Register](#register)
     - [Login](#login)
     - [Logout](#logout)
     - [Destinations](#destinations)
     - [Alert Messages](#alert-messages)      
+
   - [Admin Panel/Superuser](#admin-panelsuperuser)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Django Packages](#django-packages)
     - [Frameworks - Libraries - Programs Used](#frameworks---libraries---programs-used)
+    
   - [Testing](#testing)
       - [Validation](#validation)
       - [Manual Testing](#manual-testing)
@@ -105,7 +103,7 @@ Please find my Kanban Board with my user stories [https://github.com/users/eshwe
  * Registered users will be given the access to comment CRUD features . 
 
 #### Related User Stories:
-* As a new user of site I want to create a user account by using my email and password
+ As a new user of site I want to create a user account by using my email and password
   So that I can access all the functionality of the site.
 
   Acceptance Criteria
@@ -113,7 +111,7 @@ Please find my Kanban Board with my user stories [https://github.com/users/eshwe
 
 ### User Story 2 View paginated list of the destinations
 
-- As a site user I can see all available list of destinations in one page.
+As a site user I can see all available list of destinations in one page.
 So that I can visit to each available destination which site has to offer.
 
   Acceptance Criteria
@@ -122,23 +120,24 @@ So that I can visit to each available destination which site has to offer.
 
 ### User Story-3 View Packages
 
-- As a site user I can see all available packages that the site has to offer for given destination
-So that I can choose suitable package for given destination
+As a site user I can see all available packages that the site has to offer for given destination
+So that I can choose suitable package for given destination. 
 
-  Acceptance Criteria
-- A.C - For each destination user will be given the dropdown list of available packages to see all the details of the package.
-
+Acceptance Criteria
+- A.C : For each destination user will be given the list of available packages in the "package detail" page to see all the details of the package including duration and prices of each package.
+- A.C : User will be also given access to get to the Itinerary and Booking in every package section. 
 
 ### User Story-4 Request Booking
 
--As a user , I can request the booking of the tour packages by providing name, email and contact number for the desired package
-So that the site admin can see my request and respond to the request by giving all the information to proceed.
+As a registered user , I can request the booking of the tour packages by providing booking month and number of people for the desired package
+So that the site admin can see my request and respond to the request by giving all the necessary information to proceed the confirmation.
 
-  Acceptance Criteria
+Acceptance Criteria
 
-- AC . User can request booking via the form given under each package.
-- AC . All the fields will be required to fill by the user .
-- AC User will be given the notification once they submitted.
+- AC : User can request booking via the form given within itinerary detail page
+- AC : User must Log In to make the booking request.
+- AC : All the fields will be required to fill by the user .
+- AC : User will be given the notification once they submitted.
 
 
 ### User Story-5 Destination Info
@@ -146,8 +145,8 @@ So that the site admin can see my request and respond to the request by giving a
 As a user I can view more information about the specific destinations of my choice
 So that I can research more about the destination
 
-  Acceptance Criteria
-- AC . Under each destination user can see the Info button which take them to the more info page.
+Acceptance Criteria
+- AC : Under each destination user can see the Info button which take them to the more info page.
 
 
 ### User Story-6 My Booking Page
@@ -156,16 +155,16 @@ As an registered user I can go to the "My Booking" link
 So that can see all the booking history that I made.
 
 Acceptance Criteria
-- AC - My Booking link will be displayed on the Nav bar easily reachable in any pages of the site
-- AC - User must Log In to see the list of the Booking reservation.
+- AC : My Booking link will be displayed on the Nav bar easily reachable in any pages of the site
+- AC : User must Log In to see the list of the Booking reservation.
 
 ### Comment in the More Info Page
 As a site user I can comment on the post of "More Info" page offered by each destination
 So that I can ask more questions/ tips about anything that I need to know before the tour.
 
 Acceptance Criteria
-- AC - User must Log In to comment on the "More Info" post .
-- AC - All Users both registered or non-registered users can see all the comments which has been shown.
+- AC : User must Log In to comment on the "More Info" post .
+- AC : All Users both registered or non-registered users can see all the comments which has been shown.
 
 ### Comment in the More Info Page
 As a site user I can comment on the post of "More Info" page offered by each destination
@@ -173,8 +172,9 @@ So that I can ask more questions/ tips about anything that I need to know before
 
 Acceptance Criteria
 
-- AC - User must Log In to comment on the "More Info" post .
-- AC - All Users both registered or non-registered users can see all the comments which has been shown.
+- AC : User must Log In to comment on the "More Info" post .
+- AC : All Users both registered or non-registered users can see all the comments which has been shown.
+- AC : Only registered users can be able to Update or Delete Comments.
 
 ### Edit Comments
 
