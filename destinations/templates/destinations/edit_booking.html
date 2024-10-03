@@ -3,33 +3,28 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<div>   
-    <section class="hero">
-        <img src="{% static 'images/hero_image_packages.jpg' %}" alt="Hero Image" class="hero-image">
-    </section>
-  </div>
-<div class="container-fluid">
-    <!-- Booking Column start here -->
-    <div class="row">
-        <div class="col-md-6 myBooking_body mx-auto">
-            <!-- check if user is authenticated  -->
-            {% if user.is_authenticated %}
-            <h2 class ="package-text "> Hi , {{user.username}}  </h1>
-                <h5 class ="package-text "> Booking for {{booking.package}} </h5>
-                <hr> 
-                <form method="POST" class ="my_booking_content">
-                    {% csrf_token %}
-                    {{ booking_form.as_p }}
-                    <button class ="btn btn-outline-success" type="submit">Save changes</button>
-                </form>
-                <br>
-                <a href="{% url 'my_booking' %}">Back to Booking List</a>
-                <br>
-            {% endif %}
-        </div>
+<div class="hero">
+    <img src="{% static 'images/hero_image_packages.jpg' %}" alt="Hero Image" class="hero-image">
+</div>
+<!-- Booking Column start here -->
+<div class="row">
+    <div class="col-md-6 myBooking_body mx-auto">
+        <!-- check if user is authenticated  -->
+        {% if user.is_authenticated %}
+        <h2 class="package-text "> Hi , {{user.username}} </h2>
+        <h5 class="package-text "> Booking for {{booking.package}} </h5>
+        <hr>
+        <form method="POST" class="my_booking_content">
+            {% csrf_token %}
+            {{ booking_form.as_p }}
+            <button class="btn btn-outline-success" type="submit">Save changes</button>
+        </form>
+        <br>
+        <a href="{% url 'my_booking' %}">Back to Booking List</a>
+        <br>
+        {% endif %}
     </div>
 </div>
-
 {% endblock content%}
 
 {% block extras %}

@@ -2,10 +2,8 @@
 {% load static %}
 {% block content %}
 {% load crispy_forms_tags %}
-<div>
-  <section class="hero">
-    <img src="{% static 'images/hero_image_packages.jpg' %}" alt="Hero Image" class="hero-image">
-  </section>
+<div class="hero">
+  <img src="{% static 'images/hero_image_packages.jpg' %}" alt="Hero Image" class="hero-image">
 </div>
 <div class="container-fluid my-booking-container">
   <!-- Booking Column start here -->
@@ -13,39 +11,38 @@
     <div class="col mx-auto myBooking_body">
       <!-- check if user is authenticated  -->
       {% if user.is_authenticated %}
-      <h2 class="package-text"> Hi , {{user.username}} </h1>
-        <h4 class="package-text"> This is your booking list </h4>
-        <hr>
-        {% for booking in bookings %}
-        <div class="row">
-          <span class="my_booking_content">
-            {{ booking.package }} |
-            <br>
-            You booked for Month {{ booking.booking_month }} |
-            Number of people {{ booking.no_of_people }}
-          </span>
-          <br><br>
-          <span>
-            <a href="{% url 'edit_booking' booking.id %}">
-              <button class="btn btn-outline-success btn-lg btn-booking-edit" data-booking_id="{{booking.id}}"> Edit
-              </button>
-            </a>
-            <button class="btn btn-outline-danger btn-lg btn-booking-delete" data-booking_id="{{booking.id}}"> Delete
-            </button>
-          </span>
-        </div>
-        {% endfor %}
-        {% else %}
-        <div class="row">
-          <p> Please log in to see your Booking List here. </p>
-        </div>
+      <h2 class="package-text"> Hi , {{user.username}} </h2>
+      <h4 class="package-text"> This is your booking list </h4>
+      <hr>
+      {% for booking in bookings %}
+      <div class="row">
+        <span class="my_booking_content">
+          {{ booking.package }} |
+          <br>
+          You booked for Month {{ booking.booking_month }} |
+          Number of people {{ booking.no_of_people }}
+        </span>
+        <br><br>
+        <span>
+          <a href="{% url 'edit_booking' booking.id %}" class="btn btn-outline-success btn-lg btn-booking-edit"
+            data-booking_id="{{booking.id}}">
+            Edit
+          </a>
+          <button class="btn btn-outline-danger btn-lg btn-booking-delete" data-booking_id="{{booking.id}}"> Delete
+          </button>
+        </span>
+      </div>
+      {% endfor %}
+      {% else %}
+      <div class="row">
+        <p> Please log in to see your Booking List here. </p>
+      </div>
     </div>
     {% endif %}
   </div>
 </div>
-
 <!--  Delete Booking  -->
-<<div class="modal fade" id="deleteBookingModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteBookingModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -62,9 +59,9 @@
       </div>
     </div>
   </div>
-  </div>
-  {% endblock content%}
+</div>
+{% endblock content%}
 
-  {% block extras %}
-  <script src="{% static 'js/bookings.js' %}"></script>
-  {% endblock %}
+{% block extras %}
+<script src="{% static 'js/bookings.js' %}"></script>
+{% endblock %}

@@ -4,13 +4,13 @@
 {% load crispy_forms_tags %}
 
 <!-- Header Image  -->
-<section class="hero">
+<div class="hero">
     {% if "placeholder" in destination.featured_image.url %}
     <img src="{% static 'images/default.jpg' %}" alt="Hero Image" class="hero-image">
     {% else %}
     <img src="{{ destination.featured_image.url }}" alt="Hero Image" class="hero-image">
     {% endif %}
-</section>
+</div>
 <!-- Info body start here  -->
 <div class="mx-auto info">
     <article>

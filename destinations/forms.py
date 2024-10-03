@@ -1,4 +1,4 @@
-from .models import Comment,Booking
+from .models import Comment, Booking
 from django import forms
 from datetime import datetime
 
@@ -8,6 +8,7 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('body',)
 
+
 class BookingForm(forms.ModelForm):
     booking_month = forms.CharField(
         widget=forms.TextInput(attrs={'type': 'date'}),  # month picker
@@ -16,12 +17,13 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = ('booking_month','no_of_people',)
+        fields = ('booking_month', 'no_of_people',)
 
     def clean_booking_month(self):
-            booking_month = self.cleaned_data.get('booking_month')
+        booking_month = self.cleaned_data.get('booking_month')
 
-            try: 
-                return booking_month
-            except ValueError:
-                raise forms.ValidationError("Enter a valid month in the format YYYY-MM.")
+        try:
+            return booking_month
+        except ValueError:
+            raise forms.ValidationError
+            ("Enter a valid month in the format YYYY-MM.")
