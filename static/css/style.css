@@ -12,6 +12,7 @@ div a {
 i{
     color:#4B7BE5;
 }
+
 body {
     font-family: "Open Sans", sans-serif;
     font-size: 13px;
@@ -92,7 +93,7 @@ main{
 .hero-text-package {
     color: #758bfd;
 }
-
+/* Image Section  */
 .img-placeholder {
     border-radius: 15px 50px 30px 5px;
     width: 95%;
@@ -108,17 +109,6 @@ main{
     padding: 5px;
 }
 
-.explore-btn {
-    display: inline-block;
-    padding: 20px 20px;
-    color: #f7f0f1;
-    text-decoration: none;
-}
-
-.explore-btn:hover {
-    font-size: 3.6rem;
-    border-radius: 8px;
-}
 
 /*  Destination  */
 .destination-container {
@@ -195,6 +185,9 @@ article .description_text {
     box-shadow: 0 0 10px rgb(150, 143, 143);
     margin: 5px;
     letter-spacing: 0.2px;
+    flex-direction: row; 
+    align-items: flex-start;
+    
 }
 
 .package-text {
@@ -215,7 +208,7 @@ article .description_text {
     font-style: italic;
     font-weight: 600;
 }
-
+/* Container Shadow Effect */
 div.polaroid {
     background-color: #ada7c9;
     box-shadow: 0 4px 8px 0 rgba(171, 102, 102, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -320,6 +313,10 @@ footer p {
         margin-top: -35px;
         font-size: 0.8rem;
     }
+    .destination img {
+        width: 100%;
+        height: auto;
+    }
     .destination-text,
     .info_link {
         font-size: 0.8rem;
@@ -328,12 +325,16 @@ footer p {
 
     /* Package section */
     .package-body {
-        width: 60%;
+        width: 85%;
+        display: flex;
+        flex-direction: column; /* Ensures image is above text */
+        align-items: center; /* Centers content horizontally */
+        justify-content: center;
     }
 
-    .package-img-placeholder {
-        display:none;
-    }
+    /* .package-img-placeholder {
+        display:flex;
+    } */
 
     .package-text {
         font-size: 0.9rem;
