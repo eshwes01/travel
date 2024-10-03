@@ -1,21 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div>   
-    <section class="hero">
+<div class="hero">   
         <img src="{% static 'images/hero_image.jpg' %}" alt="Hero Image" class="hero-image">
         <div class="hero-text">
             <h1 class="">Travel with Peace</h1>
             <!-- <a href="#" class="explore-btn">Explore <i class="fa-solid fa-plane-departure"></i></a> -->
         </div>
-    </section>
 </div>
 <div class="container-fluid">
     <!-- Destination Column -->
     <div class="destination-container">
         {% for destination in destination_list %}
         <div class="destination polaroid">
-                <section>
                     {% if "placeholder" in destination.featured_image.url %}
                     <a href="{% url 'package_detail' destination.slug %}">
                         <img class="img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image"></a>
@@ -24,10 +21,6 @@
                         <img class="img-placeholder" src="{{ destination.featured_image.url }}" alt="{{ destination.title }}"></a>
                     {% endif %}
                     <p class="destination-title">{{ destination.title }}</p>
-                </section>
-                <!-- <article>   
-                     <p class="description_text"> {{destination.description}} </p>
-                </article> -->
                 <div >
                     <span>
                     <a class="destination-text" href="{% url 'package_detail' destination.slug %}"> Our Packages > </a>

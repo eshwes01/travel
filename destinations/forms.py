@@ -10,7 +10,7 @@ class CommentForm(forms.ModelForm):
 
 class BookingForm(forms.ModelForm):
     booking_month = forms.CharField(
-        widget=forms.TextInput(attrs={'type': 'month'}),  # month picker
+        widget=forms.TextInput(attrs={'type': 'date'}),  # month picker
         label="Month to update",
     )
 
@@ -21,9 +21,7 @@ class BookingForm(forms.ModelForm):
     def clean_booking_month(self):
             booking_month = self.cleaned_data.get('booking_month')
 
-            try:
-                # Append "-01" to represent the first day of the month
-                booking_month_date = datetime.strptime(booking_month + "-01", '%Y-%m-%d')
-                return booking_month_date
+            try: 
+                return booking_month
             except ValueError:
                 raise forms.ValidationError("Enter a valid month in the format YYYY-MM.")

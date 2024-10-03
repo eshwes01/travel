@@ -14,7 +14,7 @@
     {% for package in packages %}
         <div class="mx-auto package-body row">
             <div class="col package-image">
-                <a href="{% url 'itinerary_detail' package.package_id %}" alt="Itinerary Detail">
+                <a href="{% url 'itinerary_detail' package.package_id %}">
                 {% if "placeholder" in package.featured_image.url %}
                 <img class="package-img-placeholder" src="{% static 'images/default.jpg' %}" alt="placeholder image">
                 {% else %}
@@ -25,10 +25,12 @@
             <div class="col">
                 <article>
                     <h1 class="package-text"> {{package.package_title }} </h1>
-                    <p class="package_price"> £{{ package.price}}</p>
-                    <p class="package-text"></p>
-                        <a href="{% url 'itinerary_detail' package.package_id %}" alt="Itinerary Detail"> Itinerary
-                            Details & Booking </a>
+                    <p class="package_price"> 
+                        <a href="{% url 'itinerary_detail' package.package_id %}" > 
+                            £{{ package.price}} </a></p>
+                    <p>
+                        <a href="{% url 'itinerary_detail' package.package_id %}" > 
+                            Itinerary Details & Booking </a>
                     </p>
                     <p> {{ package.body }}</p>
                     <p> {{ co_name }}</p>

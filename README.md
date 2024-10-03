@@ -262,15 +262,19 @@ Booking Details: Below the greeting, each booking is listed with relevant inform
 Trip Description: For each trip, details such as the number of days (e.g., "12 days, Classic Vietnam and beach"), the destination (e.g., "Vietnam"), 
 and the booking month (e.g., "You booked for Month Nov. 1, 2024") are displayed.
 Number of People: It also mentions how many people are included in the booking (e.g., "Number of people: 1").
-![Itinerary Detail ](static/images/my_booking.png)
+![<My Booking > ](static/images/my_booking.png)
 
 
 
 ### Edit Booking 
 
-![Itinerary Detail ](static/images/edit_booking.png)
+User allow to edit the booking that they made whether or not confirm by one of the advisors. 
+
+![Edit Booking ](static/images/edit_booking.png)
 
 ###  Delete Booking
+
+User can be able to delete the booking that they made whether or not confirm by one of the advisors.
 
 ![Itinerary Detail ](static/images/delete_booking.png)
 
