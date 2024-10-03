@@ -20,7 +20,7 @@
                     <a href="{% url 'package_detail' destination.slug %}">
                         <img class="img-placeholder" src="{{ destination.featured_image.url }}" alt="{{ destination.title }}"></a>
                     {% endif %}
-                    <p class="destination-title">{{ destination.title }}</p>
+                    <p class="destination-title"> <i class="fa-solid fa-location-dot"></i>&nbsp {{ destination.title }}</p>
                 <div >
                     <span>
                     <a class="destination-text" href="{% url 'package_detail' destination.slug %}"> Our Packages > </a>

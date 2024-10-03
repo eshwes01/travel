@@ -139,7 +139,7 @@ def edit_booking(request, booking_id):
         }
     )
 
-
+# Deleting Booking from My Booking page
 def delete_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
 
@@ -152,7 +152,7 @@ def delete_booking(request, booking_id):
     messages.add_message(request, messages.SUCCESS, "Booking Deleted!")
     return HttpResponseRedirect(reverse('my_booking'))
 
-
+# This method will carry out as itenerary detail display page 
 def itinerary_detail(request, package_id):
     package = get_object_or_404(Packages, pk=package_id)
     bookings = package.bookings.all()

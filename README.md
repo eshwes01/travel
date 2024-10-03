@@ -5,15 +5,21 @@
 
 ### Outline key features  
 
- * Destinations
+ * Destinations card
 
- * Tour Packages
+ * Tour Packages List
 
- * Manage Booking Reservation (User can edit and delete bookings from booking history CRUD)
+ * Itinerary Details for each package
+
+ * Booking Request Form
+
+ * Manage Booking Reservation 
+      (User can create, edit and delete bookings from booking history CRUD)
 
  * Registration/ Account Management
 
- * Comments CRUD on Destinations Info Post
+ * Comments on Destinations Info Post 
+      (User can create,edit and delete the comments CRUD )
 
 
   > ## Target Audiences
@@ -244,8 +250,6 @@ Links to a page displaying travel packages or details of available destinations.
 My Booking: Provides access to a user’s current bookings or reservation history.
 ![My Booking list ](static/images/my_booking.png)
 
-Log In / Register: A login or registration page to access user accounts.
-Main Section (Travel Destinations):
 
 ## More Info :
 Links to a page displaying more information i.e Things to do , Local Food , Culture about each destination which feature can give user to research more about the destination they want to explore.
@@ -299,7 +303,8 @@ Social Media Icons: Links to social media pages for further interaction with the
 
 ### Sign In
 
--
+-Log In / Register: A login or registration page to access user accounts.
+Main Section (Travel Destinations):
 
 
 ### Sign Out
@@ -349,13 +354,14 @@ Social Media Icons: Links to social media pages for further interaction with the
 
 ###  Am I Responsive 
  
-![Am I Responsive ](static/images/am_I_Responsive.png)
+![Am I Responsive ](static/images/Am_I_Responsive.png)
 
 
 ### Validation
 
 
 - HTML using [W3C HTML validator](https://validator.w3.org/)
+
 - CSS using [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/)
 - Python via [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
 
