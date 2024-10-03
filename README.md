@@ -76,9 +76,30 @@
 
   The site purpose is to embrace families and individuals who love to make effortless travel around Sound East Asia region.
 
-  Any user who didn't register can be able to see all types of tour packages and prices for each destinations shown as well as requesting the booking for the specific packages. 
+  ### Destination Cards / Landing Page
+     Different travel destination cards, each offering: A placeholder image representing the destination. A brief description of the destination. "Our Packages" Button: Leads to detailed package offers for the specific destination. "Info" Button: Provides more detailed information about the destination.
+
+  ### F1. Our Package
+    All users who come to visit the site can be able to see all types of "tour packages" and "prices" for each destinations shown .
   
-  However, in order to request the booking for desired package and adding the comments on the destination info page they will need to be registered.
+  ### F2. Info" link from landing page 
+    This link will take users to the page where more information about each specific destination from the site.
+  
+  ### F3 "Itinerary Detail and Booking" 
+    Link can be seen on package detail page so that user can browse the itinerary details for each package and can request the booking. However, in order to request the booking for desired package and adding the comments on the destination info page they will need to be registered.
+
+  ### F4 Notification Message -> 
+    After users finished their bookings, notification messsage will be displayed on the top for booking succesfully submitted. 
+    *** Booking Month and Number of people will be the required fields for users to make the booking. 
+
+  ### F5 My Booking -> 
+   Registered users who made booking for the site are allowed to update and delete their bookings by clicking the Edit / Delete button from My Booking page.
+
+  ### F6 Comment on Info Section -> 
+    All Registered users can make comments on all the info section of each destinations, update and delete their comments whether the comments been approved by admin or not while non-registered users can only see all the comments but not allow to modify.  
+
+
+
 
 ## Agile Methodology
 
@@ -87,9 +108,6 @@ The Agile Methodology was used to plan this project. This was implemented throug
 Please find my Kanban Board with my user stories [https://github.com/users/eshwes01/projects/4]
 
 ## Epics and User Stories
-
-
-
 ### Epics : User Registration
  Goals : 
  * Landing page should be easy access for the user to register, able to Log In and Log Out. 
@@ -192,7 +210,9 @@ Acceptance Criteria
 
 ## Tasks
 
-The tasks for the website development process was closely followed as mentioned in CI's Django module "I Think Therefore I Blog" walkthrough project. 
+The tasks for the website development process was closely followed as mentioned in CI's Django module "I Think Therefore I Blog" walkthrough project.
+Web site idea is mainly inspired from the tour package travel providers site.
+
 
 
 
@@ -434,15 +454,47 @@ In the IDE:
 # Credits
 
 ## Code
-- 
+   
+   Large amount of code used while developing this site were referenced and learned from following ,
+
+     1. https://docs.djangoproject.com/en/5.1/ 
+     2. https://stackoverflow.com/
+     3. https://www.w3schools.com/
+     4. Mdn Web docs
+     5. Code Instite LMS contents
+     6. https://getbootstrap.com/docs/5.3/
+
 
 ## Learning Resources
 
 
 
 ## Content and Media
+    Main Contents for destinations , packages and info pages were taken from the following web site and credit
 
-## Important Notice 
+    https://www.titantravel.co.uk/blogs/
+    https://www.roughguides.com/
+    https://uniquetours.com/ 
+    https://www.indietraveller.co/things-to-do-in-bogota/
+    https://theadventurepeople.com/tour/ 
+
+   Media Images has been taken from 
+    
+    https://unsplash.com/
+    All artist credits goes to the following, 
+    1. Neom 
+    2. Pawel-janiak
+    3. Tiago-rosado
+    4. Vince
+    5. Life on the road
+    6. Himanshusingh-gurjar
+    7. Daniel-lienert
+    8. Diego-gennaro
+    9. Jesse-schoff
+    10. Julian-Yu-Wu
+
+
+## Important Notice !!
 
   During development SECRET KEY in setting has been committed to GitHub unintentionally . However , the key has already taken out and securely added in the env.py file.
 

@@ -116,13 +116,13 @@ main{
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     background-color: #faf6f6;
 }
 
 .destination {
     border: 1px solid #ddd;
-    border-radius: 25px;
+    border-radius: 10px;
     padding: 15px;
     width: 30%;
     box-shadow: 0 0 10px rgb(95, 89, 89);
@@ -131,30 +131,28 @@ main{
 }
 
 .destination-title {
-    margin-top: -51px;
-    font-size: 1.6rem;
+    margin-top: -45px;
+    font-size: 1.4rem;
     color: #ccdbdc;
     font-weight: bold;
     text-shadow: 3px 2px #3a015c;
     margin-left: 10px;
-    margin-bottom: 19px;
+    margin-bottom: 5px;
 }
 
 .destination img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 7px;
 }
 
 .destination-text {
     font-size: 1.2rem;
     color: #f8edeb;
-    border-radius: 11px;
     letter-spacing: 1px;
     text-shadow: 2px 2px 5px red;
-    margin-left: 10px;
-    padding: 5px 10px;
-    width: 100%;
+    margin-left: 3px;
+    padding:  2px;
 }
 
 .created-on {
@@ -307,11 +305,11 @@ footer p {
 }
 
 /* Media Query for the smaller screen devices*/
-@media (max-width: 750px) {
+@media (max-width: 758px) {
     /* destination section */
     .destination-title{
-        margin-top: -35px;
-        font-size: 0.8rem;
+        margin-top: -22px;
+        font-size: 0.6rem;
     }
     .destination img {
         width: 100%;
@@ -319,7 +317,7 @@ footer p {
     }
     .destination-text,
     .info_link {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         letter-spacing: 0;
     }  
 
