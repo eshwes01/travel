@@ -194,6 +194,7 @@ The tasks for the website development process was closely followed as mentioned 
 
 ### Colours
 
+Color Palette: The interface uses a clean and calm color palette with shades of green, brown, and white, reinforcing a nature or travel theme.
 
 
 ### Typography
@@ -269,6 +270,9 @@ Number of People: It also mentions how many people are included in the booking (
 ### Edit Booking 
 
 User allow to edit the booking that they made whether or not confirm by one of the advisors. 
+Edit/Delete Buttons: For each booking, there are two action buttons:
+Edit (green button): Allows the user to modify the booking.
+Delete (red button): Provides an option to delete the booking.
 
 ![Edit Booking ](static/images/edit_booking.png)
 
@@ -342,6 +346,11 @@ Social Media Icons: Links to social media pages for further interaction with the
 [Back to top ⇧](#content)
 
 ## Testing
+
+###  Am I Responsive 
+ 
+![Am I Responsive ](static/images/am_I_Responsive.png)
+
 
 ### Validation
 

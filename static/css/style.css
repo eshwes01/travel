@@ -11,7 +11,7 @@ div a {
 }
 
 body {
-    font-family: Open Sans, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 13px;
 }
 
@@ -132,7 +132,7 @@ main{
     width: 30%;
     box-shadow: 0 0 10px rgb(95, 89, 89);
     margin-bottom: 10px;
-    letter-spacing: 0.2;
+    letter-spacing: 0.2px;
 }
 
 .destination-title {
@@ -152,7 +152,6 @@ main{
 }
 
 .destination-text {
-    display: relative;
     font-size: 1.2rem;
     color: #f8edeb;
     border-radius: 11px;
@@ -176,7 +175,6 @@ article .description_text {
 
 /* Package  */
 .package-container {
-    display: absolute;
     justify-content: center;
     margin-top: 10px;
     width: 100%;
@@ -185,20 +183,18 @@ article .description_text {
 }
 
 .package-body {
-    display: relative;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px 30px;
     width: 60%;
     box-shadow: 0 0 10px rgb(150, 143, 143);
     margin: 5px;
-    letter-spacing: 0.2;
+    letter-spacing: 0.2px;
 }
 
 .package-text {
     font-size: 1.8rem;
     color: hsl(1, 61%, 27%);
-    display: relative;
     letter-spacing: 1.2px;
     text-shadow: 2px 2px 5px #131008;
 }
@@ -212,7 +208,7 @@ article .description_text {
     color: #311fe2;
     font-size: 2rem;
     font-style: italic;
-    font-weight: 600px;
+    font-weight: 600;
 }
 
 div.polaroid {
@@ -223,7 +219,6 @@ div.polaroid {
 
 /* Info section */
 .info {
-    display: relative;
     border: 2px solid #473d3d;
     border-radius: 10px;
     width: 85%;
@@ -235,7 +230,6 @@ div.polaroid {
     color: #012a4a;
 }
 
-
 .info_link{
     font-size: 1.2rem;
     color: #f8edeb;
@@ -245,12 +239,6 @@ div.polaroid {
     padding: 5px 10px;
 }
 
-.btn-delete{
-    background-color: #ac3931;
-}
-.btn-edit {
-    background-color : #72b01d;
-}
 /* Booking Form */
 .booking-body {
     background-color: #f3ffe1;
@@ -338,12 +326,13 @@ footer p {
 
     /* Package section */
     .package-body {
-        display: relative;
         width: 60%;
     }
+
     .package-img-placeholder {
         display:none;
     }
+
     .package-text {
         font-size: 0.9rem;
         letter-spacing: 0.2px;
@@ -377,5 +366,4 @@ footer p {
     .social-media-item{
         font-size: 1rem;
     }
-
-  }
+}
