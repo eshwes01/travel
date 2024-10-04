@@ -18,6 +18,8 @@
                 <h3 class ="package-text"> Booking Request </h3>
                 <p class="package_price"> {{package.price}}</p>
                 <form id="bookingForm" method="post" style="margin-top: 1.3em;">
+                  <strong>**Please note date selection can be varies as package comes 
+                     with fixed date !!</strong>
                   {{ booking_form | crispy }}
                   {% csrf_token %}
                   <button id="submitButton" type="submit"

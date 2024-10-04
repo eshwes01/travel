@@ -1,28 +1,34 @@
 # Travel Era 
   This travel web site aiming to develop for Full Stack Software Development bootcamp final project at Code Institute.
 
-  
+ ![Am I Responsive ](destinations/documentation/wireframes/Am_I_Responsive.png) 
+
+ Deployed version of this site can access here : https://simple-app-52d1ea9641cb.herokuapp.com/
 
 ### Outline key features  
 
- * Destinations card
-
- * Tour Packages List
-
- * Itinerary Details for each package
-
- * Booking Request Form
+Site user can do following features ,
+ 
+ * Booking Request 
 
  * Manage Booking Reservation 
-      (User can create, edit and delete bookings from booking history CRUD)
+      (User can edit and delete bookings from booking history CRUD)
 
  * Registration/ Account Management
 
- * Comments on Destinations Info Post 
+ * Comments on Destinations Info posts
       (User can create,edit and delete the comments CRUD )
 
+ Admin (Super) user of the site can add , 
+   * Destinations 
+   * Tour Packages 
+   *  Precise Itinerary details 
+    Moreover, admin user can also create
+   * "More Information" posts from the admin panel to display as a post for the users in order to expand more research which can attarct users to book the package that site offered. 
 
-  > ## Target Audiences
+
+  > ## Target Audiences  :  
+
   Adventure Seekers , Cultural Enthusiasts – Tourists interested in exploring historical sites, traditional festivals, local customs, and UNESCO World Heritage locations.
 
   Luxury Travelers – High-end tourists seeking premium, customized experiences including exclusive resorts, private tours, and personalized service.
@@ -74,38 +80,17 @@
 
 ## Site Aims
 
-  The site purpose is to embrace families and individuals who love to make effortless travel around Sound East Asia region.
-
-  ### Destination Cards / Landing Page
-     Different travel destination cards, each offering: A placeholder image representing the destination. A brief description of the destination. "Our Packages" Button: Leads to detailed package offers for the specific destination. "Info" Button: Provides more detailed information about the destination.
-
-  ### F1. Our Package
-    All users who come to visit the site can be able to see all types of "tour packages" and "prices" for each destinations shown .
+  The site purpose is to embrace families and individuals who love to make effortless travel around Sound East Asia region. 
+  Giving more flexibilty and variety of destinations regarding the tour packages. 
   
-  ### F2. Info" link from landing page 
-    This link will take users to the page where more information about each specific destination from the site.
+  Travellers were encouraged to do more research about the places to explore by offering info call out button on landing page and allowing users to dive deeper into travel packages and details for each destination.
+
   
-  ### F3 "Itinerary Detail and Booking" 
-    Link can be seen on package detail page so that user can browse the itinerary details for each package and can request the booking. However, in order to request the booking for desired package and adding the comments on the destination info page they will need to be registered.
-
-  ### F4 Notification Message -> 
-    After users finished their bookings, notification messsage will be displayed on the top for booking succesfully submitted. 
-    *** Booking Month and Number of people will be the required fields for users to make the booking. 
-
-  ### F5 My Booking -> 
-   Registered users who made booking for the site are allowed to update and delete their bookings by clicking the Edit / Delete button from My Booking page.
-
-  ### F6 Comment on Info Section -> 
-    All Registered users can make comments on all the info section of each destinations, update and delete their comments whether the comments been approved by admin or not while non-registered users can only see all the comments but not allow to modify.  
-
-
-
-
 ## Agile Methodology
 
 The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board. 
 
-Please find my Kanban Board with my user stories [https://github.com/users/eshwes01/projects/4]
+Please find my Kanban Board with my user stories here:  [https://github.com/users/eshwes01/projects/4]
 
 ## Epics and User Stories
 ### Epics : User Registration
@@ -215,12 +200,21 @@ Web site idea is mainly inspired from the tour package travel providers site.
 
 
 
-
 ## Design
+Page Layout: The page uses a minimalistic, card-based layout that is easy to navigate, especially on mobile devices.
+Consistent Colors: The color palette of light purples and blues keeps the design professional yet welcoming.
+
+Interactive Elements:
+Info and Package Links: Each card includes interactive links (e.g., “Our Packages” and “Info”), allowing users to dive deeper into travel packages and details for each destination.
+8. Mobile-Friendly Interface:
+Collapsible Menu: The hamburger icon and stacked layout suggest the page is optimized for mobile users.
 
 ### Colours
 
 Color Palette: The interface uses a clean and calm color palette with shades of green, brown, and white, reinforcing a nature or travel theme.
+
+The site is design to be visually appealing with modern, rounded cards and a soft color scheme. The combination of purple card backgrounds and text gives it a calm, professional aesthetic.
+It appears that the site is optimized for both mobile and desktop usage.
 
 
 ### Typography
@@ -253,59 +247,78 @@ Lucidchart was used to create a database schema to visualise the types of custom
 # Features
 # UI Features
 
-## Home:
+## Home and Logo
  A button or link that brings the user to the homepage.
+  ![Home and Logo ](destinations/documentation/testing/home_logo.png)
 
-## Destination Cards: 
-Different travel destination cards, each offering:
-    A placeholder image representing the destination.
-    A brief description of the destination.
-    "Our Packages" Button: Leads to detailed package offers for the specific destination.
-    "Info" Button: Provides more detailed information about the destination.
+### Destination Cards / Landing Page
+  Different travel destination cards, each offering: A placeholder image representing the destination. 
+  Calls to Action: "Our Packages" and "Info" links for more details on each destination, allowing users to explore available travel packages.
+
+  ![Landing Page ](destinations/documentation/testing/landing_page_UI.png)
+
+  ![Landing Page Mobile ](destinations/documentation/testing/Iphone-14_UI.png)
+  
+
+  ### F1. Our Package
+  All users who come to visit the site can be able to see all types of "tour packages" and "prices" for each destinations shown .
+  My Booking: Provides access to a user’s current bookings or reservation history.
+  ![Our Package page ](destinations/documentation/testing/package_detail_page.png)
+
+  ![Our Package Mobile ](destinations/documentation/testing/our_package_mobile.png)
+  
+
+ 
+  ### F2. Info" link from landing page 
+  This link will take users to the page where more information about each specific destination from the site.
+  ![Info link ](destinations/documentation/testing/info_page_UI.png)
+
+  ### F3 "Itinerary Detail and Booking" 
+  Link can be seen on package detail page so that user can browse the itinerary details for each package and can request the booking. However, in order to request the booking for desired package and adding the comments on the destination info page they will need to be registered.
+
+  Itinerary deatils link can be seen when user click "Our package" in landing page as below 
+  ![Itinerary Detail ](destinations/documentation/testing/Itinerary_detail_UI_desktop.png)
+
+  ### F4 Notification Messages -> 
+  After users finished their bookings, notification messsage will be displayed on the top for booking succesfully submitted. 
+  *** Booking Month and Number of people will be the required fields for users to make the booking. 
+
+  ![Booking Request Message](destinations/documentation/testing/message_bookingUpdate.png)
 
 
-## Our Packages: 
-Links to a page displaying travel packages or details of available destinations.
+  ### F5 My Booking -> 
+  Registered users who made booking for the site are allowed to update and delete their bookings by clicking the Edit / Delete button from My Booking page.
 
-My Booking: Provides access to a user’s current bookings or reservation history.
-![My Booking list ](static/images/my_booking.png)
-
-
-## More Info :
-Links to a page displaying more information i.e Things to do , Local Food , Culture about each destination which feature can give user to research more about the destination they want to explore.
-
-![Itinerary Detail ](static/images/info_page.png)
-
-
-### Itinerary Details & Booking
-
-Itinerary deatils link can be seen when user click "Our package" in landing page as below 
-![Itinerary Detail ](static/images/package_detail_page.png)
-
-### My Booking
-Booking Details: Below the greeting, each booking is listed with relevant information such as:
-Trip Description: For each trip, details such as the number of days (e.g., "12 days, Classic Vietnam and beach"), the destination (e.g., "Vietnam"), 
-and the booking month (e.g., "You booked for Month Nov. 1, 2024") are displayed.
-Number of People: It also mentions how many people are included in the booking (e.g., "Number of people: 1").
-![<My Booking > ](static/images/my_booking.png)
-
+  Booking Details: Below the greeting, each booking is listed with relevant information such as:
+  Trip Description: For each trip, details such as the number of days (e.g., "12 days, Classic Vietnam and beach"), the destination (e.g., "Vietnam"), 
+  and the booking month (e.g., "You booked for Month Nov. 1, 2024") are displayed.
+  Number of People: It also mentions how many people are included in the booking (e.g., "Number of people: 1").
+  ![<My Booking >](destinations/documentation/testing/booking_list_UI.png)
 
 
 ### Edit Booking 
 
-User allow to edit the booking that they made whether or not confirm by one of the advisors. 
+User allow to edit the booking that they made whether or not been confirmed by admin. 
+
 Edit/Delete Buttons: For each booking, there are two action buttons:
 Edit (green button): Allows the user to modify the booking.
-Delete (red button): Provides an option to delete the booking.
 
-![Edit Booking ](static/images/edit_booking.png)
+
+![Edit Booking ](destinations/documentation/testing/edit_booking_UI.png)
 
 ###  Delete Booking
 
-User can be able to delete the booking that they made whether or not confirm by one of the advisors.
+User can be able to delete the booking that they made whether or not been confirmed by admin.
+Delete (red button): Provides an option to delete the booking.
 
-![Itinerary Detail ](static/images/delete_booking.png)
+![Delete Booking ](destinations/documentation/testing/delete_booking_UI.png)
 
+![Delete Message ](destinations/documentation/testing/booking_delete_message.png)
+
+  ### F6 Comment on Info Section -> 
+  All Registered users can make comments on all the info section of each destinations, update and delete their comments whether the comments been approved by admin or not while non-registered users can only see all the comments but not allow to modify.  
+
+![Comment Info ](destinations/documentation/testing/comments_section.png)
 
 ### Footer Section:
 
@@ -314,17 +327,18 @@ Rating: Shows customer ratings for the overall travel services or destinations.
 Reviews: Displays customer reviews or testimonials.
 Social Media Icons: Links to social media pages for further interaction with the service.
 
+Social Media Icons: There are icons linking to social media platforms such as Messenger, possibly Twitter (X), and Instagram, indicating that users can follow or contact the company through these platforms.
 
-----
-
+Copyright Statement: The footer includes a copyright notice, indicating the site is for educational purposes.
 ### Sign Up
 
 - 
 
 ### Sign In
 
--Log In / Register: A login or registration page to access user accounts.
-Main Section (Travel Destinations):
+-Log In / Register:
+ A login or registration page to access user accounts.
+
 
 
 ### Sign Out
@@ -358,23 +372,38 @@ Main Section (Travel Destinations):
 
 ## Technologies Used
 
+ 
+ *Gunicorn- As the server for Heroku.
+* Cloudinary- Was used to host the static files and media for the site.
+* Dj_database_url- To parse the database URL from the environment variables in Heroku.
+* Psycopg2- As an adaptor for Python and PostgreSQL databases.
+
+* Summernote- As a text editor.
+* Allauth- For authentication, registration, account management.
+* Crispy Forms- To style the forms.
+
 ### Languages Used
 
 
 
-### Frameworks - Libraries - Programs Used
+### Frameworks - Libraries
 
 * [Django](https://www.djangoproject.com/) 
+* Bootstrap- Used to style the website, add responsiveness and interactivity.
+* Git- Used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub.
+* GitHub- Used to store the project's code after being pushed from Git.
 
------
+* PostgreSQL- Database used through heroku.
+* Balsamiq- To build the wireframes for the project.
+* Chrome Dev Tools was used to inspect page elements, debug, troubleshoot and test features and adjust property values. Using the Lighthouse extension installed in Chrome Browser, the performance report was generated.
 
-[Back to top ⇧](#content)
+* Font Awesome: was used to add icons for aesthetic and UX purposes.
+* Heroku- Used to deploy the live project.
+
+
 
 ## Testing
 
-###  Am I Responsive 
- 
-![Am I Responsive ](static/images/Am_I_Responsive.png)
 
 
 ### Validation
@@ -383,7 +412,10 @@ Main Section (Travel Destinations):
 - HTML using [W3C HTML validator](https://validator.w3.org/)
 
 - CSS using [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/)
+
 - Python via [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
+
+
 
 ### Manual Testing
 
@@ -424,8 +456,7 @@ Main Section (Travel Destinations):
 
 
 
-
-### 5. Heroku Deployment: 
+### 5. Heroku Deployment: Heroku- Used to deploy the live project.
 * Click Deploy tab in Heroku.
 
 * Select Github as the deployment method.
@@ -457,12 +488,12 @@ In the IDE:
    
    Large amount of code used while developing this site were referenced and learned from following ,
 
-     1. https://docs.djangoproject.com/en/5.1/ 
-     2. https://stackoverflow.com/
-     3. https://www.w3schools.com/
-     4. Mdn Web docs
-     5. Code Instite LMS contents
-     6. https://getbootstrap.com/docs/5.3/
+  1. https://docs.djangoproject.com/en/5.1/ 
+  2. https://stackoverflow.com/
+  3. https://www.w3schools.com/
+  4. Mdn Web docs
+  5. Code Instite LMS contents
+  6. https://getbootstrap.com/docs/5.3/
 
 
 ## Learning Resources
@@ -470,13 +501,13 @@ In the IDE:
 
 
 ## Content and Media
-    Main Contents for destinations , packages and info pages were taken from the following web site and credit
+  Main Contents for destinations , packages and info pages were taken from the following web site and credit
 
-    https://www.titantravel.co.uk/blogs/
-    https://www.roughguides.com/
-    https://uniquetours.com/ 
-    https://www.indietraveller.co/things-to-do-in-bogota/
-    https://theadventurepeople.com/tour/ 
+   * https://www.titantravel.co.uk/blogs/
+   * https://www.roughguides.com/
+   * https://uniquetours.com/ 
+   * https://www.indietraveller.co/things-to-do-in-bogota/
+   * https://theadventurepeople.com/tour/ 
 
    Media Images has been taken from 
     
@@ -493,6 +524,7 @@ In the IDE:
     9. Jesse-schoff
     10. Julian-Yu-Wu
 
+   Color Contrast for the whole site =>   https://coolors.co/palettes/trending
 
 ## Important Notice !!
 

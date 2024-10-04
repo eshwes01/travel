@@ -47,6 +47,9 @@ def package_detail(request, slug):
 
 
 def info_detail(request, slug):
+    """
+        view info_detail
+    """
     destination = get_object_or_404(Destination, slug=slug)
     comments = destination.comments.filter(approved=True)
     comment_count = comments.count()
@@ -78,8 +81,12 @@ def info_detail(request, slug):
 
 
 def comment_edit(request, slug, comment_id):
+    """
+        view to edit comments
+    """
     destination = get_object_or_404(Destination, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
+    comment_form = CommentForm(data=request.POST, instance=comment)
 
     if request.user != comment.author:
         messages.add_message(request, messages.ERROR,
@@ -88,7 +95,11 @@ def comment_edit(request, slug, comment_id):
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST, instance=comment)
-        if comment_form.is_valid():
+        
+        if comment_form.is_valid() and comment.author == request.user:
+            comment = comment_form.save(commit=False)
+            comment.destination = destination
+            comment.approved = False
             comment_form.save()
             messages.add_message(request, messages.SUCCESS,
                                  'Comment Updated and awaiting approval!')
@@ -100,6 +111,9 @@ def comment_edit(request, slug, comment_id):
 
 
 def comment_delete(request, slug, comment_id):
+    """
+        view to delete the comments
+    """
     destination = get_object_or_404(Destination, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
 
