@@ -3,7 +3,7 @@
 
  ![Am I Responsive ](destinations/documentation/wireframes/Am_I_Responsive.png) 
 
- Deployed version of this site can access here : https://simple-app-52d1ea9641cb.herokuapp.com/
+ Deployed version of this site can access here : https://myapp001-530ce8fec14d.herokuapp.com/
 
 ### Outline key features  
 
