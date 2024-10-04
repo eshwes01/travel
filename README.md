@@ -450,7 +450,10 @@ Site admin can see and delete all the bookings and adjust accordingly with the r
 
 ### Languages Used
 
-
+* HTML 5- Used to structure all the templates on the site
+* CSS 3- to provide extra styling to the site
+* JavaScript- Minimum javascript was used to fade out alerts after a few seconds.
+* Python- To provide the functionality to the site. Packages used in the project can be found in requirements.txt
 
 ### Frameworks - Libraries
 
@@ -458,13 +461,13 @@ Site admin can see and delete all the bookings and adjust accordingly with the r
 * Bootstrap- Used to style the website, add responsiveness and interactivity.
 * Git- Used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub.
 * GitHub- Used to store the project's code after being pushed from Git.
-
 * PostgreSQL- Database used through heroku.
 * Balsamiq- To build the wireframes for the project.
 * Chrome Dev Tools was used to inspect page elements, debug, troubleshoot and test features and adjust property values. Using the Lighthouse extension installed in Chrome Browser, the performance report was generated.
 
 * Font Awesome: was used to add icons for aesthetic and UX purposes.
 * Heroku- Used to deploy the live project.
+* Miro Board for project planning
 
 
 ### Validation
@@ -527,6 +530,7 @@ While checking the JS code "Undefined Variable from bootstrap" has been shown as
 
    LightHouse Test 
    ![LightHouse](destinations/documentation/validation/light_house_checked.png)
+
 ## Testing
 
   Testing as been thoroughly done for all the functionality of the site which satisfied the user stories and outline features given with laptop and mobile devices. 
@@ -652,7 +656,7 @@ https://unsplash.com/
     9. Jesse-schoff
     10. Julian-Yu-Wu
 
-   Color Contrast for the whole site =>   https://coolors.co/palettes/trending
+   Color Contrast for the whole site been designed by using this https://coolors.co/palettes/trending
 
 ## Important Notice !!
 
@@ -662,6 +666,7 @@ https://unsplash.com/
 
 ## Acknowledgement
 
-  My main appriciation and speicial thanks to my facilitator Elaine Roche, Mentor Mark Briscoe and John Rearden. All my fellow co-horts and tutor support. Chris for the best support througout the project. 
+  My main appriciation and speicial thanks to my facilitator Elaine Roche, Mentor Mark Briscoe and John Rearden. All my fellow co-horts and tutor support. 
+  Chris for the best support througout the project. 
   
  
