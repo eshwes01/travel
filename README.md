@@ -86,7 +86,7 @@ Site user can do following features ,
   
 ## Agile Methodology
 
-The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board. 
+The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board. All the acceptance criteria has been tested as each story before the 'Done' stage and were also included in the final pre-submission manual testing documented .
 
 Please find my Kanban Board with my user stories here:  [https://github.com/users/eshwes01/projects/4]
 
@@ -248,10 +248,11 @@ It appears that the site is optimized for both mobile and desktop usage.
 
 ### Typography
 
-
+ Google font  "Lato" has been used throughout the site with a backup of sans-seri for clear and simple readility.
 
 ### Imagery
 
+    All travel images were taken from Unsplashed Photography website for which were given for frees access.
 
 ----
 ### Wireframes
@@ -396,22 +397,41 @@ In order to use site full functionality such as making booking request , or givi
 ----
 
 ## Admin Panel/Superuser
+  
+Admin (Super) user of the site can add ,
 
--
+#### Destinations : 
+Site admin can add/change the destination by clicking "Add+, Change" beside the Destinations on admin home page as below. 
+
+ ![admin Dash ](destinations/documentation/admin_panel/admin_dashboard.png)
+
+ ![Add Destination](destinations/documentation/admin_panel/Add_destination.png)
+ 
+#### Tour Packages : 
+Site admin can add/change the tour packages by clicking "Add+" beside the Destinations on admin home page. Site admin can also see all existing packages. "Summer Note" field has been used in order to decorate or adding the image. 
+
+ ![Tour Package Details ](destinations/documentation/admin_panel/Package_List.png)
+ 
+ ![Tour Package Details ](destinations/documentation/admin_panel/adding_package_detail.png)
 
 
+#### Precise Itinerary details : 
+Site admin can add/change the itinerary field in the packages table relavant to that speicific package. "Summer Note" field has been used in order to decorate the text.
+![Itinerary_detail](destinations/documentation/admin_panel/itenarary_detail.png)
 
-### Admin 'Post' Model Management
+### Admin 'Info'
+Site admin can add/change the info in the Infos table,"Summer Note" field has been used in order to decorate the text.
+![Info_details](destinations/documentation/admin_panel/info_detail.png)
+![Info_details_2](destinations/documentation/admin_panel/info_detail_2.png)
 
-- 
 
 ### Admin 'Comment' Model Management
+Site admin can see all the comments and approved by using approved checkbox provided so that user can see their comments to be update or delete,"Summer Note" field has been used in order to decorate the text.
+-
+![Comment_admin ](destinations/documentation/admin_panel/Comment_admin_panel.png)
+![Comment_admin_approval](destinations/documentation/admin_panel/comment_approval.png)
 
-- 
-
-### Admin 'Destination' Model Management
-
-
+### Admin 'Booking' Model Management
 
 
 
@@ -450,13 +470,16 @@ In order to use site full functionality such as making booking request , or givi
 
 
 ## Testing
+  Testing as been thoroughly done for the functionality of the site which satisfied the user stories and outline features given with both laptop and mobile devices. 
 
+  Please find the test plan here .
 
 
 ### Validation
 
 
 - HTML using [W3C HTML validator](https://validator.w3.org/)
+ 
 
 - CSS using [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/)
 
@@ -473,11 +496,6 @@ In order to use site full functionality such as making booking request , or givi
 
 ## Bugs
 
-| **Bug** | **Fix** |
-| ----------- | ----------- |
-|
-
-
 | **Unfix Bug** |
 | ----------- | 
 
@@ -487,23 +505,19 @@ In order to use site full functionality such as making booking request , or givi
 
 ## Future Implementation
 
-
+ - Currently user couldn't make the enquiry about their booking status, this could be the future feature to add for next sprint.
 
 
 ## Deployment
 
 ### 1. Creating the Django Project
 * Go to the Code Institute Gitpod Full Template [Template](https://github.com/Code-Institute-Org/gitpod-full-template).
+
+- App Installation and deploying this project with the help of this sheet below provided by Code Institute ,
+  https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf
 * 
-
-### 2. Create your Heroku app
-* Navigate to [Heroku](https://id.heroku.com).
-* 
-
-
-
-
-### 5. Heroku Deployment: Heroku- Used to deploy the live project.
+###  Heroku Deployment: Heroku- Used to deploy the live project
+.
 * Click Deploy tab in Heroku.
 
 * Select Github as the deployment method.
@@ -575,7 +589,7 @@ In the IDE:
 
 ## Important Notice !!
 
-  During development SECRET KEY in setting has been committed to GitHub unintentionally . However , the key has already taken out and securely added in the env.py file.
+  During development "SECRET KEY" in setting.py has been committed to GitHub unintentionally . However , the key has already taken out and securely placed in the env.py file.
 
 ----
 
