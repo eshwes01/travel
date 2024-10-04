@@ -613,8 +613,6 @@ In the IDE:
 
 * To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
 
-----
-
 # Credits
 
 ## Code and Learning Resources
