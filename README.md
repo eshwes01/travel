@@ -426,20 +426,22 @@ Site admin can add/change the info in the Infos table,"Summer Note" field has be
 
 
 ### Admin 'Comment' Model Management
-Site admin can see all the comments and approved by using approved checkbox provided so that user can see their comments to be update or delete,"Summer Note" field has been used in order to decorate the text.
+Site admin can see all the comments and approved  by using approved checkbox provided so that user can see their comments to be update or delete. Admin can delete the user comment if not appropiate for the site purpose. "Summer Note" field has been used in order to decorate the text.
 -
 ![Comment_admin ](destinations/documentation/admin_panel/Comment_admin_panel.png)
 ![Comment_admin_approval](destinations/documentation/admin_panel/comment_approval.png)
 
 ### Admin 'Booking' Model Management
+Site admin can see and delete all the bookings and adjust accordingly with the relavant availiable date to inform user back.
 
+![Add Booking](destinations/documentation/admin_panel/add_booking.png)
 
-
+![Booking List](destinations/documentation/admin_panel/booking_list.png)
 ----
 
 ## Technologies Used
 
- 
+
  *Gunicorn- As the server for Heroku.
 * Cloudinary- Was used to host the static files and media for the site.
 * Dj_database_url- To parse the database URL from the environment variables in Heroku.
@@ -479,11 +481,51 @@ Site admin can see all the comments and approved by using approved checkbox prov
 
 
 - HTML using [W3C HTML validator](https://validator.w3.org/)
- 
+![HTML_Validation_1](destinations/documentation/validation/landingpage_checked.png)
+   
+   Package Detail Page checked  
+![HTML_Validation_2](destinations/documentation/validation/packageDetail-Checked.png)
+
+  Infor Page checked here 
+![HTML_Validation_3](destinations/documentation/validation/info_page_checked.png)
+
+  Edit Booking checked here 
+![HTML_Validation_4](destinations/documentation/validation/Edit_booking_checked.png)
+
+ LogIn Page checked here
+![HTML_Validation_5](destinations/documentation/validation/Log_In_checked.png)
+
+Log Out Page checked here
+![HTML_Validation_6](destinations/documentation/validation/Log_Out_checked.png)
+
+Found these errors when checking SingUp page however these code were from Django framework exisitng SignUp template.
+
+![HTML_Validation_7](destinations/documentation/validation/SignUP_checked.png)
+
+![HTML_Validation_7](destinations/documentation/validation/SignUp_W3C_django_error.png)
+
+
+
 
 - CSS using [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/)
 
+   CSS styles checked passed.
+![CSS_validator](destinations/documentation/validation/CSS_Validator _checked.png)
+
+
 - Python via [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
+
+Python views.py checked completed with No errors
+![Python_Views](destinations/documentation/validation/views.py_checked.png)
+
+Python models.py checked completed with No errors
+![Python_Models](destinations/documentation/validation/model.py_checked.png)
+
+Python forms.py checked completed with No errors
+![Python_Forms](destinations/documentation/validation/forms_py_checked.png)
+
+Python admin.py checked completed with No errors
+![Python_admin](destinations/documentation/validation/admin_py_checked.png)
 
 
 
@@ -544,8 +586,7 @@ In the IDE:
 
 
 # Credits
-
-## Code
+## Code and Learning Resources
    
    Large amount of code used while developing this site were referenced and learned from following ,
 
@@ -555,10 +596,6 @@ In the IDE:
   4. Mdn Web docs
   5. Code Instite LMS contents
   6. https://getbootstrap.com/docs/5.3/
-
-
-## Learning Resources
-
 
 
 ## Content and Media
