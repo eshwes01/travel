@@ -662,11 +662,8 @@ https://unsplash.com/
 
   During development "SECRET KEY" in setting.py has been committed to GitHub unintentionally . However , the key has already taken out and securely placed in the env.py file.
 
-----
-
 ## Acknowledgement
 
-  My main appriciation and speicial thanks to my facilitator Elaine Roche, Mentor Mark Briscoe and John Rearden. All my fellow co-horts and tutor support. 
-  Chris for the best support througout the project. 
+  My main appriciation and speicial thanks to my facilitator Elaine Roche, Mentor Mark Briscoe and John Rearden. All my fellow co-horts and tutor support. Chris for the best support througout the project. 
   
  
