@@ -10,6 +10,9 @@ class CommentForm(forms.ModelForm):
 
 
 class BookingForm(forms.ModelForm):
+    """
+        Booking Form
+    """
     booking_month = forms.CharField(
         widget=forms.TextInput(attrs={'type': 'date'}),  # month picker
         label="Select Month to Book ",

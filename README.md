@@ -573,14 +573,15 @@ While checking the JS code "Undefined Variable from bootstrap" has been shown as
   https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf
 *
 ### 2. Setting up settings.py
-In your Django 'settings.py' file type:
-from pathlib import Path
-import os
-import dj_database_url
+  In your Django 'settings.py' file type:
+  from pathlib import Path
+  import os
+  import dj_database_url
 
-if os.path.isfile("env.py"):
- import env
-Remove the default insecure secret key in settings.py and replace with the link to the secret key variable in Heroku by typing: SECRET_KEY = os.environ.get(SECRET_KEY)
+  if os.path.isfile("env.py"):
+  import env
+  Remove the default insecure secret key in settings.py and replace with the link to the secret key variable in Heroku by typing: 
+    SECRET_KEY = os.environ.get(SECRET_KEY)
 
 
 ### 3.Heroku Deployment: Heroku- Used to deploy the live project
@@ -618,7 +619,7 @@ In the IDE:
   2. https://stackoverflow.com/
   3. https://www.w3schools.com/
   4. Mdn Web docs
-  5. Code Instite LMS contents
+  5. Code Instite LMS contents (Therefor I Blog walkthrough)
   6. https://getbootstrap.com/docs/5.3/
 
 
@@ -631,10 +632,13 @@ In the IDE:
    * https://www.indietraveller.co/things-to-do-in-bogota/
    * https://theadventurepeople.com/tour/ 
 
-   Media Images has been taken from 
+   Media Images were taken from 
     
-    https://unsplash.com/
-    All artist credits goes to the following, 
+https://unsplash.com/ 
+
+
+    Credits goes to the following photographer artists of Unsplash site
+
     1. Neom 
     2. Pawel-janiak
     3. Tiago-rosado
@@ -656,4 +660,6 @@ In the IDE:
 
 ## Acknowledgement
 
-
+  My main appriciation and speicial thanks to my facilitator Elaine Roche, Mentor Mark Briscoe and John Rearden. All my fellow co-horts and tutor support. Chris for the best support througout the project. 
+  
+ 

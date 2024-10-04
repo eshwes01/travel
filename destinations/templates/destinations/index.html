@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+
+<!-- Hero Section -->
 <div class="hero">   
         <img src="{% static 'images/hero_image.jpg' %}" alt="Hero Image" class="hero-image">
         <div class="hero-text">
@@ -8,6 +10,8 @@
             <!-- <a href="#" class="explore-btn">Explore <i class="fa-solid fa-plane-departure"></i></a> -->
         </div>
 </div>
+
+<!-- Destination Main -->
 <div class="container-fluid">
     <!-- Destination Column -->
     <div class="destination-container">
@@ -36,6 +40,8 @@
         {% endif %}
         {% endfor %}
     </div>
+
+    <!-- Pagination Navigation Link Section -->
     <div class="row">
         <div class="col mx-auto">  
             {% if is_paginated %}

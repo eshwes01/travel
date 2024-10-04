@@ -5,8 +5,11 @@ from datetime import date
 from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator, MaxValueValidator
 
-# Destination model 
+
 class Destination(models.Model):
+    """
+        Destination Model
+    """
     slug = models.SlugField(max_length=200, unique =True)
     title = models.CharField(max_length=200, unique=True)
     description = models.TextField()
@@ -20,8 +23,10 @@ class Destination(models.Model):
     class Meta:
         ordering = ["created_on"]
 
-# Info model
 class Info(models.Model):
+    """
+        Info Model
+    """
     destination = models.OneToOneField(
         Destination,
         on_delete= models.CASCADE,
@@ -37,6 +42,9 @@ class Info(models.Model):
 
 # Package model 
 class Packages(models.Model):
+    """
+        Package Model
+    """
     destination = models.ForeignKey(
         Destination,
         on_delete=models.CASCADE,
@@ -53,8 +61,11 @@ class Packages(models.Model):
     def __str__(self):
         return f"{self.package_title} : {self.destination.title}"
 
-# Comment model
+
 class Comment(models.Model):
+    """
+        Comment Model
+    """
     destination = models.ForeignKey(
         Destination,
         on_delete=models.CASCADE,
@@ -72,6 +83,9 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     
 class Booking(models.Model):
+    """
+        Booking Model
+    """
     user = models.ForeignKey(
         User,
         on_delete= models.CASCADE,
@@ -96,7 +110,3 @@ class Booking(models.Model):
     def __str__(self):
         return f"Booking for {self.no_of_people} people in {self.booking_month}"
         
-# def profile_page(request):
-#     user = get_object_or_404(User, user=request.user)
-#     # Retrieve all comments for the user object
-#     comments = user.commenter.all()
