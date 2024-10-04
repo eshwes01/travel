@@ -30,33 +30,35 @@
   </div>
   <!-- Comment Section Start Here  -->
   <div class="row">
-    <div class="col-md-4 comment-body">
-      <h3> <i class="fa-solid fa-quote-left"></i> Comments : </h3>
-      <div class="card-body">
-        {% for comment in comments %}
-        <div class="p-2 comments">
-          {% if not comment.approved and comment.author == user %}
-          faded{% elif not comment.approved %} d-none{% endif %}
-          <p class="font-weight-bold">
-            {{ comment.author }}
-            {{ comment.created_on }}
-            wrote:
-          </p>
-          <div id="comment{{ comment.id }}">
-            {{ comment.body }}
-          </div>
-          {% if not comment.approved and comment.author == user %}
-          <p class="approval">This comment is awaiting approval</p>
-          {%endif%}
-          {% if user.is_authenticated and comment.author == user %}
-          <button class="btn btn-delete" data-comment_id="{{ comment.id }}"> Delete </button>
-          <button class="btn btn-edit" data-comment_id="{{ comment.id }}"> Edit </button>
-          {% endif %}
+  <div class="col-md-4 comment-body">
+    <h3><i class="fa-solid fa-quote-left"></i> Comments :</h3>
+    <div class="card-body">
+      {% for comment in comments %}
+      <div class="p-2 comments
+        {% if not comment.approved and comment.author == user %} faded:
+        {% elif not comment.approved %} d-none
+        {% endif %}
+      ">
+        <p class="font-weight-bold">
+          {{ comment.author }} - {{ comment.created_on }} wrote:
+        </p>
+        <div id="comment{{ comment.id }}">
+          {{ comment.body }}
         </div>
-        {% endfor %}
+        
+        {% if not comment.approved and comment.author == user %}
+        <p class="approval">This comment is awaiting approval</p>
+        {% endif %}
+        
+        {% if user.is_authenticated and comment.author == user %}
+        <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
+        <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
+        {% endif %}
       </div>
+      {% endfor %}
     </div>
   </div>
+</div>
   <div class="row">
     <!--  New Comments -->
     <div class="col-md-4 ">

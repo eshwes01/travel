@@ -320,7 +320,7 @@ Lucidchart was used to create a database schema to visualise the types of custom
   ### F3 "Itinerary Detail and Booking" 
   Link can be seen on package detail page so that user can browse the itinerary details for each package and can request the booking. However, in order to request the booking for desired package and adding the comments on the destination info page they will need to be registered.
 
-  Itinerary deatils link can be seen when user click "Our package" in landing page as below 
+  Itinerary deatils link will be redirect when user click "Our package" call out button on landing page
   ![Itinerary Detail ](destinations/documentation/testing/Itinerary_detail_UI_desktop.png)
 
   ### F4 Notification Messages -> 
@@ -366,29 +366,32 @@ Delete (red button): Provides an option to delete the booking.
 
 ### Footer Section:
 
-Rating: Shows customer ratings for the overall travel services or destinations.
+Rating: Shows customer ratings for the overall travel services or destinations. (This is just for visual appealling display purpose.)
 
 Reviews: Displays customer reviews or testimonials.
 Social Media Icons: Links to social media pages for further interaction with the service.
 
 Social Media Icons: There are icons linking to social media platforms such as Messenger, possibly Twitter (X), and Instagram, indicating that users can follow or contact the company through these platforms.
 
-Copyright Statement: The footer includes a copyright notice, indicating the site is for educational purposes.
+Copyright Statement
 ### Sign Up
+  User has to sign up / register by providing their username and password .
 
-- 
+![Sign UP ](destinations/documentation/testing/signUp_Desktop.png)
+
 
 ### Sign In
 
--Log In / Register:
- A login or registration page to access user accounts.
 
+In order to use site full functionality such as making booking request , or giving comments/suggestion users neeed to  Log In :
 
+ ![Sign In ](destinations/documentation/testing/Log_In_mobile.png)
+ ![Sign In ](destinations/documentation/testing/Log_In_desktop.png)
 
 ### Sign Out
+ User can be able to sign out safely from the site.
 
-- 
-
+ ![Sign Out ](destinations/documentation/testing/SignOut_UI.png)
 
 ----
 

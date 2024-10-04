@@ -15,6 +15,9 @@ class DestinationsList(generic.ListView):
 
 @login_required
 def my_booking(request):
+    """
+        View to show all the booking histories
+    """
     bookings = Booking.objects.filter(user=request.user)
     booking_form = BookingForm(data=request.POST)
 
@@ -30,6 +33,9 @@ def my_booking(request):
 
 
 def package_detail(request, slug):
+    """
+        view package_detail
+    """
     destinations = Destination.objects.all()
     destination = get_object_or_404(destinations, slug=slug)
 
@@ -98,8 +104,6 @@ def comment_edit(request, slug, comment_id):
         
         if comment_form.is_valid() and comment.author == request.user:
             comment = comment_form.save(commit=False)
-            comment.destination = destination
-            comment.approved = False
             comment_form.save()
             messages.add_message(request, messages.SUCCESS,
                                  'Comment Updated and awaiting approval!')
@@ -128,6 +132,9 @@ def comment_delete(request, slug, comment_id):
 
 
 def edit_booking(request, booking_id):
+    """
+        view to edit the bookings
+    """
     booking = get_object_or_404(Booking, id=booking_id)
 
     if booking.user != request.user:
@@ -153,8 +160,11 @@ def edit_booking(request, booking_id):
         }
     )
 
-# Deleting Booking from My Booking page
+
 def delete_booking(request, booking_id):
+    """
+        view to delete the Bookings
+    """
     booking = get_object_or_404(Booking, id=booking_id)
 
     if booking.user != request.user:
@@ -166,8 +176,11 @@ def delete_booking(request, booking_id):
     messages.add_message(request, messages.SUCCESS, "Booking Deleted!")
     return HttpResponseRedirect(reverse('my_booking'))
 
-# This method will carry out as itenerary detail display page 
+ 
 def itinerary_detail(request, package_id):
+    """
+        view to display itinerary details and booking request form
+    """
     package = get_object_or_404(Packages, pk=package_id)
     bookings = package.bookings.all()
 
@@ -180,7 +193,7 @@ def itinerary_detail(request, package_id):
             booking.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Your booking is successfully submitted!'
+                'Your booking is successfully submitted! One of our advisors will contact you shortly.'
             )
             return HttpResponseRedirect(reverse
                                     ('itinerary_detail', args=[package_id]))
