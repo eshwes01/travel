@@ -525,7 +525,8 @@ While checking the JS code "Undefined Variable from bootstrap" has been shown as
  Booking JS page checked
 ![Booking_JS](destinations/documentation/validation/JS_bookingForm_checked.png)
 
-
+   LightHouse Test 
+   ![LightHouse](destinations/documentation/validation/light_house_checked.png)
 ## Testing
 
   Testing as been thoroughly done for all the functionality of the site which satisfied the user stories and outline features given with laptop and mobile devices. 
@@ -554,6 +555,7 @@ While checking the JS code "Undefined Variable from bootstrap" has been shown as
 | ----------- | 
    1. In the Edit Booking section of date field in the booking request has been validated with month instead of date [today.date().month ] therefore user can book previous date of this month. However user cannot book past months "Booking Error " will be shown. 
 
+   2. In the Comment session , user cannot see their comment as soon as they submitted shwoing "Comment Updated and awaiting for approval" , user will need to wait to see if admin approved the comment can then be able to edit / delete their comment.
 
 ----
 
