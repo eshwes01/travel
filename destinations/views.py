@@ -106,7 +106,7 @@ def comment_edit(request, slug, comment_id):
             comment = comment_form.save(commit=False)
             comment_form.save()
             messages.add_message(request, messages.SUCCESS,
-                                 'Comment Updated and awaiting approval!')
+                                 'Comment Updated !!')
         else:
             messages.add_message(
                 request, messages.ERROR, 'Error updating comment.')

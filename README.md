@@ -1,5 +1,5 @@
 # Travel Era 
-  This travel web site aiming to develop for Full Stack Software Development bootcamp final CATSTONE project at Code Institute.
+  This travel site is aiming to develop for Full Stack Software Development bootcamp final CATSTONE project at Code Institute.
 
  ![Am I Responsive ](destinations/documentation/wireframes/Am_I_Responsive.png) 
 
@@ -64,10 +64,7 @@ Site user can do following features ,
       - [Unfix Bugs](#unfix-bugs)
   - [Deployment](#deployment)
       - [Creating the Django project](#creating-the-django-project)
-      - [Creating Heroku app](#creating-heroku-app)
-      - [Set up Environment Variables](#set-up-environment-variables)
-      - [Heroku deployment](#heroku-deployment)
-      - [Final Deployment](#final-deployment)
+   
   - [Credits](#credits)
     - [Content](#content)
     - [Information Sources / Resources](#information-sources--resources)
@@ -470,17 +467,10 @@ Site admin can see and delete all the bookings and adjust accordingly with the r
 * Heroku- Used to deploy the live project.
 
 
-
-## Testing
-  Testing as been thoroughly done for the functionality of the site which satisfied the user stories and outline features given with both laptop and mobile devices. 
-
-  Please find the test plan here .
-
-
 ### Validation
 
 
-- HTML using [W3C HTML validator](https://validator.w3.org/)
+### HTML using [W3C HTML validator](https://validator.w3.org/)
 ![HTML_Validation_1](destinations/documentation/validation/landingpage_checked.png)
    
    Package Detail Page checked  
@@ -506,14 +496,13 @@ Found these errors when checking SingUp page however these code were from Django
 
 
 
-
-- CSS using [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/)
+ ### CSS using [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/)
 
    CSS styles checked passed.
-![CSS_validator](destinations/documentation/validation/CSS_Validator _checked.png)
+![CSS_validator](destinations/documentation/validation/css_checked.png)
 
 
-- Python via [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
+### Python via [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/)
 
 Python views.py checked completed with No errors
 ![Python_Views](destinations/documentation/validation/views.py_checked.png)
@@ -527,38 +516,74 @@ Python forms.py checked completed with No errors
 Python admin.py checked completed with No errors
 ![Python_admin](destinations/documentation/validation/admin_py_checked.png)
 
+ ### JSHint https://jshint.com/
+While checking the JS code "Undefined Variable from bootstrap" has been shown as follow however the bootstrap has been imported in the base.html hence there has no issue on running the code.
 
+ Commnet JS page checked 
+![Comment_JS](destinations/documentation/validation/JS_Comment_form_checked.png)
+
+ Booking JS page checked
+![Booking_JS](destinations/documentation/validation/JS_bookingForm_checked.png)
+
+
+## Testing
+
+  Testing as been thoroughly done for all the functionality of the site which satisfied the user stories and outline features given with laptop and mobile devices. 
 
 ### Manual Testing
 
+   Manual Test Plan can find here .
+   
+![Test_Plan 1](destinations/documentation/testing/Test_plan_1.png)
+![Test_Plan 2](destinations/documentation/testing/Test_plan_2.png)
+![Test_Plan 3](destinations/documentation/testing/Test_plan_3.png)
 
 
+### Browser Compatibility
 
-----
+  Chrome DevTools was used to test the responsiveness of the application on different screen sizes. Further more testing from 
+  * mobile devices such as  (Samsaung Note 10, Real Me pro 10 )
+  * Safari Browser 
+  were carried out for the full responsivness. 
+
+--
 
 ## Bugs
 
 | **Unfix Bug** |
 | ----------- | 
-
+   1. In the Edit Booking section of date field in the booking request has been validated with month instead of date [today.date().month ] therefore user can book previous date of this month. However user cannot book past months "Booking Error " will be shown. 
 
 
 ----
 
 ## Future Implementation
 
- - Currently user couldn't make the enquiry about their booking status, this could be the future feature to add for next sprint.
+ 1. Currently user couldn't make the enquiry about their booking status, this could be the future feature to add for next sprint.
+ 
+ 2. User canonot give the review for each packages this will be added to future implementation.
 
 
 ## Deployment
 
-### 1. Creating the Django Project
+### 1.Creating the Django Project
 * Go to the Code Institute Gitpod Full Template [Template](https://github.com/Code-Institute-Org/gitpod-full-template).
 
 - App Installation and deploying this project with the help of this sheet below provided by Code Institute ,
   https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf
-* 
-###  Heroku Deployment: Heroku- Used to deploy the live project
+*
+### 2. Setting up settings.py
+In your Django 'settings.py' file type:
+from pathlib import Path
+import os
+import dj_database_url
+
+if os.path.isfile("env.py"):
+ import env
+Remove the default insecure secret key in settings.py and replace with the link to the secret key variable in Heroku by typing: SECRET_KEY = os.environ.get(SECRET_KEY)
+
+
+### 3.Heroku Deployment: Heroku- Used to deploy the live project
 .
 * Click Deploy tab in Heroku.
 
@@ -573,7 +598,7 @@ Python admin.py checked completed with No errors
 * Click either Enable Automatic Deploys for automatic deployment when you push updates to Github or To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
 
 
-### 6. Final Deployment
+###  Final Deployment
 In the IDE:
 * When development is complete change the debug setting to: `DEBUG = False` in `settings.py` 
 * In Heroku settings config vars change the `DISABLE_COLLECTSTATIC` value to 0
@@ -583,9 +608,8 @@ In the IDE:
 
 ----
 
-
-
 # Credits
+
 ## Code and Learning Resources
    
    Large amount of code used while developing this site were referenced and learned from following ,

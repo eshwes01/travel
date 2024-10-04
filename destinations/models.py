@@ -3,6 +3,7 @@ from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 from datetime import date
 from django.core.exceptions import ValidationError
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Destination model 
 class Destination(models.Model):
@@ -87,7 +88,10 @@ class Booking(models.Model):
             raise ValidationError("Date cannot be in the past")
 
     booking_month = models.DateField(default=date.today, validators=[validate_date])
-    no_of_people = models.IntegerField(default = 1)
+    no_of_people = models.IntegerField( validators=[
+            MinValueValidator(1),  # Minimum value of 1
+            MaxValueValidator(30)  # Maximum value of 30
+        ])
 
     def __str__(self):
         return f"Booking for {self.no_of_people} people in {self.booking_month}"
