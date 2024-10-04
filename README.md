@@ -1,5 +1,5 @@
 # Travel Era 
-  This travel web site aiming to develop for Full Stack Software Development bootcamp final project at Code Institute.
+  This travel web site aiming to develop for Full Stack Software Development bootcamp final CATSTONE project at Code Institute.
 
  ![Am I Responsive ](destinations/documentation/wireframes/Am_I_Responsive.png) 
 
@@ -22,10 +22,8 @@ Site user can do following features ,
  Admin (Super) user of the site can add , 
    * Destinations 
    * Tour Packages 
-   *  Precise Itinerary details 
-    Moreover, admin user can also create
-   * "More Information" posts from the admin panel to display as a post for the users in order to expand more research which can attarct users to book the package that site offered. 
-
+   * Precise Itinerary details 
+   * Create Post about "Info" in the admin panel to display for the users in order to expand more on their research of the tours.
 
   > ## Target Audiences  :  
 
@@ -98,7 +96,7 @@ Please find my Kanban Board with my user stories here:  [https://github.com/user
  * Landing page should be easy access for the user to register, able to Log In and Log Out. 
  * Registered users will be given the access to comment CRUD features . 
 
-#### Related User Stories:
+### User Story 1 :
  As a new user of site I want to create a user account by using my email and password
   So that I can access all the functionality of the site.
 
@@ -192,11 +190,42 @@ Acceptance Criteria
 - AC : User can find the Edit / Delete button right under each booking request he made on My Booking page.
 - AC : User must logged In before editing / deleting the requests.
 
+### User Story-11 Create Destination
+As a site admin I can create ,edit and delete the destinations
+So that I can manage the destinations availability
+
+Acceptance Criteria
+- AC : All available destination can be seen by users as soon as they land the page.
+- AC : Destinations will be display by card display with pagination of 3 columns and 2 rows easy to navigate .
+
+
+### User Story-12 Create New Packages
+As a site admin I can create , edit and delete the packages of specific each destination
+So that I can manage all the necessary contents and their availability .
+
+### User Story-13 Create Info Post
+
+As a site admin , I can be able to manage the info post for related destinations
+So that I can update and delete the relevant and up-to-date information for the users.
+
+Acceptance Criteria
+-AC : One destination will have one info page where user can see all further information and can comment on post.
+
+### User Story-14 Comment Approval from admin site
+
+As a site admin I can see all the comments that user make in the admin panel
+So that I can monitor and approve relevant comments associated with the post.
+
+Acceptance Criteria
+- AC : All the comments awaiting for admin approval will be on hold to the admin site and users can only see once approved.
+- AC : Site user will be notified for with awaiting for approval message once submitted comment.
+- AC : Approved comments can be seen by all visitors of the site but only authenticated user can edit /delete
+
 
 ## Tasks
 
-The tasks for the website development process was closely followed as mentioned in CI's Django module "I Think Therefore I Blog" walkthrough project.
-Web site idea is mainly inspired from the tour package travel providers site.
+The tasks for the website development processes were closely followed as mentioned in CI's Django module "I Think Therefore I Blog" walkthrough project.
+Project idea is mainly inspired from the tour package travel providers site and former CI's students projects .
 
 
 
@@ -227,11 +256,26 @@ It appears that the site is optimized for both mobile and desktop usage.
 ----
 ### Wireframes
 
-![Home Page](static/images/destination_WF.png)
-![Package Detail Page](static/images/package_Detail_WF.png)
-![Info Detail Page](static/images/info.png)
-![Itinerary Detail Page ](static/images/itinerary_detail.png)
-![My Booking list ](static/images/MyBooking_list.png)
+Landing Page WF
+![Home Page](destinations/documentation/wireframes/destination_WF.png)
+
+Landing Page Mobile Screen
+![Home Page Mobile](destinations/documentation/wireframes/Landing_page_wf_mobile.png)
+
+![Home Page Tablet](destinations/documentation/wireframes/Landing_page_wf_tablet.png)
+
+
+Package Detail Page WF
+![Package Detail Page](destinations/documentation/wireframes/package_Detail_WF.png)
+
+Info Detail Page WF
+![Info Detail Page](destinations/documentation/wireframes/info.png)
+
+Itinerary Detail WF 
+![Itinerary Detail Page ](destinations/documentation/wireframes/itinerary_detail.png)
+
+My Booking Page will look closer to this,
+![My Booking list ](destinations/documentation/wireframes/MyBooking_list.png)
 
 
 ----
@@ -240,7 +284,7 @@ It appears that the site is optimized for both mobile and desktop usage.
 
 Lucidchart was used to create a database schema to visualise the types of custom models the project requires. Below is the Database structure that this project is based on. 
 
-![Entity Relationship Diagram](static/images/ERDUpdated.png)
+![Entity Relationship Diagram](destinations/documentation/wireframes/ERDUpdated.png)
 
 
 ----
